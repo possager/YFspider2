@@ -17,7 +17,7 @@ class YfspiderspeakItem(scrapy.Item):
     publish_user_id=scrapy.Field(output_processor=TakeFirst())#用户id
     publish_user=scrapy.Field(output_processor=TakeFirst())#用户名
     publish_user_photo=scrapy.Field(output_processor=TakeFirst())#用户头像
-    publish__user_jsonid=scrapy.Field(output_processor=TakeFirst())#用户的jsonid(对应着用户json信息的命名：平台名称（或者英文）_用户id)
+    publish_user_jsonid=scrapy.Field(output_processor=TakeFirst())#用户的jsonid(对应着用户json信息的命名：平台名称（或者英文）_用户id)
     txpath=scrapy.Field(output_processor=TakeFirst())#图片存放服务器(针对微信)
     title=scrapy.Field(output_processor=TakeFirst())#标题
     reply_count=scrapy.Field(output_processor=TakeFirst())#回复数
@@ -26,7 +26,7 @@ class YfspiderspeakItem(scrapy.Item):
     url=scrapy.Field(output_processor=TakeFirst())#（论坛的URL）||（论坛回复的URL）||（新闻的URL）
     reproduce_count=scrapy.Field(output_processor=TakeFirst())#转载数
     ancestor_id=scrapy.Field(output_processor=TakeFirst())#祖先借点的ID（回复和回复的回复必填）
-    spider_time=scrapy.Field(output_processor=TakeFirst())#爬虫爬取时间
+    spider_time=scrapy.Field(input_processor=lambda x:int(x[0]*1000),output_processor=TakeFirst())#爬虫爬取时间
     publish_time=scrapy.Field(output_processor=TakeFirst())#发布时间
     parent_id=scrapy.Field(output_processor=TakeFirst())#父集ID（如果是回复就填，没有就不填）
     like_nodes=scrapy.Field()#jsonArray类型变量，里面的结构和当前json结构一样
@@ -38,7 +38,7 @@ class YfspiderspeakItem(scrapy.Item):
     read_count=scrapy.Field(output_processor=TakeFirst())#阅读量
 
 
-class YfspiderplantformItem(scrapy.Item):
+class YfUserInfoItem(scrapy.Item):
     publish_user=scrapy.Field(output_processor=TakeFirst())#用户名
     publish_user_photo=scrapy.Field(output_processor=TakeFirst())#用户头像
     publish_user_id=scrapy.Field(output_processor=TakeFirst())#发布用户Id
