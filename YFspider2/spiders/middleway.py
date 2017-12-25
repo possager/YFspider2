@@ -1,13 +1,16 @@
-from scrapy.spiders import CrawlSpider,Rule
+# from scrapy.spiders import CrawlSpider,Rule
+from scrapy.spiders import Rule
+from scrapy_redis.spiders import RedisCrawlSpider
 from scrapy.linkextractor import LinkExtractor
 import scrapy
 
 
 
 
-class middleway(CrawlSpider):
+class middleway(RedisCrawlSpider):
     name = 'middleway'
-    start_urls=['http://woeser.middle-way.net/']
+    # start_urls=['http://woeser.middle-way.net/']
+    redis_key='middleway:urls'
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -19,12 +22,13 @@ class middleway(CrawlSpider):
     )
 
 
-    def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(url=url,headers=self.headers)
+    # def start_requests(self):
+    #     for url in self.start_urls:
+    #         yield scrapy.Request(url=url,headers=self.headers)
 
 
 
     def parse_more(self,response):
         print 'in parseMore'
-        print response.xpath('#Blog1 > div.blog-posts.hfeed > div > div > div > div.post.hentry > h3').extract
+        # print response.xpath('#Blog1 > div.blog-posts.hfeed > div > div > div > div.post.hentry > h3').extract
+        print response.url
