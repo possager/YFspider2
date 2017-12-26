@@ -67,6 +67,8 @@ ROBOTSTXT_OBEY = False
 ITEM_PIPELINES = {
    # 'YFspider2.pipelines.Yfspider2Pipeline': 300,
     'scrapy_redis.pipelines.RedisPipeline':300,
+    'YFspider2.pipelines.save_data_to_file':603,
+    'YFspider2.pipelines.YfspidersetdefaultValue':601,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
