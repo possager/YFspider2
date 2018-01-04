@@ -18,8 +18,8 @@ import datetime
 
 class middleway(RedisCrawlSpider):
     name = 'middleway'
-    # start_urls=['http://woeser.middle-way.net/']
-    redis_key='middleway:urls'
+    start_urls=['http://woeser.middle-way.net/']
+    # redis_key='middleway:urls'
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -27,7 +27,7 @@ class middleway(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow='http\:\/\/woeser\.middle\-way\.net\/\d{4}\/\d{1,2}\/[\S|\s]{1,12}\.html',),callback='parse_more',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/woeser\.middle\-way\.net\/\d{4}\/\d{1,2}\/[\S|\s]{1,12}\.html',),callback='parse_content',follow=True),
     )
 
 
@@ -37,7 +37,7 @@ class middleway(RedisCrawlSpider):
 
 
 
-    def parse_more(self,response):
+    def parse_content(self,response):
         print 'in parseMore'
 
 

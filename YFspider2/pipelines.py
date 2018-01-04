@@ -50,6 +50,7 @@ class save_data_to_file(object):
             publish_time_stramp_str_13=str(int(publish_time_stramp*1000))
         except:
             print 'wrong in create publish_time_stramp_str_13'
+            publish_time_stramp_str_13='time_wrong'
 
         urlhashlib=hashlib.md5(urlOruid).hexdigest()
         urlhashlib_str=str(urlhashlib)

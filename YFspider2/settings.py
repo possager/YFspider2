@@ -98,3 +98,5 @@ REDIS_PORT="6379"
 
 SCHEDULER="scrapy_redis.scheduler.Scheduler"
 DUPEFILTER_CLASS="scrapy_redis.dupefilter.RFPDupeFilter"
+
+REACTOR_THREADPOOL_MAXSIZE='32'
