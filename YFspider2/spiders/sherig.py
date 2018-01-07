@@ -1,3 +1,4 @@
+#_*_coding:utf-8_*_
 import scrapy
 # from scrapy.spider import Spider
 from scrapy.spider import CrawlSpider

@@ -58,7 +58,7 @@ class save_data_to_file(object):
         publish_time_split_2=publish_time.split(' ')
         filename=plant_form+'_'+plant_form+'_'+publish_time_stramp_str_13+'_'+urlhashlib_str+'_'+newsidOrtid
 
-        file_path=plant_form+'/'+'data'+'/'+publish_time_split_2[0]#需要文件的名，还需要文件之前的路径。
+        file_path=BASIC_FILE+'/'+plant_form+'/'+'data'+'/'+publish_time_split_2[0]#需要文件的名，还需要文件之前的路径。
         filename=file_path+'/'+filename
 
         return filename,file_path

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫编写注意事项</title>
+</head>
+<body>
+
+
+<div class="tchrd">
+    <h1>
+        编写爬虫过程中遇到的问题
+    </h1>
+    <a>
+        <h3>
+            tchrd
+        </h3>
+        <p>
+        tchrd网站中的默认启动方式，通过往redis中传递url来启动爬虫
+        lpush tchrd:url http://tchrd.org/chinese/%E8%A5%BF%E8%97%8F%E4%B8%80%E5%BA%A7%E5%B7%A8%E5%A4%A7%E7%9A%84%E7%9B%91%E7%8B%B1%E8%A5%BF%E8%97%8F%E4%BA%BA%E6%9D%83%E4%B8%8E%E6%B0%91%E4%B8%BB%E4%BF%83%E8%BF%9B%E4%B8%AD%E5%BF%83%E5%8F%91%E5%B8%83/
+        这样启动的网站爬虫爬取不完整。
+        还可以添加
+        lpush tchrd:url http://tchrd.org/chinese/1999-%E8%A5%BF%E8%97%8F%E4%BA%BA%E6%9D%83%E6%8A%A5%E5%91%8A-%E6%91%98%E8%A6%81/
+        但是效果也不完整
+        </p>
+        <p>
+            时间：2018-01-05
+        </p>
+    </a>
+
+    <a>
+        <h3>
+            studentsforafreetibet
+        </h3>
+        <p>
+            这个网站里边的内容十分杂乱，目前打算只抓取media板块中的内容。
+        </p>
+    </a>
+
+    <a>
+        <h3>
+            tibetonline.tv
+        </h3>
+        <p>
+            这个网站里边的内容都是视频，暂时没抓
+        </p>
+    </a>
+</div>
+
+</body>
+</html>
