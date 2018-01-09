@@ -9,6 +9,7 @@ from scrapy.linkextractor import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
+import hashlib
 
 
 

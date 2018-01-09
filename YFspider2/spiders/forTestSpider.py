@@ -4,7 +4,7 @@
 import scrapy
 from scrapy.spiders import CrawlSpider,Rule
 from scrapy.linkextractor import LinkExtractor
-
+import re
 
 
 class testSpider(CrawlSpider):
@@ -15,8 +15,11 @@ class testSpider(CrawlSpider):
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     }
 
+    allow_re=re.compile(r'http\:\/\/brucedone\.com\/archives\/\d{1,5}')
+
 
     rules = (
+        Rule(LinkExtractor(allow=allow_re),callback='parse_item2',follow=True),
         Rule(LinkExtractor(allow=(r'http\:\/\/brucedone\.com\/archives\/\d{1,5}',)), callback='parse_item2', follow=True),  # True该False
         Rule(LinkExtractor(allow=(r'brucedone\.com\/archives\/date\/\d{1,5}\/\d{1,2}',)),callback='parse_item3')
     )
