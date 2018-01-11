@@ -11,6 +11,13 @@
     <h1>
         编写爬虫过程中遇到的问题
     </h1>
+    <div>
+        <a>
+            <h4>
+                统一记录格式：应当包含网站链接，爬虫名称，爬虫时间，启动方式，中间遇到的问题
+            </h4>
+        </a>
+    </div>
     <a>
         <h3>
             tchrd
@@ -121,6 +128,58 @@
         <P>
             时间：2018-01-08
         </P>
+    </a>
+    <a>
+        <h3>
+            atc_org_au
+        </h3>
+        <p>
+            这个网站从主页进去抓不全，只能抓50个左右的新闻。起始链接是：https://www.atc.org.au/。添加了跟进板块和板块页数的链接之后，这个问题解决了。
+        </p>
+        <p>
+            时间：2018-01-10
+        </p>
+    </a>
+    <a>
+        <h3>
+            https://www.tibet-initiative.de/这个网站没法爬，因为这个网站板块分类不明确。
+        </h3>
+        <p>
+            所以放弃了
+        </p>
+        <p>
+            时间：2018-1-10
+        </p>
+    </a>
+    <a>
+        <h3>
+            http://www.savetibet.org/
+        </h3>
+        <p>
+            这个真的是全抓。里边的一个字段貌似有点问题，publish_user_id很多时候没有，而且新闻类的publish_user一般都是publish_user_href。所以我想
+            新闻类的publish_user_href不是太重要吧！注意要将print的语句给注释掉。前边content内容字段的，没加join的要把join加上
+        </p>
+        <p>
+            时间：2018-1-11
+        </p>
+    </a>
+    <a>
+        <h3>
+            http://dhokhamchushigangdrug.com/
+        </h3>
+        <p>
+            这个网站也有很多东西,可能是文档的网页一共只有两种类型。
+            Your access to this site has been limited!!!!!!!!!!!
+            这个烂网站还有反扒措施。。。。。。
+        </p>
+    </a>
+    <a>
+        <h3>
+            http://www.chushigangdrug.ch/aktuelles/这个网站也是杂乱无章，还是用遍历的方法爬取
+        </h3>
+        <p>
+            网站里边都是些什么东西额！！！
+        </p>
     </a>
 </div>
 

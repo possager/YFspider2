@@ -46,9 +46,10 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'YFspider2.middlewares.Yfspider2SpiderMiddleware': 543,
-#}
+SPIDER_MIDDLEWARES = {
+   # 'YFspider2.middlewares.Yfspider2SpiderMiddleware': 543,
+    'scrapy.contrib.spidermiddleware.referer.RefererMiddleware': True,
+}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html

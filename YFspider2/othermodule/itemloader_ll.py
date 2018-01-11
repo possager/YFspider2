@@ -17,6 +17,7 @@ from scrapy.loader.processors import Identity
 class itemloader_ll(ItemLoader):
     '''
     添加了一个新的add_to_ariginal方法，因为官方说add是append而不是覆盖原来的数据，而结果代码中是覆盖原来的数据，所以这里添加了一个自己写的函数
+
     '''
 
     def __init__(self, item=None, selector=None, response=None, parent=None, **context):
@@ -47,6 +48,9 @@ class itemloader_ll(ItemLoader):
             else:
                 self.values_added[field_name].append(value)
             # self._add_value(field_name, value)
+
+    def add_xpath_re(self, field_name, xpath, *processors, **kw):
+        self.add_xpath(field_name,xpath,processors,kw)
 
 
     def load_item(self):
