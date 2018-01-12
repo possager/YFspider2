@@ -9,4 +9,4 @@ from scrapy.cmdline import execute
 
 
 # execute('scrapy crawl studentsforafreetibet'.split(' '))
-execute('scrapy crawl chushigangdrug'.split(' '))
+execute('scrapy crawl tibetanentrepreneurs'.split(' '))
