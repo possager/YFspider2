@@ -19,7 +19,7 @@ class YfspiderspeakItem(scrapy.Item):
     publish_time=scrapy.Field(output_processor=TakeFirst())#发布时间
     id=scrapy.Field(output_processor=TakeFirst())#在平台中的言论ID（如果是回复的话，有就填，没有就不填）
     publish_user_photo=scrapy.Field(output_processor=TakeFirst())#用户头像
-    publish_user=scrapy.Field(output_processor=TakeFirst())#用户名
+    publish_user=scrapy.Field()#用户名
     url=scrapy.Field(output_processor=TakeFirst())#（论坛的URL）||（论坛回复的URL）||（新闻的URL）
 
     img_urls=scrapy.Field()#图片urls,string数组类型
