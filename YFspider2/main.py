@@ -1,3 +1,3 @@
 from scrapy.cmdline import execute
 
-execute('scrapy crawl ftchinese'.split(' '))
+execute('scrapy crawl chinesepen'.split(' '))
