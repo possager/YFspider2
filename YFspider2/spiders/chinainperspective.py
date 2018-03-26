@@ -94,8 +94,8 @@ class chinainperspective(RedisCrawlSpider):
         loader1.add_value('img_urls',response.selector.xpath('//div[@id="divContent"]/div/p//img').re(r'src="(.*?)"'))
         loader1.add_value('publish_time',response.xpath('//span[@id="labResource"]/br').re(ur'\, (\w*) (\d{1,2}).*(\d{4})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@id="labAuthor"]/text()',deal_publish_user)
-        loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)
-        loader1.add_value('reply_nodes',response.selector.re(ur'var items \= (\[.*?\])\;'),)
+        # loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)
+        # loader1.add_value('reply_nodes',response.selector.re(ur'var items \= (\[.*?\])\;'),)
 
 
 
