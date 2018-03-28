@@ -73,7 +73,7 @@ class chinaaid(RedisCrawlSpider):
         loader1.add_xpath('content','//div[@id="main"]//div[@class="post-entry"]//text()',lambda x:[x1.strip() for x1 in x],Join())
         loader1.add_value('publish_time',response.xpath('//div[@id="main"]//div[@class="date-outer"]//span[@class="heading-date"]').re('(\d{1,2})\/(\d{1,2})\/(\d{4})'),deal_publish_time)
         loader1.add_xpath('img_urls','//div[@id="main"]//div[@class="post-entry"]//img/@src')
-        # loader1.add_xpath('')
+
 
 
 
