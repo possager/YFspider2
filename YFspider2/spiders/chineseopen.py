@@ -14,7 +14,7 @@ import datetime
 
 
 
-
+#正在编辑,未测试
 class chinesepen(RedisCrawlSpider):
     name = 'chinesepen'
     start_urls=['http://www.chinesepen.org/']
@@ -27,6 +27,7 @@ class chinesepen(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/www\.chinesepen\.org\/blog\/archives\/\d*',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinesepen\.org\/english\/.*?'),callback='parse_content_englist',follow=True)
     )
 
 
@@ -100,11 +101,38 @@ class chinesepen(RedisCrawlSpider):
         loader1.add_value('id',response.url.split('/')[-1])
         loader1.add_value('spider_time',time.time())
         loader1.add_xpath('title','//div[@id="main"]//h1[@class="entry-title"]/text()',lambda x:x[0].strip())
-        loader1.add_xpath('content','//meta[@property="og:description"]/@content',Join())
+        loader1.add_xpath('content','//meta[@property="og:description"]/@content',lambda x:Join([oneP.strip() for oneP in x]))
         loader1.add_xpath('publish_time','//div[@id="main"]//span[@class="date"]/text()',deal_publish_time)
         loader1.add_xpath('publish_user','//div[@id="main"]//span[@class="author"]/text()',deal_publish_user)
         loader1.add_value('read_count',response.xpath("//div[@id='content']/article/div/text()").re('阅读次数\:(.*)'),deal_read_count)
 
         item1=loader1.load_item()
+        return item1
+
+
+    def parse_content_english(self,response):
+
+        def deal_publish_time(publish_time):
+            if publish_time:
+                publish_time_split=publish_time[0].strip().split('/')
+                return publish_time_split[2]+'-'+publish_time_split[1]+'-'+publish_time_split[0]
+            else:
+                return None
+
+
+        loader1 = itemloader_ll(response=response, item=YfspiderspeakItem())
+        loader1.add_value('url', response.url)
+        loader1.add_value('id', response.url.split('/')[-1])
+        loader1.add_value('spider_time', time.time())
+        loader1.add_xpath('title', '//div[@id="container"]//h1[@class="entry-title"]//text()', lambda x: x[0].strip())
+        loader1.add_xpath('content', '//div[@id="container"]//div[@class="entry-content"]//p//text()',
+                          lambda x: Join([oneP.strip() for oneP in x]))
+
+        loader1.add_xpath('publish_time', '//div[@id="container"]//div[@class="entry-meta"]//span[@class="entry-date"]/text()', deal_publish_time)
+        loader1.add_xpath('publish_user', '//div[@id="container"]//div[@class="entry-meta"]//span[@class="author vcard"]/a/text()', lambda x:x.strip() if x else None)
+        loader1.add_value('read_count', response.xpath('//div[@id="content"]/text()').re('^\s*\d+\s*'),
+                          lambda x:x.strip() if x else 0)
+
+        item1 = loader1.load_item()
         return item1
 

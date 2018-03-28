@@ -15,7 +15,7 @@ from w3lib.url import urljoin
 
 class tibetswiss(RedisCrawlSpider):
     name = 'tibetswiss'
-    redis_key = 'tibetswiss:url'
+    # redis_key = 'tibetswiss:url'
     start_urls = ['http://www.tibetswiss.ch/index-bo.html']
 
     rules = {

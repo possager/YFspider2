@@ -18,14 +18,14 @@ class YfspiderspeakItem(scrapy.Item):
     spider_time=scrapy.Field(input_processor=lambda x:int(x[0]*1000),output_processor=TakeFirst())#爬虫爬取时间
     publish_time=scrapy.Field(output_processor=TakeFirst())#发布时间
     id=scrapy.Field(output_processor=TakeFirst())#在平台中的言论ID（如果是回复的话，有就填，没有就不填）
-    publish_user_photo=scrapy.Field(output_processor=TakeFirst())#用户头像
-    publish_user=scrapy.Field()#用户名
+    publish_user=scrapy.Field()#用户名-----------------------------------------------------------------------------!!!!!
     url=scrapy.Field(output_processor=TakeFirst())#（论坛的URL）||（论坛回复的URL）||（新闻的URL）
 
     img_urls=scrapy.Field()#图片urls,string数组类型
     publish_user_id=scrapy.Field(output_processor=TakeFirst())#用户id
     reply_count=scrapy.Field(output_processor=TakeFirst())#回复数
 
+    publish_user_photo = scrapy.Field(output_processor=TakeFirst())  # 用户头像
     read_count=scrapy.Field(output_processor=TakeFirst())#阅读量
     like_count=scrapy.Field(output_processor=TakeFirst())#赞成数
     publish_user_jsonid=scrapy.Field(output_processor=TakeFirst())#用户的jsonid(对应着用户json信息的命名：平台名称（或者英文）_用户id)
