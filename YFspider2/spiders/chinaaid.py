@@ -28,7 +28,9 @@ class chinaaid(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/\d{4}/\d{1,2}/.*?\_\d*\.html',),callback='parse_content',follow=True),
-        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/.*?'),follow=True)
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/.*?'),follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/\d{4}/\d{1,2}/.*?.html',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/.*?',),follow=True)
     )
 
 
