@@ -16,6 +16,12 @@ import re
 
 
 
+
+# Re_match=re.compile(r'^https\:\/\/www\.tibetsun\.com/.*?/\d{4}/\d[1,2]/\d{1,2}/\S*')
+
+
+
+
 class tibetsun(RedisCrawlSpider):
     name = 'tibetsun'
     start_urls=['https://www.tibetsun.com/']
@@ -27,7 +33,7 @@ class tibetsun(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow='^https\:\/\/www\.tibetsun\.com/.*?/\d{4}/\d[1,2]/\d{1,2}/\S*',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='^https\:\/\/www\.tibetsun\.com/.*?/\d{4}/\d{1,2}/\d{1,2}/\S*',),callback='parse_content',follow=True),
         Rule(LinkExtractor(allow='^https://www.tibetsun.com[^news|^interviews]*',),follow=True,)
     )
 
