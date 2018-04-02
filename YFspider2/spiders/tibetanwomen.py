@@ -40,6 +40,7 @@ class tibetanwomen(CrawlSpider):
         content_loader.add_xpath('publish_time','//div[@id]/div[@class="entry clearfix"]/div[@class="date updated alpha with-year"]/span/@title',lambda x:x[0].replace('T',' ')+':00' if x else None)
         content_loader.add_value('id',response.url.strip('/').split('/')[-1],deal_id)
         content_loader.add_xpath('img_urls','//div[@id="content-main"]//img/@src')
+        content_loader.add_xpath('video_urls','//div[@id="content"]//div[@class="hentry-container clear"]//iframe/@src')
         # content_loader.add_xpath('publish_user')
 
         item1=content_loader.load_item()

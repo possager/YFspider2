@@ -4,8 +4,11 @@ import json
 import time
 
 
+console_url='http://192.168.6.230:6800'
+
+
 def get_all_spiders():
-    response1=requests.get(url='http://localhost:6800/listspiders.json?',params={'project':'default'})
+    response1=requests.get(url=console_url+'/listspiders.json?',params={'project':'default'})
     result1=json.loads(response1.text)
     print('爬虫项目状态是-------------',result1['status'],'可用的爬虫数量：-------',len(result1['spiders']))
     print('可用的爬虫列表：')
@@ -22,7 +25,7 @@ def start_a_spider_job(project='default',spidername=None):
             'setting':None,
             'jobid':None
         }
-        respons1=requests.post(url='http://localhost:6800/schedule.json',data=spider_task)
+        respons1=requests.post(url=console_url+'/schedule.json',data=spider_task)
         print(respons1.text)
 
     else:
@@ -35,13 +38,13 @@ def cancel_job(jobId=None,project='default'):
             'project':project,
             'job':jobId
         }
-        response1=requests.post(url='http://localhost:6800/cancel.json',data=cancel_spider)
+        response1=requests.post(url=console_url+'/cancel.json',data=cancel_spider)
 
         print(response1.text)
 
 
 def get_all_Jobs(project='default'):
-    all_job_url='http://localhost:6800/listjobs.json'
+    all_job_url=console_url+'/listjobs.json'
     all_job_dict={
         'project':project
     }

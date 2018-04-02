@@ -18,7 +18,7 @@ import hashlib
 class tchrd(RedisCrawlSpider):
     name = 'tchrd'
     start_urls=['http://tchrd.org/chinese/']
-    redis_key = 'tchrd:url'
+    # redis_key = 'tchrd:url'
     rules = (
         # Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?\/)"', ),
         Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?[\/\"|^])',restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]'),

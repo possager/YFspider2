@@ -13,7 +13,7 @@ import hashlib
 
 class studentsforafreetibet(RedisCrawlSpider):
     name = 'studentsforafreetibet'
-    redis_key = 'studentsforafreetibet:url'
+    # redis_key = 'studentsforafreetibet:url'
     start_urls = ['https://www.studentsforafreetibet.org/media-center/']
 
     rules = {

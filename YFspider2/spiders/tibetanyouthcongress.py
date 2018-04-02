@@ -14,7 +14,7 @@ import hashlib
 
 class tibetanyouthcongress(RedisCrawlSpider):
     name = 'tibetanyouthcongress'
-    redis_key = 'tibetanyouthcongress:url'
+    # redis_key = 'tibetanyouthcongress:url'
     start_urls = ['https://www.tibetanyouthcongress.org/']
 
     rules = {

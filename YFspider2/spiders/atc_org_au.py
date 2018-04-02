@@ -17,7 +17,7 @@ class atc_org_au(RedisCrawlSpider):
     name = 'atc_org_au'
     # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
     start_urls = ['https://www.atc.org.au/']
-    redis_key = 'atc_org_au:url'
+    # redis_key = 'atc_org_au:url'
 
     rules = (
         # Extract links matching 'category.php' (but not matching 'subsection.php')

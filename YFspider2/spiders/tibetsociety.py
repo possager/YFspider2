@@ -17,7 +17,7 @@ class tibetsociety(RedisCrawlSpider):
     name = 'tibetsociety'
     # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
     start_urls=['']
-    redis_key = 'tibetsociety:url'
+    # redis_key = 'tibetsociety:url'
 
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',

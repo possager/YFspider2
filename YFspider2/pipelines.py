@@ -5,12 +5,22 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-BASIC_FILE="E:/data_ll"
+
 import json
 import time
 import datetime
 import os
 import hashlib
+import platform
+
+
+
+
+
+BASIC_FILE="E:/data_ll"
+if platform.system()=='Linux':#BigDATA's workstation
+    BASIC_FILE='/home/silence/spider_test/spider_content'
+
 
 
 
