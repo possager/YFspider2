@@ -33,7 +33,7 @@ def get_file():
                     'path':BASIC_FILE_webname_data_date.replace('/','\\').replace('E:\\data_ll\\','')+'\\',
 
                 }
-                file= {'file': open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')}
+                file = {'file': open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')}
 
 
 
