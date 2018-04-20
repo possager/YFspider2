@@ -59,7 +59,7 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
 
 
 
-        print response.url
+        print (response.url)
         if response.xpath('//table//table[@class="titel"]//tr/td'):
             content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
             content_loader.add_value('url',response.url)
@@ -74,4 +74,4 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
             item1=content_loader.load_item()
             return item1
         else:
-            print 'unknown page'
+            print ('unknown page')

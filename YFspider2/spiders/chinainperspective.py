@@ -8,7 +8,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -38,7 +38,7 @@ class chinainperspective(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
 
         def deal_publish_time(publish_time_list=[]):
@@ -63,6 +63,9 @@ class chinainperspective(RedisCrawlSpider):
                 }
 
                 moun_num=mouth_eng_to_num[mounth]
+
+                if len(day)<2:
+                    day='0'+day
 
                 publish_time=year+'-'+moun_num+'-'+day+' 00:00:00'
                 return publish_time
@@ -89,10 +92,10 @@ class chinainperspective(RedisCrawlSpider):
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())
         loader1.add_xpath('title','//span[@id="labArticle_Name"]/text()',TakeFirst(),lambda x:x.strip())
-        loader1.add_xpath('content','//div[@id="divContent"]/div/p/text()',lambda x:[i.strip() for i in x],Join())
+        loader1.add_xpath('content','//div[@id="divContent"]//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.split('=')[1])
-        loader1.add_value('img_urls',response.selector.xpath('//div[@id="divContent"]/div/p//img').re(r'src="(.*?)"'))
-        loader1.add_value('publish_time',response.xpath('//span[@id="labResource"]/br').re(ur'\, (\w*) (\d{1,2}).*(\d{4})'),deal_publish_time)
+        loader1.add_value('img_urls',response.selector.xpath('//div[@id="divContent"]//img/@src'))
+        loader1.add_value('publish_time',response.xpath('//span[@id="labResource"]').re(ur'\, (\w*) (\d{1,2}).*(\d{4})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@id="labAuthor"]/text()',deal_publish_user)
         # loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)
         # loader1.add_value('reply_nodes',response.selector.re(ur'var items \= (\[.*?\])\;'),)
@@ -100,5 +103,5 @@ class chinainperspective(RedisCrawlSpider):
 
 
         item=loader1.load_item()
-        print item
+        print (item)
         return item

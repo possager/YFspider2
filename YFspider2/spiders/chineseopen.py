@@ -7,7 +7,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -38,7 +38,7 @@ class chinesepen(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
 
         def deal_publish_time(publish_time_raw):

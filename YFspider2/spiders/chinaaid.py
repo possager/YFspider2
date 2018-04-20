@@ -8,7 +8,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -41,12 +41,12 @@ class chinaaid(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
 
         def deal_publish_time(publish_time_list=[]):
             if not publish_time_list:
-                print 'time is None'
+                print ('time is None')
                 return None
             if len(publish_time_list)==3:
                 publish_time_list1=[]
@@ -63,7 +63,7 @@ class chinaaid(RedisCrawlSpider):
                 publish_time_str+=' 00:00:00'
                 return publish_time_str
             else:
-                print 'publish_time_wrong'
+                print ('publish_time_wrong')
                 return None
 
 
@@ -80,5 +80,5 @@ class chinaaid(RedisCrawlSpider):
 
 
         item=loader1.load_item()
-        print item
+        print (item)
         return item

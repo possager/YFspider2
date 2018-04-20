@@ -80,7 +80,7 @@ class atc_org_au(RedisCrawlSpider):
             return img_urls_end
 
 
-        print response.url
+        # print response.url
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())

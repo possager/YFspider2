@@ -23,7 +23,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose,Compose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -63,7 +63,7 @@ class dorjeshugden(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
 
         def deal_publish_time(publish_time_list=[]):
@@ -94,7 +94,7 @@ class dorjeshugden(RedisCrawlSpider):
                 return year + '-' + mouth_num + '-' + day + ' 00:00:00'
 
             else:
-                print 'publish_time_wrong'
+                print ('publish_time_wrong')
                 return None
         def deal_reply_nodes(reply_nodes=None):
             reply_nodes_list=[]
@@ -162,5 +162,5 @@ class dorjeshugden(RedisCrawlSpider):
 
 
         item=loader1.load_item()
-        print item
+        print (item)
         return item

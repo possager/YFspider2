@@ -8,7 +8,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -39,7 +39,7 @@ class khabdha(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
         def deal_publish_time(publish_time_raw_list):
             mouth_eng_to_num = {
@@ -146,5 +146,5 @@ class khabdha(RedisCrawlSpider):
 
 
         item=loader1.load_item()
-        print item
+        print (item)
         return item

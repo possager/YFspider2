@@ -45,7 +45,7 @@ class tibetsociety(RedisCrawlSpider):
     )
 
     def parse_content(self, response):
-        print response.url
+        print (response.url)
 
         def deal_img_urls(img_urls_raw):
             img_url_list=[]

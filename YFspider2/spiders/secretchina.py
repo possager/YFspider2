@@ -8,7 +8,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -67,7 +67,7 @@ class middleway(RedisCrawlSpider):
                 publish_user_list=publish_user_raw.split(' ')
                 return publish_user_list
 
-        print 'in parseMore'
+        print ('in parseMore')
         loader1=itemloader_ll(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())

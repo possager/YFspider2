@@ -34,7 +34,7 @@ class tibetswiss(RedisCrawlSpider):
             return img_result
 
 
-        print response.url
+        print (response.url)
 
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
@@ -59,8 +59,8 @@ class tibetswiss(RedisCrawlSpider):
             return img_result
 
 
-        print response.url
-        print 'in photo'
+        print (response.url)
+        # print 'in photo'
         content_loader = itemloader_ll(response=response, item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())

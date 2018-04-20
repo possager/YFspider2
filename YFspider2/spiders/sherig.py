@@ -54,5 +54,5 @@ class sherig(CrawlSpider):
 
 
         item1=loaders1.load_item()
-        print item1
+        print (item1)
         return item1

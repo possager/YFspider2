@@ -8,7 +8,7 @@ from YFspider2.items import YfspiderspeakItem
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
-from string import strip
+
 import scrapy
 import time
 import datetime
@@ -38,12 +38,12 @@ class minghui(RedisCrawlSpider):
 
 
     def parse_content(self,response):
-        print 'in parseMore'
+        print ('in parseMore')
 
 
         def deal_publish_time(publish_time_str):
             if not publish_time_str:
-                print 'time is None'
+                print ('time is None')
                 return None
             Re_find_publish_date=re.compile('articles\/(\d{4})\/(\d{1,2})\/(\d{1,2})')
             publish_date_list=Re_find_publish_date.findall(publish_time_str)
@@ -64,7 +64,7 @@ class minghui(RedisCrawlSpider):
         loader1.add_xpath('title','//div[@id="master_container"]//div[@class="ar_articleTitle"]/h1/text()',TakeFirst(),lambda x:x.strip())
         loader1.add_xpath('content','//div[@id="master_container"]//div[@class="ar_articleContent"]//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.split('-')[-1].split('.')[0].strip())
-        loader1.add_xpath('img_urls','//div[@id="master_container"]//img/@src')
+        loader1.add_xpath('img_urls','//div[@id="master_container"]//div[@id="ar_article1"]//img/@src')
         loader1.add_value('publish_time',response.url,deal_publish_time)
         # loader1.add_value('publish_user','degewa')
         # loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)
@@ -73,5 +73,5 @@ class minghui(RedisCrawlSpider):
 
 
         item=loader1.load_item()
-        print item
+        print (item)
         return item

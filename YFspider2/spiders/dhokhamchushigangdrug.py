@@ -43,13 +43,13 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
     )
 
     def parse_content(self, response):
-        print response.url
+        print (response.url)
 
         def deal_id(id_raw):
             return hashlib.md5(id_raw).hexdigest()
 
         if response.xpath('//div[@class="wrap container"]//main/header'):
-            print 'has header,maybe is article'
+            print ('has header,maybe is article')
             content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
             content_loader.add_value('url',response.url)
             content_loader.add_value('spider_time',time.time())
@@ -64,7 +64,7 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
             item1=content_loader.load_item()
             return item1
         elif response.xpath('//div[@class="wrap container"]//main/div[@class="page-header"]'):
-            print 'anther type page'
+            print ('anther type page')
             content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
             content_loader.add_value('url',response.url)
             content_loader.add_value('spider_time',time.time())
@@ -78,4 +78,4 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
             item1=content_loader.load_item()
             return item1
         else:
-            print 'unkonwn page'
+            print ('unkonwn page')

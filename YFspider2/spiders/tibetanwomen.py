@@ -29,7 +29,7 @@ class tibetanwomen(CrawlSpider):
             return hashlib.md5(id_raw).hexdigest()
 
 
-        print response.url
+        print (response.url)
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())

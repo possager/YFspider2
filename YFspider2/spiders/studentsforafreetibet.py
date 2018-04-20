@@ -25,7 +25,7 @@ class studentsforafreetibet(RedisCrawlSpider):
     def parse_content(self,response):
 
         def deal_publish_time(publish_time_url):
-            print 'in deal_publish_time',publish_time_url
+            print ('in deal_publish_time',publish_time_url)
             try:
                 publish_time_url=publish_time_url[0]
             except:
@@ -40,7 +40,7 @@ class studentsforafreetibet(RedisCrawlSpider):
 
 
 
-        print response.url
+        print (response.url)
         content_loader=itemloader_ll(item=YfspiderspeakItem(),response=response)
 
 
@@ -53,5 +53,5 @@ class studentsforafreetibet(RedisCrawlSpider):
         content_loader.add_value('img_urls',response.xpath('//div[@class="blog-content-wrapper"]//img').re('src="(.*?)"'))
         content_loader.add_value('id',response.url.strip('/').split('/')[-1],deal_id)
         item=content_loader.load_item()
-        print item
+        print (item)
         return item

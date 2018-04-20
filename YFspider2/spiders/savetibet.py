@@ -29,7 +29,7 @@ class savetibet(RedisCrawlSpider):
     )
 
     def parse_content(self, response):
-        print response.url
+        print (response.url)
 
         def deal_img_urls(img_urls_raw):
             img_urls_dealed=[]
@@ -67,4 +67,4 @@ class savetibet(RedisCrawlSpider):
             item1=content_laoder.load_item()
             return item1
         else:
-            print 'no,it not content page'
+            print ('no,it not content page')

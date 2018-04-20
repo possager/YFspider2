@@ -85,11 +85,11 @@ class tibetsociety(RedisCrawlSpider):
             return img_urls_list
 
 
-        print response.url
+        print (response.url)
         href_list_len= len(response.xpath('//span[@class="body_outer"]//table[@class="contentpaneopen"]//td[@valign="top"]//a/@href'))
-        print href_list_len
+        print (href_list_len)
         if href_list_len>150:
-            print 'it is a index_list page'
+            print ('it is a index_list page')
         else:
             content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
             content_loader.add_value('url',response.url)

@@ -75,7 +75,7 @@ class tibetsociety(RedisCrawlSpider):
                 return '1111-11-11 11:11:11'
 
 
-        print response.url
+        print (response.url)
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())
