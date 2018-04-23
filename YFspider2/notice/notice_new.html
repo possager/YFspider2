@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫编写注意事项</title>
+    <link rel="stylesheet" type="text/css" href="Semantic/semantic.min.css">
+    <script src="Semantic/semantic.min.js"></script>
+</head>
+<body>
+
+<div class="ui inverted vertical masthead center aligned segment">
+
+          <h1 class="ui inverted header">
+            爬虫编写过程中遇到的问题
+        </h1>
+    <div class="text container">
+        <h3>
+            所有的模块,统一记录格式：应当包含网站链接，爬虫名称，爬虫时间，启动方式，中间遇到的问题
+        </h3>
+        <p>
+            应当统一添加数据规范化处理模块，所以最后存储的时候应当调用一个规范化功能的函数。规范化成item中的字段格式
+        </p>
+        <p>
+            注意字段中的数据类型，比如reply_count应当是int类型，而不是string。
+        </p>
+        <p>
+            注意这个项目使用的是scrapy-redis来写的，要注意每个网站的启动主url。
+        </p>
+        <p>
+            分中英文的网站，spider_name都要加上C或者E，分别代表中文和英文。
+        </p>
+    </div>
+
+
+    <div class="center blue aligned column">
+        <div class="center aligned column"></div>
+
+    </div>
+
+</div>
+
+<div class="ui vertical masthead aligned segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="html ui top attached segment">
+            <div class="ui bulleted list">
+                <div class="item">
+                    <h2 style="color: red">
+                        即时：注意事项
+                    </h2>
+                    <div class="ui bulleted list">
+                        <div class="item">
+                            像澎湃新闻里边的那种没有抓取到内容的评论，应该舍弃掉，所以应该有一个单独的模块，在数据的流的最末端，做一个判断，如果不合适就舍弃，并log记录之。
+                        </div>
+                        <div class="item">
+                            spider_time统一在最后添加。
+                        </div>
+                        <div class="item">
+                            临时添加了params这个字段，之前数据库里边一直没有
+                        </div>
+                        <div class="item">
+                                最终的规范化模块，比如时间戳的处理，可能有问题
+                        </div>
+                        <div class="item">
+                            今天在今日头条中发现，deal_comment的数据return之后，没有进入pipeline中。所以yield和return不能同时使用。
+                        </div>
+                        <div class="item">
+                            pipeline功能和standroid模块的功能有重复。
+                        </div>
+                        <div class="item">
+                            依赖库:pyexecjs,pymongo,scrapy,scrapyd,redis。
+                        </div>
+                        <div class="item">
+                            今日头条过滤掉了不少，一会检查是怎么回事。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui vertical masthead aligned segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="html ui top attached segment"><div class="ui bulleted list">
+                <div class="item">
+                    <h2>
+                        多杰雄登---http://www.xiongdeng.com
+                    </h2>
+                    <div class="list">
+                        <div class="item">
+                            里边没有publish_time
+                        </div>
+                        <div class="item">
+                            文章中有下一页
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

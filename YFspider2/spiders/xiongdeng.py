@@ -15,9 +15,6 @@ from w3lib.url import urljoin
 
 class tibetsociety(RedisCrawlSpider):
     name = 'xiongdeng'
-    # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
-    start_urls=['']
-    # redis_key = 'xiongdeng:url'
 
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
@@ -25,23 +22,15 @@ class tibetsociety(RedisCrawlSpider):
         'Host':'ww.tibetsociety.com',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
         'Referer':'http://www.xiongdeng.com/'
-        # 'Accept-Encoding':'gzip, deflate'
+
     }
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield scrapy.Request(url=url,headers=self.headers,callback=self.parse_content)
+
 
 
     rules = (
-        # Extract links matching 'category.php' (but not matching 'subsection.php')
-        # and follow links from them (since no callback means follow=True by default).
-        # Rule(LinkExtractor(allow=r'http\:\/\/www\.sherig\.org\/tb\/\d{4}\/\d{1,2}\/.*?\/$',),callback='parse_content',follow=True),
-        #http\:\/\/www\.sherig\.org\/tb\/\d{4}\/\d{1,2}\/[^\\\/\']*?\/\B
+
         Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/\?p\=\d{1,4}', ), callback='parse_content',
              follow=True),
-
-        # Extract links matching 'item.php' and parse them with the spider's method parse_item
-        # Rule(LinkExtractor(allow='http://www.sherig.org/tb/page/\d{1,5}/'), follow=True),
     )
 
     def parse_content(self, response):
@@ -58,6 +47,30 @@ class tibetsociety(RedisCrawlSpider):
 
             return img_url_list
 
+        def deal_next_page_url(response):
+            next_page_url_list=response.xpath('//p[@class="pages"]/a')
+            if '&page=' in response.url:
+                try:
+                    page_now_split=int(response.url.split('&page='))
+                    page_now_int=str(page_now_split[1])
+                    next_page_url=page_now_split[0]+'&page='+str(page_now_int+1)
+                except:
+                    page_now_int=1
+                    next_page_url=response.url.split('&page')[0]+str(page_now_int+1)
+
+
+            else:
+                page_now_int=1
+                next_page_url=response.url+'&page='+str(page_now_int+1)
+
+            if next_page_url_list:
+                if page_now_int<len(next_page_url_list):
+                    return next_page_url
+                else:
+                    return None
+            else:
+                return None
+
 
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
@@ -70,4 +83,8 @@ class tibetsociety(RedisCrawlSpider):
         content_loader.add_value('img_urls','//div[@class="entry"]/div[@id="entry"]//@src',deal_img_urls)
 
         item1=content_loader.load_item()
-        return item1
+
+        next_page_url=deal_next_page_url(response)
+        if next_page_url:
+            return item1
+
