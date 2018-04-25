@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
@@ -21,6 +21,7 @@ class tibetanwomen(CrawlSpider):
         Rule(LinkExtractor(allow=r'http\:\/\/tibetanwomen\.org\/[^\.\/]*\/$', restrict_xpaths='//div[@id="content"]'), callback='parse_content',
              follow=True),
         Rule(LinkExtractor(allow='http://tibetanwomen.org/page/\d{1,4}/',restrict_xpaths='//div[@id="content"]'), follow=True),
+        Rule(LinkExtractor(allow='http:\/\/tibetanwomen\.org\/.*'),follow=True)
     )
 
     def parse_content(self, response):
@@ -41,7 +42,6 @@ class tibetanwomen(CrawlSpider):
         content_loader.add_value('id',response.url.strip('/').split('/')[-1],deal_id)
         content_loader.add_xpath('img_urls','//div[@id="content-main"]//img/@src')
         content_loader.add_xpath('video_urls','//div[@id="content"]//div[@class="hentry-container clear"]//iframe/@src')
-        # content_loader.add_xpath('publish_user')
 
         item1=content_loader.load_item()
         return item1

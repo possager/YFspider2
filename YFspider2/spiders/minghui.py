@@ -2,7 +2,7 @@
 # from scrapy.spiders import CrawlSpider,Rule
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
 # from scrapy.loader import
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
@@ -28,7 +28,7 @@ class minghui(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow='http\:\/\/www\.minghui\.org\/mh\/articles\/\d{4}/\d{1,2}/\d{1,2}/[^\d]{1,4}.*?.html',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.minghui\.org\/mh\/articles\/\d{4}/\d{1,2}/\d{1,2}/[^\d]{1,4}.*?\d.*?.html',),callback='parse_content',follow=True),
         Rule(LinkExtractor(allow='http\:\/\/www\.minghui\.org\/.*?'),follow=True)
     )
 
@@ -61,10 +61,10 @@ class minghui(RedisCrawlSpider):
         loader1=ItemLoader(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())
-        loader1.add_xpath('title','//div[@id="master_container"]//div[@class="ar_articleTitle"]/h1/text()',TakeFirst(),lambda x:x.strip())
-        loader1.add_xpath('content','//div[@id="master_container"]//div[@class="ar_articleContent"]//text()',lambda x:[i.strip() for i in x],Join())
+        loader1.add_xpath('title','//div[@id="master_container"]//div[contains(@class,"articleTitle")]/h1/text()',TakeFirst(),lambda x:x.strip())
+        loader1.add_xpath('content','//div[@id="master_container"]//div[contains(@class,"articleContent")]//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.split('-')[-1].split('.')[0].strip())
-        loader1.add_xpath('img_urls','//div[@id="master_container"]//div[@id="ar_article1"]//img/@src')
+        loader1.add_xpath('img_urls','//div[@id="master_container"]//div[contains(@id,"articleContent")]//img/@src')
         loader1.add_value('publish_time',response.url,deal_publish_time)
         # loader1.add_value('publish_user','degewa')
         # loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)

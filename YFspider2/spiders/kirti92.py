@@ -2,7 +2,7 @@
 # from scrapy.spiders import CrawlSpider,Rule
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
 # from scrapy.loader import
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
@@ -28,7 +28,7 @@ class kirti92(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/www\.kirti92\.org\/index\.php\/\d{4}\-\d{1,2}\-\d{1,2}\-\d{1,2}\-\d{1,2}\-\d{1,2}\/\d*\-\d{4}\-\d{1,2}\-\d{1,2}\-\d{1,2}\-\d{1,2}\-\d{1,2}',),callback='parse_content',follow=True),
-        Rule(LinkExtractor(allow='http\:\/\/www\.kirti92\.org'),follow=True)
+        Rule(LinkExtractor(allow='http\:\/\/www\.kirti92\.org\/.*'),follow=True)
     )
 
 

@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
@@ -31,6 +31,7 @@ class tibetsociety(RedisCrawlSpider):
 
         Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/\?p\=\d{1,4}', ), callback='parse_content',
              follow=True),
+        Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/.*', ), follow=True),
     )
 
     def parse_content(self, response):

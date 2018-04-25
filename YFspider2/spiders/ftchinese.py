@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time

@@ -17,9 +17,11 @@ import platform
 
 
 
-BASIC_FILE="E:/data_ll"
+BASIC_FILE="E:/data_ll_xz"
+BASIC_FILE2='E:/data_ll_all_xz'
 if platform.system()=='Linux':#BigDATA's workstation
     BASIC_FILE='/home/silence/spider_test/spider_content'
+    BASIC_FILE2='/home/silence/spider_test/spider_content_all'
 
 
 
@@ -49,6 +51,12 @@ class save_data_to_file(object):
         filename,file_path=self.create_file_str(publish_time=publish_time,plant_form=plant_form,urlOruid=urlOruid,newsidOrtid=newsidOrtid,datatype=datetime)
 
         self.save_data(file_path=file_path,file=filename,full_data=item_dict)
+
+        try:
+            self.save_data(file_path='E:/data_all_xizang',file='E:/data_all_xizang/'+filename.split('/')[-1],full_data=item_dict)
+        except Exception as e:
+            print e
+
         return item
 
 
@@ -95,6 +103,7 @@ class save_data_to_file(object):
                     return time.strptime('1111-11-11 11:11:11','%Y-%m-%d %H:%M:%S')
 
     def save_data(self,file_path, file, full_data):  # 因为后来要用到存储的时候的文件名，先要调用里边的文件名，所以生成文件名和爬取数据结果应该分开写。
+        #file相当于是file_path+'/'+filename
         if os.path.exists(file_path):
             with open(file, 'w+') as cmfl:
                 json.dump(full_data, cmfl)
@@ -103,3 +112,52 @@ class save_data_to_file(object):
             with open(file, 'w+') as cmfl:
                 json.dump(full_data, cmfl)
 
+
+class save_data_to_RemoteFile_XMX(object):
+    def process_item(self,item,spider):
+        item_dict = dict(item)
+        plant_form = spider.name
+        publish_time = item['publish_time']
+        urlOruid = item['url']
+        newsidOrtid = item['id']
+        datatype = 'news'
+
+
+        def create_file_name(publish_time,plant_form,urlOrtid,datatype):
+            try:
+                publish_time_tuple=time.strptime(publish_time,'%Y-%m-%d %H:%M:%S')
+                timestamp=time.mktime(publish_time_tuple)
+                timestamp_str_13=str(int(timestamp*1000))
+            except Exception as e:
+                print e
+                publish_time_tuple=time.strptime('1111-11-11 11:11:11','%Y-%m-%d %H:%M:%S')
+                timestamp=time.mktime(publish_time_tuple)
+                timestamp_str_13=str(int(timestamp*1000))
+
+            urlhashlib = hashlib.md5(urlOruid).hexdigest()
+            urlhashlib_str = str(urlhashlib)
+
+            try:
+                publish_time_split_2 = publish_time.split(' ')
+            except Exception as e:
+                publish_time_split_2 = ['time_wrong', 'time_wrong']
+
+            filename = timestamp_str_13 + '_speeches_' + plant_form + '_' + publish_time_split_2[
+                0] + '_' + urlhashlib_str + '_' + newsidOrtid
+
+            return filename
+
+        def save_data(file_path, file, full_data):  #
+            if os.path.exists(file_path):
+                with open(file, 'w+') as cmfl:
+                    json.dump(full_data, cmfl)
+            else:
+                os.makedirs(file_path)
+                with open(file, 'w+') as cmfl:
+                    json.dump(full_data, cmfl)
+
+        filename=create_file_name(publish_time,plant_form,urlOruid,datatype)
+
+        save_data(file_path=BASIC_FILE2,file=BASIC_FILE2+'/'+filename,full_data=item_dict)
+
+        return item

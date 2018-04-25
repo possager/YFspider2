@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
@@ -21,7 +21,8 @@ class tibetswiss(RedisCrawlSpider):
     rules = {
         Rule(LinkExtractor(allow=r'www\.tibetswiss\.ch\/(europe\-chitue\-bo|europe-chitue-bo|photo-gallary-bo|news-archive-bo|index-bo)\..*',deny=('http://www.tibetswiss.ch/partner-links-bo.html')),follow=True),
         Rule(LinkExtractor(allow=r'www\.tibetswiss\.ch\/latest\-news\-tibetan\/items\/.*\.html',),callback='parse_content_last_news',follow=True),
-        Rule(LinkExtractor(allow=r'www\.tibetswiss\.ch\/photogallery\-bo\/items\/.*\.html',),callback='parse_photo',follow=True)
+        Rule(LinkExtractor(allow=r'www\.tibetswiss\.ch\/photogallery\-bo\/items\/.*\.html',),callback='parse_photo',follow=True),
+        Rule(LinkExtractor(allow=r'www\.tibetswiss\.ch\/.*',),follow=True)
         # Rule(LinkExtractor(allow=r'()',restrict_xpaths='//div[@class="container"]/div[@class="nine columns"]',),follow=True),
     }
 

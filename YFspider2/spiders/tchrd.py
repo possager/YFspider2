@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
@@ -18,13 +18,12 @@ import hashlib
 class tchrd(RedisCrawlSpider):
     name = 'tchrd'
     start_urls=['http://tchrd.org/chinese/']
-    # redis_key = 'tchrd:url'
+
     rules = (
-        # Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?\/)"', ),
-        Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?[\/\"|^])',restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]'),
+        Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?[\/\"|^])',deny=(r'google.com',r'linkedin.com',r'facebook.com'),restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]'),
              callback='parse_content',
              follow=True),
-        # Rule(LinkExtractor(allow=r'http\:\/\/tchrd\.org\/chinese\/$',deny=(r'google.com',r'linkedin.com',r'facebook.com')),follow=True),
+        Rule(LinkExtractor(allow=r'http\:\/\/tchrd\.org\/chinese\/$',deny=(r'google.com',r'linkedin.com',r'facebook.com')),follow=True),
     )
 
     def parse_content(self,response):

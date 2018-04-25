@@ -2,7 +2,7 @@
 # from scrapy.spiders import CrawlSpider,Rule
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
 # from scrapy.loader import
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
@@ -28,12 +28,11 @@ class chinainperspective(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/chinainperspective\.com\/ArtShow\.aspx\?AID\=\d*',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/chinainperspective\.com\/.*',),follow=True)
     )
 
 
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield scrapy.Request(url=url,headers=self.headers)
+
 
 
 

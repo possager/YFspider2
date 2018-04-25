@@ -40,9 +40,6 @@ web_begin_url_config={
     'radiosoh':'http://radiosoh.com/',#希望之声英文版，分中英文
     'chinaaid':'http://www.chinaaid.net/',
     'tibetswiss':'http://www.tibetswiss.ch/index-bo.html',
-
-
-
 }
 
 
@@ -170,11 +167,13 @@ def deal_web_requests(web_name):
 
 
 if __name__ == '__main__':
-    for n,one in enumerate(get_all_Rediswebsite_name()):
-        send_start_url_to_redis(one)
+    # for n,one in enumerate(get_all_Rediswebsite_name()):
+    #     send_start_url_to_redis(one)
         # deal_web_dupefilter(one)
         # deal_web_items(one)
         # deal_web_requests(one)
         # deal_web_start_urls(one)
 
-    send_ConfigWebname_to_redis()
+
+    # send_ConfigWebname_to_redis()
+    deal_web_dupefilter('minghui')

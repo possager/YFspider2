@@ -1,7 +1,7 @@
 #_*_coding:utf-8_*_
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
 # from scrapy.loader import
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
@@ -30,9 +30,6 @@ class uyghurcongress(RedisCrawlSpider):
     )
 
 
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield scrapy.Request(url=url,headers=self.headers)
 
 
 

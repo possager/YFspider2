@@ -5,7 +5,7 @@ from scrapy.spider import CrawlSpider
 from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
@@ -15,21 +15,15 @@ from w3lib.url import urljoin
 
 class atc_org_au(RedisCrawlSpider):
     name = 'atc_org_au'
-    # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
+
     start_urls = ['https://www.atc.org.au/']
-    # redis_key = 'atc_org_au:url'
+
 
     rules = (
-        # Extract links matching 'category.php' (but not matching 'subsection.php')
-        # and follow links from them (since no callback means follow=True by default).
 
-        # Rule(LinkExtractor(allow=r'www\.atc\.org\.au\/.*', ),follow=True),
-        # Rule(LinkExtractor(allow=r'www\.atc\.org\.au\/((?!item).)*$'),follow=True),
-        Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?\?.*'), follow=True),
-
-    # Extract links matching 'item.php' and parse them with the spider's method parse_item
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/\S*\/\S*\/item\/.*'), follow=True,callback='parse_content'),
-        Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?$'),follow=True)
+        Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?$'),follow=True),
+        Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?\?.*'), follow=True),
     )
 
     def parse_content(self,response):

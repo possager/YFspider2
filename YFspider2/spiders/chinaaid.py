@@ -2,7 +2,7 @@
 # from scrapy.spiders import CrawlSpider,Rule
 from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
 # from scrapy.loader import
 from YFspider2.othermodule.itemloader_ll import itemloader_ll
@@ -19,7 +19,6 @@ import datetime
 class chinaaid(RedisCrawlSpider):
     name = 'chinaaid'
     start_urls=['http://www.chinaaid.net']
-    # redis_key='middleway:urls'
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -28,15 +27,12 @@ class chinaaid(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/\d{4}/\d{1,2}/.*?\_\d*\.html',),callback='parse_content',follow=True),
-        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/.*?'),follow=True),
-        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/\d{4}/\d{1,2}/.*?.html',),callback='parse_content',follow=True),
-        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/.*?',),follow=True)
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/\d{4}/\d{1,2}/.*?.html', ), callback='parse_content',
+             follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.net\/.*'),follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.chinaaid\.org\/.*',),follow=True)
     )
 
-
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield scrapy.Request(url=url,headers=self.headers)
 
 
 
