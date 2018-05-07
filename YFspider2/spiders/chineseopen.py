@@ -98,7 +98,7 @@ class chinesepen(RedisCrawlSpider):
         loader1.add_value('id',response.url.split('/')[-1])
         loader1.add_value('spider_time',time.time())
         loader1.add_xpath('title','//div[@id="main"]//h1[@class="entry-title"]/text()',lambda x:x[0].strip())
-        loader1.add_xpath('content','//meta[@property="og:description"]/@content',lambda x:Join([oneP.strip() for oneP in x]))
+        loader1.add_xpath('content','//meta[@property="og:description"]/@content',lambda x:''.join([oneP.strip() for oneP in x]))
         loader1.add_xpath('publish_time','//div[@id="main"]//span[@class="date"]/text()',deal_publish_time)
         loader1.add_xpath('publish_user','//div[@id="main"]//span[@class="author"]/text()',deal_publish_user)
         loader1.add_value('read_count',response.xpath("//div[@id='content']/article/div/text()").re('阅读次数\:(.*)'),deal_read_count)

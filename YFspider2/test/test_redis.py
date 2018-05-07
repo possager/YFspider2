@@ -1,7 +1,8 @@
-import redis
+import time
 
 
-pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
-r = redis.Redis(connection_pool=pool)
+timestr1='1970-01-01 08:00:02'
+timetuple=time.strptime(timestr1,'%Y-%m-%d %H:%M:%S')
 
-r.lpush('kirti92:start_urls','')
+timestamp=time.mktime(timetuple)
+print str(int(timestamp*1000))

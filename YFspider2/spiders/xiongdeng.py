@@ -31,7 +31,7 @@ class tibetsociety(RedisCrawlSpider):
 
         Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/\?p\=\d{1,4}', ), callback='parse_content',
              follow=True),
-        Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/.*', ), follow=True),
+        Rule(LinkExtractor(allow=r'http\:\/\/www\.xiongdeng\.com\/.*',deny='.*forum.php?.*' ), follow=True),
     )
 
     def parse_content(self, response):

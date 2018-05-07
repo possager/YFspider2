@@ -19,7 +19,7 @@ web_begin_url_config={
     'tibetanwomen':'http://tibetanwomen.org/',
     'tchrd':'http://tchrd.org/chinese/',
     'uyghurcongress':'http://www.uyghurcongress.org/cn/',
-    'ftchinese':'http://www.ftchinese.com/',#这个进去就有广告
+    'CFTchinese':'http://www.ftchinese.com/',#这个进去就有广告
     'chushigangdrug':'http://www.chushigangdrug.ch/',
     'middleway':'http://woeser.middle-way.net/',
     'tibetsun':'https://www.tibetsun.com/',
@@ -30,7 +30,7 @@ web_begin_url_config={
     'dhokhamchushigangdrug':'http://dhokhamchushigangdrug.com/',
     'tibetanentrepreneurs':'http://tibetanentrepreneurs.org/',
     'khabdha':'http://www.khabdha.org/',
-    'atc_org_au':'http://www.atc.org.au/',
+    'AtcOrgAu':'http://www.atc.org.au/',
     'dorjeshugden':'http://www.dorjeshugden.com/',#多杰雄登英文版
     'chinesepen':'http://www.chinesepen.org/',
     'minghui':'http://www.minghui.org/',
@@ -168,12 +168,13 @@ def deal_web_requests(web_name):
 
 if __name__ == '__main__':
     # for n,one in enumerate(get_all_Rediswebsite_name()):
-    #     send_start_url_to_redis(one)
-        # deal_web_dupefilter(one)
-        # deal_web_items(one)
-        # deal_web_requests(one)
-        # deal_web_start_urls(one)
+    #     # send_start_url_to_redis(one)
+    #     deal_web_dupefilter(one)
+    #     deal_web_items(one)
+    #     deal_web_requests(one)
+    #     deal_web_start_urls(one)
 
 
     # send_ConfigWebname_to_redis()
-    deal_web_dupefilter('minghui')
+    # deal_web_dupefilter('atc_org_au')
+    send_start_url_to_redis('tibetanyouthcongress')

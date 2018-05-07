@@ -14,14 +14,14 @@ from w3lib.url import urljoin
 
 
 class atc_org_au(RedisCrawlSpider):
-    name = 'atc_org_au'
+    name = 'AtcOrgAu'
 
     start_urls = ['https://www.atc.org.au/']
 
 
     rules = (
 
-        Rule(LinkExtractor(allow='www\.atc\.org\.au\/\S*\/\S*\/item\/.*'), follow=True,callback='parse_content'),
+        Rule(LinkExtractor(allow='www\.atc\.org\.au\/.*?\/.*?\/item\/.*'), follow=True,callback='parse_content'),
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?$'),follow=True),
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?\?.*'), follow=True),
     )
@@ -33,7 +33,7 @@ class atc_org_au(RedisCrawlSpider):
             else:
                 publish_time_str=publish_time_raw
 
-            publish_DMY=publish_time_str.split(',')[1].strip()
+            publish_DMY=publish_time_str.strip()
             mouth_transform = {
                 'January': '01',
                 'February': '02',
@@ -80,8 +80,8 @@ class atc_org_au(RedisCrawlSpider):
         content_loader.add_value('spider_time',time.time())
 
         content_loader.add_xpath('title','//div[@class="ItemViewMain"]/div[@class="itemHeader"]/h2[@class="itemTitle"]/text()',lambda x:x[0].strip() if x else None)
-        content_loader.add_xpath('content','//div[@class="ItemViewMain"]/div[@class="itemBody"]//p/text()')
-        content_loader.add_xpath('publish_time','//div[@class="itemHeader"]/div[@class="infoline"]/span[@class="itemDateCreated"]/text()',deal_publish_time)
+        content_loader.add_xpath('content','//div[@class="ItemViewMain"]/div[@class="itemBody"]//text()',Join())
+        content_loader.add_value('publish_time',response.xpath('//div[@class="itemHeader"]/div[@class="infoline"]/span[@class="itemDateCreated"]/text()').re('(\d{2} \S* \d{4})'),deal_publish_time)
         content_loader.add_value('id',response.url.strip('/').split('/')[-1],deal_id)
         content_loader.add_xpath('img_urls','//div[@class="ItemViewMain"]/div[@class="itemBody"]//img/@src',deal_img)
 

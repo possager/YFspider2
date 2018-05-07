@@ -19,7 +19,7 @@ import datetime
 class kirti92(RedisCrawlSpider):
     name = 'kirti92'
     start_urls=['http://www.kirti92.org/']
-    # redis_key='middleway:urls'
+
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -32,9 +32,6 @@ class kirti92(RedisCrawlSpider):
     )
 
 
-    # def start_requests(self):
-    #     for url in self.start_urls:
-    #         yield scrapy.Request(url=url,headers=self.headers)
 
 
 

@@ -12,6 +12,8 @@ import datetime
 import os
 import hashlib
 import platform
+from YFspider2.othermodule.pipeline_nameEN_to_nameCN import getNameCN
+
 
 
 
@@ -73,13 +75,16 @@ class save_data_to_file(object):
         urlhashlib=hashlib.md5(urlOruid).hexdigest()
         urlhashlib_str=str(urlhashlib)
 
+        CNname=getNameCN(plant_form)
+
         try:
             publish_time_split_2=publish_time.split(' ')
+            publish_time_split_2=[str(x) for x in publish_time_split_2]
         except Exception as e:
             publish_time_split_2=['time_wrong','time_wrong']
-        filename=publish_time_stramp_str_13+'_speeches_'+plant_form+'_'+publish_time_split_2[0]+'_'+urlhashlib_str+'_'+newsidOrtid
+        filename=publish_time_stramp_str_13+'_speeches_'+CNname+'_'+str(publish_time_split_2[0])+'_'+plant_form+'_'+publish_time_stramp_str_13+'_'+urlhashlib_str
 
-        file_path=BASIC_FILE+'/'+plant_form+'/'+'data'+'/'+publish_time_split_2[0]#需要文件的名，还需要文件之前的路径。
+        file_path=BASIC_FILE+'/speeches'+'/'+CNname+'/'+publish_time_split_2[0]#需要文件的名，还需要文件之前的路径。
         filename=file_path+'/'+filename
 
         return filename,file_path
@@ -130,20 +135,24 @@ class save_data_to_RemoteFile_XMX(object):
                 timestamp_str_13=str(int(timestamp*1000))
             except Exception as e:
                 print e
-                publish_time_tuple=time.strptime('1111-11-11 11:11:11','%Y-%m-%d %H:%M:%S')
+                publish_time_tuple=time.strptime('2011-11-11 11:11:11','%Y-%m-%d %H:%M:%S')
                 timestamp=time.mktime(publish_time_tuple)
                 timestamp_str_13=str(int(timestamp*1000))
 
             urlhashlib = hashlib.md5(urlOruid).hexdigest()
             urlhashlib_str = str(urlhashlib)
 
+
+            CNname=getNameCN(plant_form)
+
             try:
                 publish_time_split_2 = publish_time.split(' ')
+                publish_time_split_2=[str(x) for x in publish_time_split_2]
             except Exception as e:
                 publish_time_split_2 = ['time_wrong', 'time_wrong']
 
-            filename = timestamp_str_13 + '_speeches_' + plant_form + '_' + publish_time_split_2[
-                0] + '_' + urlhashlib_str + '_' + newsidOrtid
+            filename = timestamp_str_13 + '_speeches_' + CNname + '_' + str(publish_time_split_2[
+                0]) + '_'+ plant_form + '_' + timestamp_str_13 + urlhashlib_str
 
             return filename
 

@@ -14,12 +14,11 @@ import hashlib
 
 class tibetanyouthcongress(RedisCrawlSpider):
     name = 'tibetanyouthcongress'
-    # redis_key = 'tibetanyouthcongress:url'
     start_urls = ['https://www.tibetanyouthcongress.org/']
 
     rules = {
-        Rule(LinkExtractor(allow=r'(https:\/\/www\.tibetanyouthcongress\.org\/\d{1,4}\/\d{1,2}\/\S*?\/)',),callback="parse_content",follow=True),
-        Rule(LinkExtractor(allow=r'(https:\/\/www\.tibetanyouthcongress\.org\/.*)',),follow=True)
+        Rule(LinkExtractor(allow=r'(www\.tibetanyouthcongress\.org\/\d{1,4}\/\d{1,2}\/.*?\/)',allow_domains='www.tibetanyouthcongress.org'),callback="parse_content",follow=True),
+        Rule(LinkExtractor(allow=r'(www\.tibetanyouthcongress\.org\/.*)',),follow=True)
         # Rule(LinkExtractor(allow=r'()',restrict_xpaths='//div[@class="container"]/div[@class="nine columns"]',),follow=True),
     }
 

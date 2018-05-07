@@ -97,9 +97,17 @@ class khabdha(RedisCrawlSpider):
 
                     if am_or_pm=='pm':
                         hourse=str(12+int(hourse))
+                    if len(day)<2:
+                        day='0'+str(day)
+                    if len(hourse)<2:
+                        hourse='0'+str(hourse)
+                    if len(minute) < 2:
+                        minute='0'+str(minute)
 
                     publish_time_rpy=year+'-'+mouth_eng_to_num[Mouth_str]+'-'+day+' '+hourse+':'+minute+':00'
                     return publish_time_rpy
+                else:
+                    return '2011-11-11 11:11:11'
 
 
 

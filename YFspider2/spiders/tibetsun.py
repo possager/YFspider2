@@ -50,6 +50,18 @@ class tibetsun(RedisCrawlSpider):
                 publish_time_str_tuple=publish_date_list[0]
                 return publish_time_str_tuple[0]+'-'+publish_time_str_tuple[1]+'-'+publish_time_str_tuple[2]+' 00:00:00'
 
+        def deal_publish_user(publish_user_list):
+            if publish_user_list:
+                publish_user_raw=publish_user_list[0]
+                if ' and ' in publish_user_raw or '|' in publish_user_raw:
+                    publish_user_raw=publish_user_raw.strip()
+                    publish_user_raw=publish_user_raw.strip('By')
+                    publish_user=re.split(' and |\|',str(publish_user_raw))
+                    publish_user=[x.strip() for x in publish_user]
+                    return publish_user
+                else:
+                    return [x.strip() for x in publish_user_list]
+
 
 
         def deal_reply_nodes(reply_nodes=None):
@@ -61,7 +73,7 @@ class tibetsun(RedisCrawlSpider):
                     'January': '01',
                     'February': '02',
                     'March': '03',
-                    'April ': '04',
+                    'April': '04',
                     'May': '05',
                     'June': '06',
                     'July': '07',
@@ -81,10 +93,13 @@ class tibetsun(RedisCrawlSpider):
                     minute=str(publishtime_cmt_list[4])
 
 
+                    if len(day_cmt)<2:
+                        day_cmt='0'+str(day_cmt)
+
                     am_or_pm=str(publishtime_cmt_list[5])
                     if am_or_pm=='pm':
-                        hours_2=str(12+int(hours))
-                    hours_2 = hours_2 if len(hours_2) > 1 else '0' + hours_2
+                        hours=str(12+int(hours))
+                    hours_2 = hours if len(hours) > 1 else '0' + hours
 
 
                     mounth_num=mouth_eng_to_num[mounth_str]
@@ -93,13 +108,17 @@ class tibetsun(RedisCrawlSpider):
 
             if reply_nodes:
                 for one_comment in reply_nodes:
-                    publish_user_cmt=one_comment.xpath('.//div[contians(@id,"comment")]/div[@class="comment-author"]/span/cite[@class="fn"]/text()').extract()
-                    publish_date_cmt=one_comment.xpath('.//span[@class="date"]').re('(\d{1,2}) (\S*) (\d{1,4}) at (\d{1,2})\:(\d{1,2}) (\S{2})')
-                    content_cmt=one_comment.xpath('.//div[@class="comment-body"]/p//text()').extract()
+                    try:
+                        publish_user_cmt=one_comment.xpath('.//div[contains(@id,"comment")]/div[@class="comment-author"]/span[@class="says"]/cite[@class="fn"]/text()').extract()
+                        publish_date_cmt=one_comment.xpath('.//span[@class="date"]').re('(\d{1,2}) (\S*) (\d{1,4}) at (\d{1,2})\:(\d{1,2}) (\S{2})')
+                        content_cmt=one_comment.xpath('.//div[@class="comment-body"]/p//text()').extract()
+                    except Exception as e:
+                        print e
+                        continue
 
                     publish_time_cmt_dealed=deal_publish_time_inside(publish_date_cmt)
-                    content_cmt_dealed=Join([x.strip() for x in content_cmt])
-                    publish_user_cmt=publish_date_cmt[0] if publish_user_cmt else ''
+                    content_cmt_dealed=''.join([x.strip() for x in content_cmt])
+                    publish_user_cmt=publish_user_cmt if publish_user_cmt else []
 
                     onecmt_dict={
                         'publish_user':publish_user_cmt,
@@ -122,6 +141,7 @@ class tibetsun(RedisCrawlSpider):
         loader1.add_value('id',response.url.split('/')[-1].strip().split('?')[0])
         loader1.add_xpath('img_urls','//div[@id="content"]/div[contains(@id,"post")]//img/@src')
         loader1.add_value('publish_time',response.url,deal_publish_time)
+        loader1.add_xpath('publish_user','//div[@class="entry-content"]//p[@id="post-credit"]/text()',deal_publish_user)
 
         loader1.add_value('reply_count',response.selector.xpath('//ol[@class="commentlist"]/li[contains(@class,"comment")]'),lambda x:len(x))
         loader1.add_value('reply_nodes',response.selector.xpath('//ol[@class="commentlist"]/li[contains(@class,"comment")]'),deal_reply_nodes)

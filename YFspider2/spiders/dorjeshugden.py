@@ -43,7 +43,7 @@ class dorjeshugden(RedisCrawlSpider):
 
     name = 'dorjeshugden'
     start_urls=['http://www.dorjeshugden.com/']
-    # redis_key='middleway:urls'
+
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -52,6 +52,9 @@ class dorjeshugden(RedisCrawlSpider):
 
     rules =  (
         Rule(LinkExtractor(allow='http\:\/\/www\.dorjeshugden\.com\/all\-articles\/.*?\/',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow='http\:\/\/www\.dorjeshugden\.com\/great\-masters\/.*?\/'),callback='parse_content',follow=True),
+        # Rule(LinkExtractor(allow='http\:\/\/www\.dorjeshugden\.com\/videos\/.*?\/'), callback='parse_content',
+        #      follow=True),
         Rule(LinkExtractor(allow='http\:\/\/www\.dorjeshugden\.com\/.*'),follow=True)
     )
 
@@ -66,7 +69,7 @@ class dorjeshugden(RedisCrawlSpider):
                 'January': '01',
                 'February': '02',
                 'March': '03',
-                'April ': '04',
+                'April': '04',
                 'May': '05',
                 'June': '06',
                 'July': '07',
@@ -98,7 +101,7 @@ class dorjeshugden(RedisCrawlSpider):
                 'January': '01',
                 'February': '02',
                 'March': '03',
-                'April ': '04',
+                'April': '04',
                 'May': '05',
                 'June': '06',
                 'July': '07',
@@ -131,7 +134,7 @@ class dorjeshugden(RedisCrawlSpider):
                 one_reply_dict={
                     'publish_time':deal_publishtime_inside(publish_time_raw),
                     'publish_user':publish_user,
-                    'content':Compose([one_content.strip() for one_content in content],Join()),
+                    'content':''.join([one_content.strip() for one_content in content]),
                     'img_urls':img_urls,
                     'id':id,
                     'parent_id':parent_id,

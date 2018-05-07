@@ -15,9 +15,7 @@ import hashlib
 
 class dhokhamchushigangdrug(RedisCrawlSpider):
     name = 'dhokhamchushigangdrug'
-    # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
     start_urls=['http://dhokhamchushigangdrug.com/']
-    redis_key = 'dhokhamchushigangdrug:url'
 
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
@@ -25,22 +23,13 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
         'Access-Control-Request-Method':'GET',
         'Accept':'*/*'
     }
-    def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(url=url,headers=self.headers)
 
 
     rules = (
-        # Extract links matching 'category.php' (but not matching 'subsection.php')
-        # and follow links from them (since no callback means follow=True by default).
-        # Rule(LinkExtractor(allow=r'http\:\/\/www\.sherig\.org\/tb\/\d{4}\/\d{1,2}\/.*?\/$',),callback='parse_content',follow=True),
-        #http\:\/\/www\.sherig\.org\/tb\/\d{4}\/\d{1,2}\/[^\\\/\']*?\/\B
+
         Rule(LinkExtractor(allow=r'http://dhokhamchushigangdrug.com/.*?', ), callback='parse_content',
              follow=True),
 
-
-        # Extract links matching 'item.php' and parse them with the spider's method parse_item
-        # Rule(LinkExtractor(allow='http://www.sherig.org/tb/page/\d{1,5}/'), follow=True),
     )
 
     def parse_content(self, response):

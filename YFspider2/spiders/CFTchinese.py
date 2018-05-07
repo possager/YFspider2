@@ -16,7 +16,7 @@ from YFspider2.othermodule.deal_url_func import deal_ftchinese_url
 
 
 class middleway(RedisCrawlSpider):
-    name = 'ftchinese'
+    name = 'CFTchinese'
 
     start_urls=['http://www.ftchinese.com/']
 
