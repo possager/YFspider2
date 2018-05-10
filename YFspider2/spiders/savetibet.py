@@ -17,7 +17,7 @@ class savetibet(RedisCrawlSpider):
     name = 'savetibet'
     # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
     start_urls=['http://www.savetibet.org/']
-    redis_key = 'savetibet:url'
+    # redis_key = 'savetibet:url'
 
     rules = (
         # Extract links matching 'category.php' (but not matching 'subsection.php')

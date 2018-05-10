@@ -81,6 +81,8 @@ class tibetsociety(RedisCrawlSpider):
         if href_list_len>150:
             print ('it is a index_list page')
         else:
+            if not response.xpath('//span[@class="body_outer"]//table[@class="contentpaneopen"]//td[@class="contentheading"]//text()').extract():
+                return
             content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
             content_loader.add_value('url',response.url)
             content_loader.add_value('spider_time',time.time())

@@ -14,7 +14,7 @@ import datetime
 
 
 
-#正在编辑,未测试
+
 class chinesepen(RedisCrawlSpider):
     name = 'chinesepen'
     start_urls=['http://www.chinesepen.org/']

@@ -31,7 +31,7 @@ class tibetsociety(RedisCrawlSpider):
     rules = (
         Rule(LinkExtractor(allow=r'http\:\/\/tibetanentrepreneurs\.org\/\d{1,4}/\d{1,2}/\d{1,2}.*?', allow_domains=r'tibetanentrepreneurs.org'), callback='parse_content',
              follow=True),
-        Rule(LinkExtractor(allow=r'http\:\/\/tibetanentrepreneurs\.org\/.*?\/',allow_domains=r'tibetanentrepreneurs.org'),follow=True)
+        Rule(LinkExtractor(allow=r'http\:\/\/tibetanentrepreneurs\.org\/.*?',allow_domains=r'tibetanentrepreneurs.org'),follow=True)
 
     )
 

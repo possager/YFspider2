@@ -35,11 +35,22 @@ web_begin_url_config={
     'chinesepen':'http://www.chinesepen.org/',
     'minghui':'http://www.minghui.org/',
     'tibetanyouthcongress':'https://www.tibetanyouthcongress.org/',
-    'studentsforafreetibet':'http://www.studentsforafreetibet.org/',
+    'studentsforafreetibet':'https://www.studentsforafreetibet.org/media-center/',
     'chinainperspective':'http://chinainperspective.com/',
     'radiosoh':'http://radiosoh.com/',#希望之声英文版，分中英文
     'chinaaid':'http://www.chinaaid.net/',
     'tibetswiss':'http://www.tibetswiss.ch/index-bo.html',
+    'savetibet':'http://www.savetibet.org/#',
+    'tibetwomenBo':'http://tibetanwomen.org/bo/',
+    'tibetanparliament':'http://tibetanparliament.org/',
+    'kagyuoffice':'https://www.kagyuoffice.org.tw/news?start=100',#这个不是网站的主页
+    'dalailamaworld':'http://www.dalailamaworld.com/',
+    'xizang_zhiye':'http://xizang-zhiye.org/',
+    'tibetexpress':'http://tibetexpress.net/',
+
+
+
+
 }
 
 
@@ -177,4 +188,4 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('tibetanyouthcongress')
+    send_start_url_to_redis('tibetexpress')

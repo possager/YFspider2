@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫编写注意事项</title>
+    <link rel="stylesheet" type="text/css" href="Semantic/semantic.min.css">
+    <script src="Semantic/semantic.min.js"></script>
+</head>
+
+<body>
+<div class="ui inverted vertical center aligned segment">
+    <h1 class="ui inverted header">
+        重新记录一次
+    </h1>
+    <div class="text container">
+        <p>
+            之前的已经排查得差不多了，所以从这里开始记录新的爬虫中遇到得问题。
+        </p>
+        <p>
+            这里边每个爬虫的模板使用的是middleway爬虫的,no!现在用的是tibetanparliament
+        </p>
+        <p>
+            后期需要配置中英文转换字典
+        </p>
+    </div>
+</div>
+<div class="ui vertical aligned segment">
+        <div class="ui middle aligned stackable grid container">
+            <div class="ui top attached segment">
+                <div class="ui bulleted list">
+                    <div class="item">
+                        <h2>
+                            tibetanwomen.org\bo
+                        </h2>
+                        <div class="ui container aligned">
+                            <div class="ui button blue">
+                                编辑时间：2018-05-08
+                            </div>
+                            <a class="ui button" href="http://tibetanwomen.org/bo/">
+                                藏妇会官网 藏文
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                里边的publish_time是藏文，看不懂
+                            </div>
+                            <div class="item">
+                                默认时间是：2018-02-01 00:00:00
+                            </div>
+                            <div class="item">
+                                默认进入的界面里边的跟进链接太少，大概抓取了85个左右，明明不止这么多！
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            http://tibetanparliament.org/
+                        </h2>
+                        <div class="ui container aligned">
+                            <div class="ui button blue">
+                                编辑时间：250418-05-09
+                            </div>
+                            <a class="ui button" href="http://tibetanparliament.org/">
+                                藏人流亡政府
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                这个网站的页面逻辑实在是太差了，根本没法遍历抓取，将来调整的话只抓取某个板块下边的，或者专门的多设置几种url链接。
+                            </div>
+                            <div class="item">
+                                http://tibetanparliament.org/category/updates/page/3/,像这样的网站里边的链接是很多的，而log记录中的这种链接好像都被500了。可能是没有添加user-Agent吧！
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            https://www.kagyuoffice.org.tw
+                        </h2>
+                        <div class="ui container aligned">
+                            <div class="ui button blue">
+                                编辑时间：2018-05-099
+                            </div>
+                            <a class="ui button" href="https://www.kagyuoffice.org.tw/news?start=100">
+                                噶玛巴官网
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                这个网站是别人的一个宣传网站，一堆有用没用的，里边只抓取了news板块里边的所有内容。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            http://www.dalailamaworld.com
+                        </h2>
+                        <div class="ui container">
+                            <div class="ui button blue">
+                                编辑时间：2018-05-09 00：00:00
+                            </div>
+                            <a class="ui button" href="http://www.dalailamaworld.com">
+                                网站链接
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                这个网站部分链接存在反爬，或者其它原因，会被403，比如：http://www.dalailamaworld.com/classified.php?f=3&sid=f19016e587b47ec02735e6e6620f610b
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            xizang_zhiye
+                        </h2>
+                        <div class="ui container">
+                            <div class="ui blue button">
+                                编辑时间：2018-05-09 00：00：00
+                            </div>
+                            <a class="ui button" href="http://xizang-zhiye.org/">
+                                网站链接
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                这个网站里边有很多事pdf文档，content内容标签里边全部都是空！
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            http://tibetexpress.net/
+                        </h2>
+                        <div class="ui container aligned">
+                            <div class=" ui button blue">
+                                编辑时间：2018-05-10 00:00:00
+                            </div>
+                            <a class="ui button" href="http://tibetexpress.net/">
+                                网站链接
+                            </a>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                在这个网站之前，很多标题都没有进一步处理！比如strip()
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

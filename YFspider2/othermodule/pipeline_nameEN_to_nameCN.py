@@ -31,7 +31,18 @@ ENCNname_dict={
     'tibetsun':'西藏太阳',
     'tibetswiss':'瑞士和比利时藏人协会',
     'uyghurcongress':'世界维吾尔大会',
-    'xiongdeng':'多杰雄登CN'
+    'xiongdeng':'多杰雄登CN',
+    # 'sherig':'藏人行政中央文化部',
+    
+    
+    'dalailamaworld':'达赖喇嘛官网',#中文
+    'kagyuoffice':'嘎玛巴官网',#中文
+    'tibetanparliament':'西藏流亡议会官网',#英文
+    'xizang_zhiye':'藏人行政中央官网',
+    'tibetexpress':'西藏快报',
+
+
+
 }
 
 def getNameCN(ENname):

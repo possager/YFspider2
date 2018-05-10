@@ -118,6 +118,9 @@
                                 看中国CH
                                 藏妇会官�
                                 藏青会官�
+                                <p style="color: red">
+                                    以上这几个网站中有特殊符号的，都出现了文件存储时的问题，因为window下字符编码的原因
+                                </p>
                             </div>
                         </div>
 
@@ -377,9 +380,9 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                         这个网站里边的内容十分杂乱，目前打算只抓取media板块中的内容。
                     </div>
                     <div class="item">
-                        从默认的主页进入，几乎抓不到数据
+                        从默认的主页进入，几乎抓不到数据,数据量不多，我要抓的也不多。
                         <div class="ui button red">
-                            未完成
+                            算是完成吧，后期协商
                         </div>
                     </div>
                 </div>
@@ -412,8 +415,8 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                     </div>
                     <div class="item">
                         这个网站爬虫中又bug
-                        <div class="ui button red">
-                            未完成
+                        <div class="ui button yellow">
+                            未完成,是文件存储时路径出错。
                         </div>
                     </div>
                 </div>
@@ -438,6 +441,7 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                 <h2>
                     tibetanwomen
                 </h2>
+
                 <div class="ui container aligned">
                     <a class="ui button blue" href="http://tibetanwomen.org/">
                         网站链接
@@ -458,8 +462,8 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                     </div>
                     <div class="item">
                         这个网站的爬虫有bug
-                        <div class="red ui button">
-                            未完成
+                        <div class="yellow ui button">
+                            未完成，可能也是存储时路径出错
                         </div>
                     </div>
                 </div>
@@ -534,10 +538,8 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                         这个真的是全抓。里边的一个字段貌似有点问题，publish_user_id很多时候没有，而且新闻类的publish_user一般都是publish_user_href。所以我想 新闻类的publish_user_href不是太重要吧！注意要将print的语句给注释掉。前边content内容字段的，没加join的要把join加上
                     </div>
                     <div class="item">
-                        从默认的start_urls进入，几乎抓不到数据
-                        <div class="ui button red">
-                            未完成
-                        </div>
+                        从默认的start_urls进入，几乎抓不到数据,完成
+
                     </div>
                 </div>
             </div>
@@ -589,6 +591,7 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <h2>
                     http://www.tibetsociety.com/
@@ -607,9 +610,10 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                     </div>
                     <div class="item">
                         这个网站部分报错，但是绝大多数页面是没有问题的。
-                        <div class="ui button red">
-                            未完成
-                        </div>
+                        <p>
+                            是因为有这样的链接：http://www.tibetsociety.com/content/view/38/47/。已经添加了判断处理模块。
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -662,9 +666,9 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                         这个网站跟进两中类型的链接，这个里边有不少外链，要做好allow_domain设置。跟进的是主页链接http://tibetanentrepreneurs.org/
                     </div>
                     <div class="item">
-                        这个网站存在大问题
+                        这个网站存在大问题,url可用链接本来就不是太多。
                         <div class="red ui button">
-                            未完成
+                            算是未完成
                         </div>
                     </div>
                 </div>
@@ -879,8 +883,8 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xbf in position 23: ordinal
                     </div>
                     <div class="item">
                         爬虫最后的存储部分有问题
-                        <div class="ui button red">
-                            未完成
+                        <div class="ui button yellow">
+                            未完成,可能是存储是路径出问题了。
                         </div>
                     </div>
                 </div>

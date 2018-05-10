@@ -135,7 +135,7 @@ class save_data_to_RemoteFile_XMX(object):
                 timestamp_str_13=str(int(timestamp*1000))
             except Exception as e:
                 print e
-                publish_time_tuple=time.strptime('2011-11-11 11:11:11','%Y-%m-%d %H:%M:%S')
+                publish_time_tuple=time.strptime('2018-02-01 00:00:00','%Y-%m-%d %H:%M:%S')
                 timestamp=time.mktime(publish_time_tuple)
                 timestamp_str_13=str(int(timestamp*1000))
 

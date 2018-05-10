@@ -13,7 +13,7 @@ import hashlib
 
 class studentsforafreetibet(RedisCrawlSpider):
     name = 'studentsforafreetibet'
-    start_urls = ['https://www.studentsforafreetibet.org/media-center/']
+    # start_urls = ['https://www.studentsforafreetibet.org/media-center/']
 
     rules = {
         Rule(LinkExtractor(allow=r'(https://www.studentsforafreetibet.org/media-center/\S*/\S*/)',deny=r'https://www.studentsforafreetibet.org/media-center/page/',restrict_xpaths='//div[@class="container"]/div[@class="nine columns"]',),callback="parse_content",follow=True),
