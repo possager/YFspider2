@@ -1,54 +1,83 @@
 #_*_coding:utf-8_*_
+import re
 import json
+import requests
+from scrapy.selector import Selector
 
 
-str_data='''2011年01月09日 上午01:26'''
+zangwenDict={
+    '༢':'2',
+    '༠':'0',
+    '༡':'1',
+    '༨':'8',
+    '༤':'4',
+    '༥':'5',
+}
 
-# time_str=str_data.replace('年','-').replace('月','-').replace('日','')
-# print time_str
-#
-# time_str2_l= time_str.split(' ')
-# time_str2=time_str2_l[1]
-# if '下午' in time_str2:
-#     time_str3= time_str2.replace('下午','').split(':')[0]
-#     time_str3_int=int(time_str3)
-#     print time_str2_l[0]+' '+str(12+time_str3_int)+':'+time_str2.replace('下午','').split(':')[1]+':00'
+zangwendict2={
+    b'\xe0\xbc\xa0': '0',
+    b'\xe0\xbc\xa1': '1',
+    b'\xe0\xbc\xa2': '2',
+    b'\xe0\xbc\xa3': '3',
+    b'\xe0\xbc\xa4': '4',
+    b'\xe0\xbc\xa5': '5',
+    b'\xe0\xbc\xa6': '6',
+    b'\xe0\xbc\xa7': '7',
+    b'\xe0\xbc\xa8': '8',
+    b'\xe0\xbc\xa9': '9',
+}
 
+zangwendict3={
+    u"༧": u"7",
+    u"༦": u"6",
+    u"༥": u"5",
+    u"༤": u"4",
+    u"༣": u"3",
+    u"༢": u"2",
+    u"༡": u"1",
+    u"༠": u"0",
+    u"༩": u"9",
+    u"༨": u"8"
+}
 
-def deal_publishtime_inside(publishtime):
-    publish_time = publishtime.replace('年', '-').replace('月', '-').replace('日', '')
-    time_split_2 = publish_time.split(' ')
+headers={
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+}
+response1=requests.get(url='http://www.vot.org/%E0%BD%A2%E0%BE%92%E0%BE%B1%E0%BC%8B%E0%BD%82%E0%BD%A2%E0%BC%8B%E0%BD%82%E0%BE%B1%E0%BD%B2%E0%BC%8B%E0%BD%82%E0%BE%B2%E0%BD%BC%E0%BD%A6%E0%BC%8B%E0%BD%9A%E0%BD%BC%E0%BD%82%E0%BD%A6%E0%BC%8B%E0%BD%82-2/',headers=headers)
 
-    data_str=time_split_2[0]
-    data_str_list=data_str.split('-')
-    mounth=data_str_list[1]
-    day=data_str_list[2]
-    if len(mounth)<2:
-        mounth='0'+mounth
-    if len(day)<2:
-        day='0'+day
-    data_str=data_str_list[0]+'-'+mounth+'-'+day
-
-    time_split_2_part2 = time_split_2[1]
-    if '下午' in time_split_2_part2:
-        time_part2_h_m = time_split_2_part2.replace('下午', '').split(':')
-        time_split_2_h = int(time_part2_h_m[0])
-        time_split_2_m = time_part2_h_m[1]
-        time_split_2_h_add = 12 + time_split_2_h
-
-        time_pm_finally = str(time_split_2_h_add) + ':' + time_split_2_m + ':00'
-        return data_str + ' ' + time_pm_finally
-    elif '上午' in time_split_2_part2:
-        time_part2_h_m = time_split_2_part2.replace('上午', '').split(':')
-        time_split_2_h = int(time_part2_h_m[0])
-        time_split_2_m = time_part2_h_m[1]
-        time_split_2_h_add = time_split_2_h
-
-        if time_split_2_h_add < 10:
-            time_split_2_h_add = '0' + str(time_split_2_h)
-
-        time_am_finally = time_split_2_h_add+':' + time_split_2_m + ':00'
-        return data_str + ' ' + time_am_finally
+selector1=Selector(text=response1.text)
+date_str= selector1.xpath('//div[@class="wrap container"]//article//time[@class="published updated"]/text()').extract()[0]
 
 
-print deal_publishtime_inside(str_data)
+
+datezangwen='ཕྱི་ལོ། ༢༠༡༨ ཟླ། ༠༥ ཚེས། ༡༤ ཉིན་སྤེལ།'
+
+date_dict={}
+
+for onechar in zangwendict3.keys():
+    if onechar in date_str:
+        print '-'
+        date_z= zangwendict3[onechar]
+        date_index= date_str.index(onechar,0,len(date_str))
+        date_dict.update({date_index:date_z})
+        datezangwen=date_str.replace(onechar,zangwendict3[onechar])
+sortdict= sorted(date_dict.items(),key=lambda item:item[0])
+
+lastindex=sortdict[0][0]
+thisindex=sortdict[0][0]
+nextString=False
+date_list=['','','']
+date_list_index=0
+
+for onesortdict in sortdict:
+
+    thisindex=onesortdict[0]
+    if thisindex-lastindex<2:
+        date_list[date_list_index]+=onesortdict[1]
+    else:
+        date_list_index+=1
+        date_list[date_list_index]+=onesortdict[1]
+    lastindex=thisindex
+
+print date_list

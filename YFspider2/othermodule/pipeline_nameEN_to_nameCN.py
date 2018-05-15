@@ -40,6 +40,28 @@ ENCNname_dict={
     'tibetanparliament':'西藏流亡议会官网',#英文
     'xizang_zhiye':'藏人行政中央官网',
     'tibetexpress':'西藏快报',
+    'liaowangxizang':'瞭望西藏',
+    'sputniknews':'俄罗斯卫星通讯社',
+    'tibettimes':'西藏时报',
+    'phayul':'家乡网',
+    'potalapost':'布达拉邮报',
+    'nytimes':'纽约时报',
+    'aboluowang':'阿波罗新闻网',
+    'kearyhuang':'妙法因陀罗新闻网',
+    'epochtimes':'大纪元新闻网',
+    'boxun':'博讯新闻',
+    'dwnews':'多维新闻网',
+    'bbc_com_zhongwen_simp':'BBC新闻网',
+    'dw':'德国之声',
+    'voachinese':'美国之音',
+    'rfa_org':'自由亚洲电台',
+    'thetibetpost':'国际西藏邮报',
+    'vot_org':'西藏之声',
+
+
+
+
+
 
 
 

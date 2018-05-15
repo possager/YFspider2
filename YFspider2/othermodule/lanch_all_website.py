@@ -47,6 +47,30 @@ web_begin_url_config={
     'dalailamaworld':'http://www.dalailamaworld.com/',
     'xizang_zhiye':'http://xizang-zhiye.org/',
     'tibetexpress':'http://tibetexpress.net/',
+    'liaowangxizang':'https://liaowangxizang.net/',
+    'sputniknews':'http://sputniknews.cn/',
+    'tibettimes':'http://tibettimes.net/',
+    'phayul':'http://www.phayul.com/',
+    'potalapost':'http://potalapost.com/',
+    'nytimes':'https://cn.nytimes.com/',
+    'aboluowang':'http://www.aboluowang.com/',
+    'kearyhuang':'https://kearyhuang.wordpress.com/',
+    'epochtimes':'http://www.epochtimes.com',
+    'boxun':'https://boxun.com/',
+    'dwnews':'http://news.dwnews.com/',
+    'cn_rfi_fr':'http://cn.rfi.fr/',
+    'bbc_com_zhongwen_simp':'http://www.bbc.com/zhongwen/simp',
+    'dw':'http://www.dw.com/',
+    'voachinese':'https://www.voachinese.com',
+    'rfa_org':'https://www.rfa.org/mandarin/',
+    'thetibetpost':'http://www.thetibetpost.com/en/',
+    'vot_org':'http://www.vot.org/',
+
+
+
+
+
+
 
 
 
@@ -188,4 +212,4 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('tibetexpress')
+    send_start_url_to_redis('vot_org')
