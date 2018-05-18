@@ -57,10 +57,12 @@ ENCNname_dict={
     'rfa_org':'自由亚洲电台',
     'thetibetpost':'国际西藏邮报',
     'vot_org':'西藏之声',
-
-
-
-
+    'kagyuofficeE':'嘎玛巴官网(英文)',
+    'chithu':'西藏流亡议会官网(藏文)',
+    'dalailama':'达赖喇嘛官网(英文)',
+    'boxunE':'博讯新闻（英文）',
+    'ntd':'新唐人（英文）',
+    'tibet':'藏人行政中央官网（英文）'
 
 
 

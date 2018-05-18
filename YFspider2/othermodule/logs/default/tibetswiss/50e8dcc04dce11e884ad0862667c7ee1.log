@@ -1,0 +1,711 @@
+2018-05-02 14:04:00 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: YFspider2)
+2018-05-02 14:04:00 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'YFspider2.spiders', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'SPIDER_MODULES': ['YFspider2.spiders'], 'REACTOR_THREADPOOL_MAXSIZE': '32', 'BOT_NAME': 'YFspider2', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs\\default\\tibetswiss\\50e8dcc04dce11e884ad0862667c7ee1.log'}
+2018-05-02 14:04:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-05-02 14:04:00 [tibetswiss] INFO: Reading start URLs from redis key 'tibetswiss:start_urls' (batch size: 16, encoding: utf-8
+2018-05-02 14:04:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-05-02 14:04:00 [py.warnings] WARNING: D:\python_27\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.spidermiddleware.referer.RefererMiddleware` class is deprecated, use `scrapy.spidermiddlewares.referer.RefererMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-05-02 14:04:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-05-02 14:04:00 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'YFspider2.pipelines.YfspidersetdefaultValue',
+ 'YFspider2.pipelines.save_data_to_RemoteFile_XMX',
+ 'YFspider2.pipelines.save_data_to_file']
+2018-05-02 14:04:00 [scrapy.core.engine] INFO: Spider opened
+2018-05-02 14:04:00 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-05-02 14:04:00 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6048
+2018-05-02 14:04:02 [tibetswiss] DEBUG: Read 1 requests from 'tibetswiss:start_urls'
+2018-05-02 14:04:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html> (referer: None)
+2018-05-02 14:04:03 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET http://www.tibetswiss.ch/index-bo.html?=#skipNavigation2> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-05-02 14:04:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=#skipNavigation1> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=6> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=3> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=4> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=2> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=92> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=5> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/index-bo.html?=&page=7> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/europe-chitue-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibet-office-genf-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photo-gallary-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/news-archive-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/movement-boc.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-kashag-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/history-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.tibetswiss.ch/praesident-vizepraesident-17.html> from <GET http://www.tibetswiss.ch/Kontakt.html>
+2018-05-02 14:04:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.tibetswiss.ch/contao/> from <GET http://www.tibetswiss.ch/contao>
+2018-05-02 14:04:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-govt-brief-introduction-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3782.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/holy-places-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-350.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibet.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3781.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tsokchung-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-349.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-community-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/charter-of-tgsl-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/--3788.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/press-release.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/contao/> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/praesident-vizepraesident-17.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-dance-group-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-308.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/gyen-duk-chok-nyi-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-ceremony-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tgsl-doekar-gyenzin-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/pujas-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tgsl-tibetan-school-director-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-school-in-swiss-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/partner-links-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-243.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/calender-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-parliament-in-exile-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/labcha.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-govt-judiciary-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-352.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tgsl-sartin-web.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/dalai-lama-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-325.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-310.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3787.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/sartin-bo.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3783.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/...456799.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/--3789.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.366.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.367.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.366.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.366',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/32-DSC02039-49f661be.jpg',
+              u'http://www.tibetswiss.ch/system/html/33-DSC02040-4ce033c5.jpg',
+              u'http://www.tibetswiss.ch/system/html/29-DSC02036-cf639596.jpg',
+              u'http://www.tibetswiss.ch/system/html/30-DSC02037-1e23713a.jpg',
+              u'http://www.tibetswiss.ch/system/html/31-DSC02038-27f42573.jpg',
+              u'http://www.tibetswiss.ch/system/html/24-DSC02031-05317c54.jpg',
+              u'http://www.tibetswiss.ch/system/html/26-DSC02033-563bca34.jpg',
+              u'http://www.tibetswiss.ch/system/html/27-DSC02034-3a30ca0e.jpg',
+              u'http://www.tibetswiss.ch/system/html/28-DSC02035-ec7752ca.jpg',
+              u'http://www.tibetswiss.ch/system/html/22-DSC02029-4732782e.jpg',
+              u'http://www.tibetswiss.ch/system/html/23-DSC02030-c3e3c4d0.jpg',
+              u'http://www.tibetswiss.ch/system/html/25-DSC02032-75f40d81.jpg',
+              u'http://www.tibetswiss.ch/system/html/19-DSC02026-33b42a28.jpg',
+              u'http://www.tibetswiss.ch/system/html/20-DSC02027-d6393de4.jpg',
+              u'http://www.tibetswiss.ch/system/html/21-DSC02028-e5cc8e6d.jpg',
+              u'http://www.tibetswiss.ch/system/html/18-DSC02025-b462db66.jpg',
+              u'http://www.tibetswiss.ch/system/html/17-DSC02024-b4e5cc4b.jpg',
+              u'http://www.tibetswiss.ch/system/html/16-DSC02023-a8bab690.jpg',
+              u'http://www.tibetswiss.ch/system/html/15-DSC02022-aa6a9162.jpg',
+              u'http://www.tibetswiss.ch/system/html/12-DSC02019-efc296b7.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241076539L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f66\u0f74\u0f51\u0f0b\xad\u0f66\u0f72\u0f0b\xad\u0f66\u0f0b\xad\u0f42\u0f53\u0f66\u0f0b\xad\u0f67\u0f7c\u0f62\u0f0b\xad\u0f43\u0f53\u0f0b\xad\u0f51\u0f74\u0f0b\xad\u0f51\u0f54\u0f63\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f62\u0f9f\u0f0b\xad\u0f58\u0f42\u0fb2\u0f72\u0f53\u0f0b\xad\u0f54\u0f51\u0fa8\u0f0b\xad\u0f61\u0f44\u0f0b\xad\u0f42\u0f66\u0f44\u0f0b\xad\u0f42\u0f72\u0f0b\xad\u0f56\u0f40\u0f60\u0f0b\xad\u0f51\u0f56\u0f44\u0f0b\xad\u0f42\u0f53\u0f44\u0f0b\xad\u0f56\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.366.html',
+ 'video_urls': None}
+2018-05-02 14:04:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3779.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.367.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.367',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/42-DSC02089-44739bc7.jpg',
+              u'http://www.tibetswiss.ch/system/html/43-DSC02090-2baf57a3.jpg',
+              u'http://www.tibetswiss.ch/system/html/40-DSC02087-d3b82461.jpg',
+              u'http://www.tibetswiss.ch/system/html/39-DSC02086-934ef970.jpg',
+              u'http://www.tibetswiss.ch/system/html/41-DSC02088-3fe8e0de.jpg',
+              u'http://www.tibetswiss.ch/system/html/36-DSC02083-2020e9be.jpg',
+              u'http://www.tibetswiss.ch/system/html/35-DSC02082-b3fc71f8.jpg',
+              u'http://www.tibetswiss.ch/system/html/37-DSC02084-add95dc6.jpg',
+              u'http://www.tibetswiss.ch/system/html/38-DSC02085-445e2fbc.jpg',
+              u'http://www.tibetswiss.ch/system/html/32-DSC02079-89c22e8f.jpg',
+              u'http://www.tibetswiss.ch/system/html/33-DSC02080-ca8f62b7.jpg',
+              u'http://www.tibetswiss.ch/system/html/34-DSC02081-04f47ae6.jpg',
+              u'http://www.tibetswiss.ch/system/html/30-DSC02077-ae36135f.jpg',
+              u'http://www.tibetswiss.ch/system/html/31-DSC02078-a1c4a5de.jpg',
+              u'http://www.tibetswiss.ch/system/html/27-DSC02073-6ae8599a.jpg',
+              u'http://www.tibetswiss.ch/system/html/28-DSC02074-f7a0fcb5.jpg',
+              u'http://www.tibetswiss.ch/system/html/29-DSC02076-0a56aed5.jpg',
+              u'http://www.tibetswiss.ch/system/html/24-DSC02070-ac5c2d33.jpg',
+              u'http://www.tibetswiss.ch/system/html/25-DSC02071-8235adc6.jpg',
+              u'http://www.tibetswiss.ch/system/html/26-DSC02072-e8e33490.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241076599L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f66\u0f74\u0f51\u0f0b\xad\u0f66\u0f72\u0f0b\xad\u0f66\u0f0b\xad\u0f42\u0f53\u0f66\u0f0b\xad\u0f67\u0f7c\u0f62\u0f0b\xad\u0f43\u0f53\u0f0b\xad\u0f51\u0f74\u0f0b\xad\u0f66\u0f92\u0fb2\u0f7c\u0f63\u0f0b\xad\u0f51\u0f40\u0f62\u0f0b\xad\u0f61\u0f72\u0f51\u0f0b\xad\u0f56\u0f5e\u0f72\u0f53\u0f0b\xad\u0f60\u0f41\u0f7c\u0f62\u0f0b\xad\u0f63\u0f7c\u0f60\u0f72\u0f0b\xad\u0f5a\u0f7a\u0f0b\xad\u0f51\u0f56\u0f44\u0f0b\xad\u0f42\u0f53\u0f44\u0f0b\xad\u0f56\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.367.html',
+ 'video_urls': None}
+2018-05-02 14:04:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.369.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:37 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.369.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.369',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/IMG_2377-215178c1.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2382-a3a0bf99.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2392-f739b665.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2394-63f6165d.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2395-a9b1d6a7.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2397-b5799319.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2399-f610db38.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2401-5f8bcf09.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2403-da092bd6.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2408-ccd712b1.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2410-1740b036.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2411-f5315ff2.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2412-3fe392ff.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2414-ecd79060.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2416-4fcc0fb4.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2418-37ebd14d.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2421-17059bcb.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2422-ba489b5d.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2423-e605afcb.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2424-a48ee83d.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241076944L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f0d\u0f66\u0fa4\u0fb1\u0f72\u0f0b\xad\u0f53\u0f7c\u0f62\u0f0b\xad\u0f38\u0f42\u0f7c\u0f44\u0f0b\xad\u0f66\u0f0b\xad\u0f38\u0f66\u0f90\u0fb1\u0f56\u0f66\u0f0b\xad\u0f58\u0f42\u0f7c\u0f53\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f54\u0f7c\u0f0b\xad\u0f58\u0f46\u0f7c\u0f42\u0f0b\xad\u0f51\u0f42\u0f74\u0f44\u0f0b\xad\u0f42\u0fb2\u0f44\u0f66\u0f0b\xad \u0f27\u0f29 \u0f63\u0f0b\xad\u0f55\u0f7a\u0f56\u0f66\u0f0b\xad\u0f54\u0f60\u0f72\u0f0b\xad\u0f66\u0f90\u0f74\u0f60\u0f72\u0f0b\xad\u0f60\u0f41\u0fb2\u0f74\u0f44\u0f66\u0f0b\xad\u0f66\u0f90\u0f62\u0f0b\xad\u0f51\u0f74\u0f66\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f42\u0f5f\u0f56\u0f66\u0f0b\xad\u0f62\u0f92\u0fb1\u0f66\u0f0b\xad\u0f66\u0fb2\u0f74\u0f44\u0f0b\xad\u0f56\u0f62\u0fa9\u0f72\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.369.html',
+ 'video_urls': None}
+2018-05-02 14:04:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3794.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.371.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.371.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.371',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/DSC00001-94e8367e.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00002-38dc2a8a.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00004-5bc14cee.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00005-d5a051f8.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00006-d47bb189.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00007-93c84caf.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00009-f73e2876.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00010-4140e3bc.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00012-6097ff9a.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00013-849916cd.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00015-4abc151c.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00019-fdb4db68.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00027-7dd9e269.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00029-f6247733.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00032-664f32e3.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00034-4ab82320.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00036-4f20f2b8.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00038-1a0b6e17.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00048-d4fabf6f.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00049-c97009b2.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241078503L,
+ 'title': u'\u0f22\u0f20\u0f21\u0f24 \u0f5f\u0fb3\u0f0b\xad \u0f21\u0f22 \u0f5a\u0f7a\u0f66\u0f0b\xad \u0f21\u0f20 \u0f62\u0f7a\u0f66\u0f0b\xad\u0f42\u0f5f\u0f60\u0f0b\xad\u0f63\u0fb7\u0f42\u0f0b\xad\u0f54\u0f60\u0f72\u0f0b\xad\u0f49\u0f72\u0f53\u0f0b\xad\u0f66\u0f74\u0f51\u0f0b\xad\u0f66\u0f72\u0f0b\xad\u0f66\u0f0b\xad\u0f42\u0f53\u0f66\u0f0b\xad\u0f60\u0f47\u0f72\u0f0b\xad\u0f4e\u0f72\u0f0b\xad\u0f5d\u0f62\u0f0b\xad\u0f60\u0f42\u0fb2\u0f7c\u0f0b\xad\u0f56\u0f0b\xad\u0f58\u0f72\u0f60\u0f72\u0f0b\xad\u0f50\u0f7c\u0f56\u0f0b\xad\u0f50\u0f44\u0f0b\xad\u0f51\u0f74\u0f66\u0f0b\xad\u0f51\u0fb2\u0f53\u0f0b\xad\u0f50\u0f7a\u0f44\u0f66\u0f0b\xad \u0f26\u0f26 \u0f54\u0f0b\xad\u0f66\u0fb2\u0f74\u0f44\u0f0b\xad\u0f56\u0f62\u0fa9\u0f72\u0f66\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.371.html',
+ 'video_urls': None}
+2018-05-02 14:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.372.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.373.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.372.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.372',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/DSC03563-bb2d951b.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03564-446b7852.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03566-b804b4f4.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03567-f3d18e55.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03568-7424c880.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03569-c3a4c002.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03570-dba48d0b.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03571-5f7847b3.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03572-b3fec093.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03573-ae32afaa.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03575-7b51f9f0.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03576-6e9b5752.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03577-394cff13.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03579-5bf8f06a.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03581-cade3c3a.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03582-7bf29001.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03583-7e48fbf1.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03584-66b38003.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03586-4b49bbf7.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC03587-5f2e37b1.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241078709L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f55\u0fb1\u0f72\u0f0b\xad\u0f63\u0f7c\u0f0b\xad \u0f22\u0f20\u0f21\u0f24  \u0f5f\u0fb3\u0f0b\xad\u0f56\u0f0b\xad \u0f21\u0f22 \u0f5a\u0f7a\u0f66\u0f0b\xad \u0f21\u0f23 \u0f49\u0f72\u0f53\u0f0b\xad\u0f66\u0f74\u0f51\u0f0b\xad\u0f66\u0f72\u0f0b\xad\u0f53\u0f44\u0f0b\xad\u0f60\u0f5b\u0f58\u0f0b\xad\u0f42\u0fb3\u0f72\u0f44\u0f0b\xad\u0f5e\u0f72\u0f0b\xad\u0f56\u0f51\u0f7a\u0f60\u0f72\u0f0b\xad\u0f51\u0f7a\u0f51\u0f0b\xad\u0f51\u0f54\u0f7c\u0f53\u0f0b\xad\u0f66\u0fa4\u0fb1\u0f72\u0f0b\xad\u0f53\u0f7c\u0f62\u0f0b\xad\u0f38\u0f42\u0f7c\u0f44\u0f0b\xad\u0f66\u0f0b\xad\u0f38\u0f66\u0f90\u0fb1\u0f56\u0f66\u0f0b\xad\u0f58\u0f42\u0f7c\u0f53\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f54\u0f7c\u0f0b\xad\u0f58\u0f46\u0f7c\u0f42\u0f0b\xad\u0f63\u0f0b\xad \u0f53\u0f7c\u0f0b\xad\u0f57\u0f7a\u0f63\u0f0b\xad\u0f5e\u0f72\u0f0b\xad\u0f56\u0f51\u0f7a\u0f60\u0f72\u0f0b\xad\u0f42\u0f5f\u0f7a\u0f44\u0f66\u0f0b\xad\u0f62\u0f9f\u0f42\u0f66\u0f0b\xad\u0f60\u0f56\u0f74\u0f63\u0f0b\xad\u0f56\u0f5e\u0f7a\u0f66\u0f0b\xad\u0f56\u0f66\u0f90\u0fb1\u0f44\u0f66\u0f0b\xad\u0f53\u0f66\u0f0b\xad\u0f63\u0f7c\u0f0b\xad\u0f44\u0f7c\u0f0b\xad \u0f22\u0f25 \u0f60\u0f41\u0f7c\u0f62\u0f0b\xad\u0f56\u0f60\u0f72\u0f0b\xad\u0f66\u0f90\u0f63\u0f0b\xad\u0f56\u0f5f\u0f44\u0f0b\xad\u0f42\u0f72\u0f0b\xad\u0f51\u0f74\u0f66\u0f0b\xad\u0f51\u0fb2\u0f53\u0f0b\xad\u0f42\u0f5f\u0f56\u0f0b\xad\u0f62\u0f92\u0fb1\u0f66\u0f0b\xad\u0f44\u0f44\u0f0b\xad\u0f66\u0fb2\u0f74\u0f44\u0f0b\xad\u0f56\u0f62\u0fa9\u0f72\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.372.html',
+ 'video_urls': None}
+2018-05-02 14:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.374.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.373.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.373',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/DSC00067-c6fa640b.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00068-3d0c47fe.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00069-05f5fb11.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00071-005b1b9e.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00072-24ac1673.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00076-3049ebc1.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00077-98a03d8c.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00079-106f8000.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00081-4b8982fc.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00082-5abe1edf.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00083-f5992a92.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00084-212e3bff.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00085-352f6b9d.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00086-df3be316.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00087-9bf60b3e.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00088-c50dafc0.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00098-300e2f74.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00099-df96267b.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00100-3c970e1e.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC00101-1e626570.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241078784L,
+ 'title': u'\u0f04\u0f0d\u0f0d \u0f22\u0f20\u0f21\u0f24\u0f0d\u0f21\u0f22\u0f0d\u0f21\u0f26\u0f0d \u0f49\u0f72\u0f53\u0f0b\xad\u0f66\u0f74\u0f51\u0f0b\xad\u0f66\u0f72\u0f0b\xad\u0f66\u0f7a\u0f62\u0f0b\xad\u0f56\u0fb1\u0f7a\u0f66\u0f0b\xad\u0f53\u0f44\u0f0b\xad\u0f54\u0f60\u0f72\u0f0b\xad\u0f62\u0f72\u0f42\u0f0b\xad\u0f42\u0f5e\u0f74\u0f44\u0f0b\xad\u0f56\u0f66\u0f9f\u0f72\u0f0b\xad\u0f42\u0f53\u0f66\u0f0b\xad\u0f41\u0f44\u0f0b\xad\u0f42\u0f72\u0f66\u0f0b\xad\u0f42\u0f7c\u0f0b\xad\u0f66\u0f92\u0fb2\u0f72\u0f42\u0f0b\xad\u0f60\u0f7c\u0f42\u0f0b\xad\u0f51\u0f42\u0f60\u0f0b\xad\u0f63\u0fa1\u0f53\u0f0b\xad\u0f63\u0f94\u0f0b\xad\u0f58\u0f46\u0f7c\u0f51\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f58\u0f7c\u0f60\u0f72\u0f0b\xad\u0f58\u0f46\u0f7c\u0f51\u0f0b\xad\u0f60\u0f56\u0f74\u0f63\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.373.html',
+ 'video_urls': None}
+2018-05-02 14:04:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.375.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.374.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.374',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/DSC08465-979aaf53.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08466-85c2e45e.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08467-93fe9098.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08468-981b5187.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08470-17f51b3b.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08471-0000f36d.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08473-217c87a3.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08475-3306c5b4.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08476-0e8aabf4.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08477-4e74c560.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08478-cebf6006.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08479-1e9fca73.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08481-0c4b1b57.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08483-d86f56e3.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08484-d25f2390.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08485-109b7b20.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08488-da290533.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08490-f9590ea3.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08491-28cee94c.jpg',
+              u'http://www.tibetswiss.ch/system/html/DSC08492-ed90cd6a.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241078877L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f0d\u0f46\u0f7c\u0f66\u0f0b\xad\u0f62\u0f97\u0f7a\u0f0b\xad\u0f66\u0f0b\xad\u0f66\u0f90\u0fb1\u0f0b\xad\u0f54\u0f4e\u0f9c\u0f72\u0f0b\xad\u0f4f\u0f60\u0f72\u0f0b\xad\u0f60\u0f51\u0f66\u0f0b\xad\u0f58\u0f46\u0f7c\u0f51\u0f0b\xad\u0f58\u0f46\u0f7c\u0f51\u0f0b\xad\u0f60\u0f56\u0f74\u0f63\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.374.html',
+ 'video_urls': None}
+2018-05-02 14:04:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.375.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.375',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/Horgen-1-a4812c7c.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-2-abed7650.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-3-09876710.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-4-15e628c8.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-5-33aa07b4.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-6-dfa56d84.jpg',
+              u'http://www.tibetswiss.ch/system/html/Horgen-7-5b835f7f.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern1-a4624b13.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern2-8960f3e4.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern3-dad88cfd.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern4-b01ef771.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern5-17bb8ca9.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern6-737ca7bc.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern7-d500878f.jpg',
+              u'http://www.tibetswiss.ch/system/html/Luzern8-6ff8740d.jpg',
+              u'http://www.tibetswiss.ch/system/html/Volketswil-122-78d07768.jpg',
+              u'http://www.tibetswiss.ch/system/html/Volketswil-133-3ad9e21d.jpg',
+              u'http://www.tibetswiss.ch/system/html/Volketswil-136-0845cc1b.jpg',
+              u'http://www.tibetswiss.ch/system/html/Volketswil-164-3c25542c.jpg',
+              u'http://www.tibetswiss.ch/system/html/Volketswil-179-afec21d4.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241078941L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f66\u0f90\u0f56\u0f66\u0f0b\xad \u0f21\u0f26 \u0f54\u0f60\u0f72\u0f0b\xad\u0f66\u0f0b\xad\u0f42\u0f53\u0f66\u0f0b\xad\u0f60\u0f50\u0f74\u0f66\u0f0b\xad\u0f5a\u0f7c\u0f42\u0f66\u0f0b\xad(\u0f42\u0fb2\u0f7c\u0f66\u0f0b\xad\u0f5a\u0f7c\u0f42\u0f66\u0f0b\xad) \u0f56\u0f51\u0f58\u0f66\u0f0b\xad\u0f50\u0f7c\u0f53\u0f0b\xad\u0f56\u0fb1\u0f74\u0f44\u0f0b\xad\u0f56\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.375.html',
+ 'video_urls': None}
+2018-05-02 14:04:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.376.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.376.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.376',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/IMG_0257-83ac0a05.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0258-d75884d4.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0265-90e23169.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0269-952b5536.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0271-96f705c1.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0273-6582bf2c.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0275-c249077d.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0279-73524ac1.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0289-88b619c2.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0290-ff8f5aaf.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0294-c1f35e20.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0317-890e6016.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0319-6a64b0a4.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0342-9d96436c.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0350-469f629a.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0351-28732278.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0352-9cd08b4c.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0354-9a9338b2.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0381-b77c1c20.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_0536-2e910704.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241079249L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f38\u0f42\u0f7c\u0f44\u0f0b\xad\u0f66\u0f38\u0f66\u0f90\u0fb1\u0f56\u0f66\u0f0b\xad\u0f58\u0f42\u0f7c\u0f53\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f54\u0f7c\u0f0b\xad\u0f58\u0f46\u0f7c\u0f42\u0f0b\xad\u0f51\u0f42\u0f74\u0f44\u0f0b\xad\u0f42\u0fb2\u0f44\u0f66\u0f0b\xad  \u0f28\u0f21   \u0f63\u0f0b\xad\u0f55\u0f7a\u0f56\u0f66\u0f0b\xad\u0f54\u0f60\u0f72\u0f0b\xad\u0f38\u0f66\u0f90\u0f74\u0f60\u0f72\u0f0b\xad\u0f60\u0f41\u0fb2\u0f74\u0f44\u0f66\u0f0b\xad\u0f66\u0f90\u0f62\u0f0b\xad\u0f66\u0fb2\u0f74\u0f44\u0f0b\xad\u0f56\u0f62\u0fa9\u0f72\u0f0b\xad\u0f42\u0f5f\u0f56\u0f0b\xad\u0f62\u0f92\u0fb1\u0f66\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.376.html',
+ 'video_urls': None}
+2018-05-02 14:04:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photogallery-bo/items/-.370.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:04:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/latest-news-tibetan/items/-3793.html> (referer: http://www.tibetswiss.ch/index-bo.html)
+2018-05-02 14:04:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.tibetswiss.ch/photogallery-bo/items/-.370.html>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '-.370',
+ 'img_urls': [u'http://www.tibetswiss.ch/system/html/IMG_2650-dfb1fb0f.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2652-47554a26.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2653-d894b70b.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2654-f2c62623.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2655-e92e63da.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2656-d75c0876.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2661-78c61bf4.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2663-5d80586f.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2665-1cbb318f.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2681-c9845ac3.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2698-420c053a.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2702-0b60c52f.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2708-f1d16988.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2711-74d664aa.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2713-7ce11122.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2716-e2a9cb53.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2722-2d2560c8.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2724-2996ac80.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2725-c707d072.jpg',
+              u'http://www.tibetswiss.ch/system/html/IMG_2727-ae27ddda.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '1111-11-11 11:11:11',
+ 'publish_user': None,
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': None,
+ 'reply_nodes': None,
+ 'reproduce_count': None,
+ 'spider_time': 1525241080241L,
+ 'title': u'\u0f04\u0f05\u0f0d \u0f0d\u0f66\u0fa4\u0fb1\u0f72\u0f0b\xad\u0f53\u0f7c\u0f62\u0f0b\xad\u0f38\u0f42\u0f7c\u0f44\u0f0b\xad\u0f66\u0f0b\xad\u0f38\u0f66\u0f90\u0fb1\u0f56\u0f66\u0f0b\xad\u0f58\u0f42\u0f7c\u0f53\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f54\u0f7c\u0f0b\xad\u0f58\u0f46\u0f7c\u0f42\u0f0b\xad\u0f51\u0f42\u0f74\u0f44\u0f0b\xad\u0f42\u0fb2\u0f44\u0f66\u0f0b\xad \u0f27\u0f29 \u0f63\u0f0b\xad\u0f55\u0f7a\u0f56\u0f66\u0f0b\xad\u0f54\u0f60\u0f72\u0f0b\xad\u0f66\u0f90\u0f74\u0f60\u0f72\u0f0b\xad\u0f60\u0f41\u0fb2\u0f74\u0f44\u0f66\u0f0b\xad\u0f66\u0f90\u0f62\u0f0b\xad\u0f51\u0f74\u0f66\u0f0b\xad\u0f46\u0f7a\u0f53\u0f0b\xad\u0f42\u0f5f\u0f56\u0f66\u0f0b\xad\u0f62\u0f92\u0fb1\u0f66\u0f0b\xad\u0f66\u0fb2\u0f74\u0f44\u0f0b\xad\u0f56\u0f62\u0fa9\u0f72\u0f0b\xad\u0f5e\u0f74\u0f66\u0f0b\xad\u0f54\u0f0d',
+ 'txpath': None,
+ 'url': 'http://www.tibetswiss.ch/photogallery-bo/items/-.370.html',
+ 'video_urls': None}
+2018-05-02 14:04:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/-376.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/-378.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/-380.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/--427.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/kalachakra-basic.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://www.tibetswiss.ch/video-libary-bo/articles/-428.html> (failed 1 times): 503 Service Unavailable
+2018-05-02 14:04:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (303) to <GET http://www.tibetswiss.ch/home-de.html> from <GET http://www.tibetswiss.ch/tgsl-de.html>
+2018-05-02 14:04:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/History.html> (referer: http://www.tibetswiss.ch/movement-boc.html)
+2018-05-02 14:04:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-329.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-336.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/nachrichtenarchiv.html> (referer: http://www.tibetswiss.ch/news-archive-bo.html)
+2018-05-02 14:04:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-342.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-459.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-471.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-473.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-501.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--343.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-516.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/-472.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib/file/tl_files/content/downloads//articles/-547.html> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:04:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--474.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--476.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/prof-samdhong-rinpoche-message-on-relauch-of-tcsl-website-465.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/exileparlament-europe.html> (referer: http://www.tibetswiss.ch/europe-chitue-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/exilparlament-europa.html> (referer: http://www.tibetswiss.ch/europe-chitue-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--479.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--512.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/secular-ethics-human-values-and-society-498.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:04:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-libary-bo/articles/--525.html> (referer: http://www.tibetswiss.ch/video-libary-bo.html)
+2018-05-02 14:05:00 [scrapy.extensions.logstats] INFO: Crawled 101 pages (at 101 pages/min), scraped 10 items (at 10 items/min)
+2018-05-02 14:05:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (303) to <GET http://www.tibetswiss.ch/home.html> from <GET http://www.tibetswiss.ch/tgsl-en.html>
+2018-05-02 14:05:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/bilder-galerie.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:05:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/das-tibet-bureau.html> (referer: http://www.tibetswiss.ch/tibet-office-genf-bo.html)
+2018-05-02 14:05:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/photo-gallery.html> (referer: http://www.tibetswiss.ch/photo-gallary-bo.html)
+2018-05-02 14:05:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=2> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=3> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=2> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=3> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=4> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=4> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=5> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=5> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=6> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=6> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home.html?page=7> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/home-de.html?page=7> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/president-vicepresident-17.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Geschichte.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Karma.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/thuemi-17.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/thuemi-16.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/calender.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-228.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/buddha.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/folklore.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/sections.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/kalender.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Statutes.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/judiciary-the-tibetan-supreme-justice-commission.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/sektionen.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/satzungen.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/diedalailamas.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/newsletter.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/news-fullpage-reader/items/un-send-fact-finding-mission-to-tibet-now-679.html> (referer: http://www.tibetswiss.ch/press-release.html)
+2018-05-02 14:05:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/news-fullpage-reader/items/tcsl-appeals-un-to-send-fact-finding-mission-to-tibet.html> (referer: http://www.tibetswiss.ch/press-release.html)
+2018-05-02 14:05:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/the-kashagcabinet.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/central-tibetan-administration.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/publikation.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/news-archive.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audio-galerie.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audio-gallery.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Partner_Links.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Exilparlament.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Geschichte_tge.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibeterschule-351.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/partner-links.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-galerie.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/video-gallery.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Exilverfassung_tge.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/dalai-lama.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/words-of-truth.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-school.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibeterschulen.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/folklore-verein.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/folklore_Verein.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.tibetswiss.ch/index-bo.html> from <GET http://www.tibetswiss.ch/>
+2018-05-02 14:05:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/lokalverfassung.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/europe-chitue-bo.html?file=tl_files/content/images/2014/09/horgen-olympic/Anmeldungsformular-Olympiade-2014.docx#skipNavigation1> (referer: http://www.tibetswiss.ch/europe-chitue-bo.html)
+2018-05-02 14:05:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-243.html?file=tl_files/content/downloads/#skipNavigation1> (referer: http://www.tibetswiss.ch/-243.html)
+2018-05-02 14:05:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-308.html?file=tl_files%27cae2/content/images/2014/09/horgen-olympic/Program-Olympiade2014.pdf#skipNavigation1> (referer: http://www.tibetswiss.ch/-308.html)
+2018-05-02 14:05:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/#skipNavigation1> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/audios-tib.html?file=tl_files/content/downloads/#skipNavigation1> (referer: http://www.tibetswiss.ch/audios-tib.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/meeting-minutes.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam#skipNavigation1> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/8.html#skipNavigation1> (referer: http://www.tibetswiss.ch/holy-places-bo.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/partner-links-bo.html?file=tl_files/content/downloads/#skipNavigation1> (referer: http://www.tibetswiss.ch/partner-links-bo.html)
+2018-05-02 14:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/gyen-duk-chok-nyi-bo.html?file=tl_files/content/images/2014/09/horgen-olympic/Anmeldungsformular-Olympiade-2014.docx#skipNavigation1> (referer: http://www.tibetswiss.ch/gyen-duk-chok-nyi-bo.html)
+2018-05-02 14:05:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tgsl-tibetan-school-director-bo.html?file=tl_files%2Fcontent%2Fimages%2F2014%2F09%2Fhorgen-olympic%2FEINLADUNG-Olympiade-BO-DE.docx#skipNavigation1> (referer: http://www.tibetswiss.ch/tgsl-tibetan-school-director-bo.html)
+2018-05-02 14:05:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Tibetan_Schools.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Lied_des_Milarepa.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Folklore_Society.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/the-tibet-office.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/regionalparlament.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Local_Constitution.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/sitzungsprotokoll.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/das-wort-des-buddha.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/die-sakya-tradition.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/die-gelug-tradition-211.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/parliament-in-exile.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Regional_Parliament.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Kashag.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetan-national-flag.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Was_ist_Unwissenheit.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/tibetischer-buddhismus.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/ex-exileparlament-europe.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/ex-exileparlament-europe-324.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/festivals-and-ceremonies.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Oberster_Gerichtshof_tge.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/himalaya.ttf> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:05:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Wer_ist_Avalokiteshvara.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/six-ornaments.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/application-for-green-book.html> (referer: http://www.tibetswiss.ch/home.html)
+2018-05-02 14:05:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Das_buddhistische_Tantra_Tibets.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Template/LocalAssembly.pdf> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:05:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/die-nyingma-tradition.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/Lost%20Application.docx> (referer: http://www.tibetswiss.ch/chatrel.html)
+2018-05-02 14:05:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/Lost%20Application.pdf> (referer: http://www.tibetswiss.ch/chatrel.html)
+2018-05-02 14:05:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Mystik_mit_dem_Geist_sehen.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:05:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Tibetan-Keyboard.jpg> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:05:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/GB%20Guideline%20Set.pdf> (referer: http://www.tibetswiss.ch/chatrel.html)
+2018-05-02 14:05:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Template/LocalAssembly.dotx> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:06:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Was_nach_der_Initiation_zu_tun_ist.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:00 [scrapy.extensions.logstats] INFO: Crawled 202 pages (at 101 pages/min), scraped 10 items (at 0 items/min)
+2018-05-02 14:06:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Tibetische_Thangkas_deuten_Teil_1.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Tibetische_Thangkas_deuten_Teil_2.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:01 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/Tsogchung%20Recommendation.pdf> (failed 1 times): 503 Service Unavailable
+2018-05-02 14:06:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Aufbau_einer_analytischen_Meditation.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Wie_gehen_Buddhisten_mit_dem_Tod_um.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Template/Letter-Hoch-with-Footer.pdf> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:06:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Shambhala_-_Mythos_oder_Wirklichkeit.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Grundlagen_einer_gesellschaftlichen_Ethik.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Jomolhari-alpha3c-0605331.ttf> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:06:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Praktizieren_Sie_die_Essenz_des_Buddhismus.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Ein_guter_Lehrer_hat_nichts_zu_verbergen.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/download-bo.html?file&file=tl_files%2Fcontent%2Fdownloads%2FMonlam&file=tl_files/content/downloads/Template/Letter-Hoch-with-Footer.dotx> (referer: http://www.tibetswiss.ch/download-bo.html)
+2018-05-02 14:06:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Das_Bewusstsein_aus_der_Sicht_des_Tantra.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Der_tibetische_Buddhismus_ist_kein_Lamaismus.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Verse_des_indischen_Meisters_Shantideva.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/verbreitung-des-dharma-durch-atisha-in-tibet.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Nachweis_des_Gesetzes_von_Ursache_und_Wirkung.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/Tsogchung%20Recommendation.docx> (referer: http://www.tibetswiss.ch/chatrel.html)
+2018-05-02 14:06:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/chatrel.html?file=tl_files/content/images/2017/12/Greenbook-Guideline/Chatrel%20Contribution%20Format-Swiss.xlsx> (referer: http://www.tibetswiss.ch/chatrel.html)
+2018-05-02 14:06:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/Was_zwischen_den_Meditationssitzungen_zu_tun_ist.html> (referer: http://www.tibetswiss.ch/home-de.html)
+2018-05-02 14:06:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2012/2012-08_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2012/2012-10_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2012/2012-11_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2012/2012-12_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2013/2013-05_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2013/2013-08_TGSL_Thuemi_Protokoll_German.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2013/2013-04_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2013/2013-08_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2012/2012-06_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2013/2013-12_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2014/2014-01_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2014/2014-02_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)
+2018-05-02 14:06:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.tibetswiss.ch/-314.html?file=tl_files/content/thumi-meeting/2013/&file=tl_files/content/thumi-meeting/2012/&file=tl_files/content/thumi-meeting/2014/2014-03_TGSL_Thuemi_Protokoll_Tibetan.pdf> (referer: http://www.tibetswiss.ch/-314.html)

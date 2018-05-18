@@ -65,6 +65,13 @@ web_begin_url_config={
     'rfa_org':'https://www.rfa.org/mandarin/',
     'thetibetpost':'http://www.thetibetpost.com/en/',
     'vot_org':'http://www.vot.org/',
+    'chithu':'http://chithu.org/',
+    'kagyuofficeE':'http://kagyuoffice.org',#英文版，注意跟之前版本的区别
+    'dalailama':'https://www.dalailama.com/',
+    'boxunE':'http://en.boxun.com/',
+    'ntd':'http://www.ntd.tv',
+    'tibet':'http://tibet.net/',
+
 
 
 
@@ -212,4 +219,4 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('vot_org')
+    send_start_url_to_redis('tibet')

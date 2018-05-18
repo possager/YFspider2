@@ -1,0 +1,118 @@
+2018-04-26 16:04:49 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: YFspider2)
+2018-04-26 16:04:49 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'YFspider2.spiders', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'SPIDER_MODULES': ['YFspider2.spiders'], 'REACTOR_THREADPOOL_MAXSIZE': '32', 'BOT_NAME': 'YFspider2', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs\\default\\middleway\\5d1ef6f0492811e8b1880862667c7ee1.log'}
+2018-04-26 16:04:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-04-26 16:04:49 [middleway] INFO: Reading start URLs from redis key 'middleway:start_urls' (batch size: 16, encoding: utf-8
+2018-04-26 16:04:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 16:04:49 [py.warnings] WARNING: D:\python_27\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.spidermiddleware.referer.RefererMiddleware` class is deprecated, use `scrapy.spidermiddlewares.referer.RefererMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-04-26 16:04:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 16:04:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'YFspider2.pipelines.YfspidersetdefaultValue',
+ 'YFspider2.pipelines.save_data_to_RemoteFile_XMX',
+ 'YFspider2.pipelines.save_data_to_file']
+2018-04-26 16:04:49 [scrapy.core.engine] INFO: Spider opened
+2018-04-26 16:04:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:04:49 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6033
+2018-04-26 16:04:49 [middleway] DEBUG: Read 1 requests from 'middleway:start_urls'
+2018-04-26 16:04:49 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://woeser.middle-way.net/> (failed 1 times): 500 Internal Server Error
+2018-04-26 16:04:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET http://woeser.middle-way.net/> (failed 2 times): 500 Internal Server Error
+2018-04-26 16:04:51 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET http://woeser.middle-way.net/> (failed 3 times): 500 Internal Server Error
+2018-04-26 16:04:51 [scrapy.core.engine] DEBUG: Crawled (500) <GET http://woeser.middle-way.net/> (referer: None)
+2018-04-26 16:04:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <500 http://woeser.middle-way.net/>: HTTP status code is not handled or not allowed
+2018-04-26 16:05:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:06:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:07:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:08:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:09:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:10:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:11:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:12:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:13:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:14:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:15:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:16:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:17:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:18:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:19:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:20:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:21:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:22:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:23:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:24:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:25:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:26:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:27:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:28:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:29:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:30:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:31:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:32:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:33:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:34:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:35:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:36:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:37:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:38:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:39:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:40:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:41:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:42:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:43:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:44:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:45:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:46:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:47:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:48:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:49:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:50:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:51:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:52:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:53:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:54:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:55:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:56:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:57:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:58:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 16:59:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:00:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:01:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:02:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:03:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:04:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:05:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:06:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:07:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:08:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:09:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:10:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:11:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:12:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:13:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:14:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:15:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:16:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:17:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:18:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:19:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 17:20:49 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)

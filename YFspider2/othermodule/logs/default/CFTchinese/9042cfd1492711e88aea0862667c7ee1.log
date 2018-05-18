@@ -1,0 +1,1538 @@
+2018-04-26 15:58:17 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: YFspider2)
+2018-04-26 15:58:17 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'YFspider2.spiders', 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'SPIDER_MODULES': ['YFspider2.spiders'], 'REACTOR_THREADPOOL_MAXSIZE': '32', 'BOT_NAME': 'YFspider2', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'LOG_FILE': 'logs\\default\\CFTchinese\\9042cfd1492711e88aea0862667c7ee1.log'}
+2018-04-26 15:58:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-04-26 15:58:17 [CFTchinese] INFO: Reading start URLs from redis key 'CFTchinese:start_urls' (batch size: 16, encoding: utf-8
+2018-04-26 15:58:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 15:58:17 [py.warnings] WARNING: D:\python_27\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.spidermiddleware.referer.RefererMiddleware` class is deprecated, use `scrapy.spidermiddlewares.referer.RefererMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2018-04-26 15:58:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 15:58:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline',
+ 'YFspider2.pipelines.YfspidersetdefaultValue',
+ 'YFspider2.pipelines.save_data_to_RemoteFile_XMX',
+ 'YFspider2.pipelines.save_data_to_file']
+2018-04-26 15:58:17 [scrapy.core.engine] INFO: Spider opened
+2018-04-26 15:58:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 15:58:17 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2018-04-26 15:58:22 [CFTchinese] DEBUG: Read 1 requests from 'CFTchinese:start_urls'
+2018-04-26 15:58:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/> (referer: None) ['partial']
+2018-04-26 15:59:37 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 15:59:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077329?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077321?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077179?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077293?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077328?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077311?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 15:59:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077314?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077329?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077329',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 13:12:00',
+ 'publish_user': [u'\u5510\u2022\u6e29\u5170', u'\u5eb7\u6cb3\u4fe1'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077329?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729584524L,
+ 'title': u'\u4e2d\u56fd\u5185\u5730\u53cd\u8150\u89e6\u89d2\u4f38\u81f3\u9999\u6e2f',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077329?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:15 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET http://www.ftchinese.com/story/001077329?full=y> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-04-26 16:00:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077313?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077323?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077321?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077321',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u8def\u6613\u4e1d\u2022\u5362\u5361\u65af'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077321?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624322L,
+ 'title': u'\u671d\u9c9c\u7cbe\u82f1\u9636\u5c42\u8f6c\u5411\u4e2d\u56fd\u7f51\u7ad9',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077321?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077179?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077179',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u660e\u5229'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077179?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624343L,
+ 'title': u'\u4e2d\u56fd\u623f\u5730\u4ea7\u8fc8\u5411\u65b0\u65f6\u4ee3\uff1f',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077179?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077293?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077293',
+ 'img_urls': [u'http://i.ftimg.net/images/2018/04/070b64f28636cc17cf97f261b2af1f26.png',
+              u'http://i.ftimg.net/images/2018/04/9db305eea661e270fad35c4d5fe47955.png',
+              u'http://i.ftimg.net/images/2018/04/da7e86cad1a5d2a00bb1fbe2db05076f.png',
+              u'http://i.ftimg.net/images/2018/04/49195c4afae3de8ce51779e5b9834a4a.png',
+              u'http://i.ftimg.net/images/2018/04/7799602a2ab19a38892056fcdb75f64c.png',
+              u'http://i.ftimg.net/images/2018/04/dabc1e18d09065cda0b99f291a2da7a5.png',
+              u'http://i.ftimg.net/images/2018/04/304b9893684f2f4ab0d141d0f95d2291.png'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u300a\u6295\u8d44\u53c2\u8003\u300b'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077293?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624354L,
+ 'title': u'\u8c03\u7814\uff1a\u8d8a\u5357\u6d88\u8d39\u8005\u60c5\u7eea\u770b\u6da8',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077293?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077328?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077328',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 12:26:00',
+ 'publish_user': [u'\u67e5\u5c14\u65af\u2022\u514b\u6d1b\u5f17'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077328?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624364L,
+ 'title': u'\u4e2d\u56fd\u62c5\u5fc3\u5931\u53bb\u5bf9\u671d\u5f71\u54cd\u529b',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077328?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077311?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077311',
+ 'img_urls': [u'http://i.ftimg.net/picture/1/000077251_piclink.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u5b5f\u8339\u9759', u'\u6b27\u9633\u8f89'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077311?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624378L,
+ 'title': u'\u9999\u6e2f\u5229\u7387\u5f62\u6210\u673a\u5236\u53ca\u672a\u6765\u8d70\u52bf',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077311?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077314?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077314',
+ 'img_urls': [u'http://i.ftimg.net/picture/8/000077258_piclink.jpg',
+              u'http://i.ftimg.net/picture/9/000077259_piclink.jpg'],
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u8521\u6d69'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077314?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624392L,
+ 'title': u'\u4e2d\u56fd\u503a\u5e02\u5c06\u8d70\u5411\u4f55\u65b9\uff1f',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077314?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:24 [scrapy.extensions.logstats] INFO: Crawled 10 pages (at 9 pages/min), scraped 7 items (at 7 items/min)
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077332?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077315?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077312?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077320?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077318?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077331?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077329?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077321?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077179?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077293?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077328?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077311?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077314?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077313?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077313',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u77f3\u6cfd'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077313?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624660L,
+ 'title': u'\u5982\u4f55\u7834\u89e3\u4eba\u5de5\u667a\u80fd\u201c\u843d\u5730\u96be\u201d\uff1f',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077313?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.ftchinese.com/story/001077323?full=y>
+{'ancestor_id': None,
+ 'content': None,
+ 'dislike_count': None,
+ 'id': '001077323',
+ 'img_urls': None,
+ 'is_pic': None,
+ 'like_count': None,
+ 'like_nodes': None,
+ 'parent_id': None,
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u8def\u6613\u4e1d\u2022\u5362\u5361\u65af'],
+ 'publish_user_id': None,
+ 'publish_user_jsonid': None,
+ 'publish_user_photo': None,
+ 'read_count': None,
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077323?v=1'],
+ 'reproduce_count': None,
+ 'spider_time': 1524729624674L,
+ 'title': u'\u5c0f\u7c73\u5bf9\u786c\u4ef6\u4e1a\u52a1\u8bbe\u5b9a5%\u5229\u6da6\u7387\u4e0a\u9650',
+ 'txpath': None,
+ 'url': 'http://www.ftchinese.com/story/001077323?full=y',
+ 'video_urls': None}
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077313?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077323?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/10722> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/story/001077327?full=y> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077331?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077332',
+ 'publish_time': '2018-04-26 14:35:00',
+ 'publish_user': [u'\u6885\u8d6b\u96f7\u6069\u2022\u514b\u6c49'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077332?v=1'],
+ 'spider_time': 1524729630223L,
+ 'title': u'\u6b27\u76df\u62df\u7acb\u6cd5\u6253\u51fb\u79d1\u6280\u5de8\u5934\u201c\u9738\u738b\u6761\u6b3e\u201d',
+ 'url': 'http://www.ftchinese.com/story/001077332?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077315',
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u8042\u8f89\u534e'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077315?v=1'],
+ 'spider_time': 1524729630237L,
+ 'title': u'\u4e2d\u56fd\u54ea\u4e9b\u90e8\u95e8\u53ef\u4ee5\u8bbe\u7acb\u5e38\u52a1\u526f\u804c\uff1f',
+ 'url': 'http://www.ftchinese.com/story/001077315?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077312',
+ 'publish_time': '2018-04-25 17:08:00',
+ 'publish_user': [u'\u8428\u59c6\u2022\u5f17\u83b1\u660e',
+                  u'\u97e9\u78a7\u5982'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077312?v=1'],
+ 'spider_time': 1524729630248L,
+ 'title': u'\u7279\u6717\u666e\u5c06\u6d3e\u9063\u9ad8\u7ea7\u522b\u4ee3\u8868\u56e2\u4e0b\u5468\u6765\u534e\u8c08\u5224',
+ 'url': 'http://www.ftchinese.com/story/001077312?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077320',
+ 'publish_time': '2018-04-26 06:02:00',
+ 'publish_user': [u'\u5229\u5965\u2022\u5218\u6613\u65af',
+                  u'Kana Inagaki',
+                  u'\u6851\u6653\u9713'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077320?v=1'],
+ 'spider_time': 1524729630262L,
+ 'title': u'\u7f8e\u4e2d\u8d38\u6613\u4e89\u7aef\u4ee4\u4e1c\u829d\u5185\u5b58\u4e1a\u52a1\u4ea4\u6613\u751f\u53d8',
+ 'url': 'http://www.ftchinese.com/story/001077320?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077318',
+ 'publish_time': '2018-04-26 09:17:00',
+ 'publish_user': [u'\u66f9\u8f9b'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077318?v=1'],
+ 'spider_time': 1524729630276L,
+ 'title': u'\u7ed3\u675f\u671d\u9c9c\u6218\u4e89\u5b89\u6392\uff1a\u4e2d\u56fd\u5fc5\u987b\u8981\u53c2\u52a0',
+ 'url': 'http://www.ftchinese.com/story/001077318?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077331',
+ 'publish_time': '2018-04-26 14:25:00',
+ 'publish_user': [u'\u5eb7\u6cb3\u4fe1'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077331?v=1'],
+ 'spider_time': 1524729630284L,
+ 'title': u'\u6e2f\u4ea4\u6240\u59d4\u4efb\u53f2\u7f8e\u4f26\u4e3a\u65b0\u4efb\u8463\u4e8b\u4f1a\u4e3b\u5e2d',
+ 'url': 'http://www.ftchinese.com/story/001077331?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077332?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077315?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077312?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077320?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077318?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Error processing {'id': '001077327',
+ 'publish_time': '2018-04-26 12:05:00',
+ 'publish_user': [u'\u5361\u7279\u91cc\u7eb3\u2022 \u66fc\u68ee'],
+ 'reply_count': 0,
+ 'reply_nodes': ['http://www.ftchinese.com/index.php/c/newcomment/001077327?v=1'],
+ 'spider_time': 1524729630364L,
+ 'title': u'\u9a6c\u514b\u9f99\u5728\u7f8e\u56fd\u56fd\u4f1a\u53d1\u8868\u9488\u5bf9\u7279\u6717\u666e\u7684\u6f14\u8bb2',
+ 'url': 'http://www.ftchinese.com/story/001077327?full=y'}
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 250, in inContext
+    result = inContext.theWork()
+  File "D:\python_27\lib\site-packages\twisted\python\threadpool.py", line 266, in <lambda>
+    inContext.theWork = lambda: context.call(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 122, in callWithContext
+    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+  File "D:\python_27\lib\site-packages\twisted\python\context.py", line 85, in callWithContext
+    return func(*args,**kw)
+  File "D:\python_27\lib\site-packages\scrapy_redis\pipelines.py", line 66, in _process_item
+    self.server.rpush(key, data)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1388, in rpush
+    return self.execute_command('RPUSH', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.ftchinese.com/story/001077327?full=y> (referer: http://www.ftchinese.com/)
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+GeneratorExit
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-04-26 16:00:30 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\twisted\internet\task.py", line 517, in _oneWorkUnit
+    result = next(self._iterator)
+  File "D:\python_27\lib\site-packages\scrapy\utils\defer.py", line 63, in <genexpr>
+    work = (callable(elem, *args, **named) for elem in iterable)
+  File "D:\python_27\lib\site-packages\scrapy\core\scraper.py", line 183, in _process_spidermw_output
+    self.crawler.engine.crawl(request=output, spider=spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 210, in crawl
+    self.schedule(request, spider)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 216, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 162, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+  File "D:\python_27\lib\site-packages\scrapy_redis\dupefilter.py", line 100, in request_seen
+    added = self.server.sadd(self.key, fp)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 1600, in sadd
+    return self.execute_command('SADD', name, *values)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+ResponseError: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2018-04-26 16:00:30 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11696> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11707> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11710> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:31 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11704> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:32 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/10852> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:32 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11695> (referer: http://www.ftchinese.com/) ['partial']
+2018-04-26 16:00:32 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "D:\python_27\lib\site-packages\scrapy\commands\crawl.py", line 58, in run
+    self.crawler_process.start()
+  File "D:\python_27\lib\site-packages\scrapy\crawler.py", line 285, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1243, in run
+    self.mainLoop()
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 1252, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "D:\python_27\lib\site-packages\twisted\internet\base.py", line 878, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "D:\python_27\lib\site-packages\scrapy\utils\reactor.py", line 41, in __call__
+    return self._func(*self._a, **self._kw)
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 122, in _next_request
+    if not self._next_request_from_scheduler(spider):
+  File "D:\python_27\lib\site-packages\scrapy\core\engine.py", line 149, in _next_request_from_scheduler
+    request = slot.scheduler.next_request()
+  File "D:\python_27\lib\site-packages\scrapy_redis\scheduler.py", line 172, in next_request
+    request = self.queue.pop(block_pop_timeout)
+  File "D:\python_27\lib\site-packages\scrapy_redis\queue.py", line 115, in pop
+    results, count = pipe.execute()
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2775, in _execute_transaction
+    self.immediate_execute_command('DISCARD')
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2715, in immediate_execute_command
+    return self.parse_response(conn, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 2838, in parse_response
+    self, connection, command_name, **options)
+  File "D:\python_27\lib\site-packages\redis\client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "D:\python_27\lib\site-packages\redis\connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: DISCARD without MULTI
+
+2018-04-26 16:00:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.ftchinese.com/interactive/11365> (referer: http://www.ftchinese.com/) ['partial']
