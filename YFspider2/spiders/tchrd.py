@@ -12,6 +12,12 @@ import time
 import hashlib
 
 
+def deal_links_to_fallow(link_raw):
+    links=link_raw.replace('http://','')
+    linksplited= links.strip('/').split('/')
+    if len(linksplited)==2:
+        print '跟进链接:',link_raw
+        return link_raw
 
 
 
@@ -21,7 +27,13 @@ class tchrd(RedisCrawlSpider):
 
     rules = (
         Rule(LinkExtractor(allow=r'(http\:\/\/tchrd\.org\/chinese\/[^\/]*?[\/\"|^])',deny=(r'google.com',r'linkedin.com',r'facebook.com'),restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]'),
-             callback='parse_content',
+             callback='parse_content',#中文
+             follow=True),
+        Rule(LinkExtractor(allow=r'(http\:\/\/www\.tchrd\.org\/tib\/\d{4}\/\d{2}\/.*\/)',deny=(r'google.com',r'linkedin.com',r'facebook.com'),restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]'),
+             callback='parse_content',#藏文
+             follow=True),
+        Rule(LinkExtractor(allow=r'(http\:\/\/www\.tchrd\.org\/.*\-.*\/)',deny=(r'google.com',r'linkedin.com',r'facebook.com'),restrict_xpaths='//*[@id="main-content"]/div[@class="content"]/div[@class="post-navigation"]',process_value=deal_links_to_fallow),
+             callback='parse_content',#英文
              follow=True),
         Rule(LinkExtractor(allow=r'http\:\/\/tchrd\.org\/chinese\/$',deny=(r'google.com',r'linkedin.com',r'facebook.com')),follow=True),
     )
@@ -48,7 +60,6 @@ class tchrd(RedisCrawlSpider):
                 'November':'11',
                 'December':'12'
             }
-
 
             mounth_str_num=mouth_transform[mounth_str]
 

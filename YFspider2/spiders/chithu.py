@@ -23,9 +23,9 @@ def deal_links_to_fallow(link_raw):
 
 
 
-class tibetanparliament(RedisCrawlSpider):
-    name = 'tibetanparliament'
-    start_urls=['http://tibetanparliament.org/']
+class chithu(RedisCrawlSpider):
+    name = 'chithu'
+    start_urls=['http://chithu.org/']
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -33,8 +33,8 @@ class tibetanparliament(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow=r'http:\/\/tibetanparliament\.org\/.*?\/$',process_value=deal_links_to_fallow),callback='parse_content',follow=True),
-        Rule(LinkExtractor(allow=r'http:\/\/tibetanparliament\.org\/.*?',),follow=True)
+        Rule(LinkExtractor(allow=r'http\:\/\/chithu\.org\/.*\-\d*/',process_value=deal_links_to_fallow),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow=r'http\:\/\/chithu\.org\/.*',),follow=True)
     )
 
 
@@ -46,7 +46,7 @@ class tibetanparliament(RedisCrawlSpider):
 
         def deal_publish_time(publish_time_list=[]):
             if publish_time_list:
-                publish_time_str=publish_time_list[0]
+                publish_time_str=publish_time_list
             else:
                 return '2018-02-01 00:00:00'
             if '+' in publish_time_str:
@@ -60,11 +60,11 @@ class tibetanparliament(RedisCrawlSpider):
         loader1=ItemLoader(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())
-        loader1.add_xpath('title','//article//h2[@class="entry-title"]/text()',lambda x:''.join([y for y in x]))
+        loader1.add_xpath('title','//article//h3[@class="entry-title"]//text()',lambda x:''.join([y for y in x]))
         loader1.add_xpath('content','//article//div[@class="entry-content"]/p//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.strip('/').split('/')[-1])
         loader1.add_xpath('img_urls','//article//div[@class="entry-content"]//img/@src')
-        loader1.add_xpath('publish_time','//article//time[@class="published"]/@datetime',deal_publish_time)
+        loader1.add_xpath('publish_time','//div[@class="content row"]//time[@class]/@datetime',deal_publish_time)
         loader1.add_xpath('publish_user','//article//time[@class="published"]/a[@class="fn"]/text()')
 
 
