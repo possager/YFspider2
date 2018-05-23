@@ -2,14 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20946cc7-2e97-48ac-a907-2269e591d441" name="Default" comment="fuwuqi peizhi">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_56ff8fe940b2e219b03017fa94710af8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_5aca3ba144469c78b7a91d2c8f10c41a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_704afe0adf2aa2f2cfa7021ff4907f02" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_73f6c17970fec24a3ddf3e5847c10f78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_74be04756bfc40dd525298cb1d3abcfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_8bbcc9bb27bdc7d762a3e02abe907b91" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_9b674cff3101f014624e691c88bf1ee4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_9e85d40a66c9383a0883d28f43394c15" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_b1a21970c32a936e907934b5ff74f64a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_b9b14c1779ff321fb7f2223312caa24e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_c3eaefe5d1494fa17bc3daa2cc88b527" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_d02908061203db9ba4da6f57b19623fc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_e943536c956959b28afacb30c2040be4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/E:/data_all_xizang/1517414400000_藏人行政中央官网（藏文）_speeches_2018-02-01_bod_1517414400000_f49b42781fbc428f17161460b9f20116" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YFspider2/KafkaConnector1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/YFspider2/dbs/default.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YFspider2/spiders/bod.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dbs/dbs/default.db" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dbs/default.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/AtcOrgAu/6b3fdfce5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/CFTchinese/6b3fdfcf5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/aboluowang/6b3fdfd05dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/bod/6b3fdfd25dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/boxun/6b3fdfd35dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/boxunE/6b3fdfd45dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chinaaid/6b3fdfd55dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chinainperspective/48878a685dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chinainperspective/6b3fdfd65dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chinesepen/6b3fdfd75dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chithu/6b3fdfd85dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/chushigangdrug/6b3fdfd95dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/cn_rfi_fr/6b3fdfda5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dalailama/6b3fdfdb5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dalailamaworld/6b3fdfdc5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dhokhamchushigangdrug/6b3fdfdd5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dorjeshugden/6b3fdfde5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dw/6b3fdfdf5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/dwnews/6b3fdfe05dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/epochtimes/6b3fdfe15dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/kagyuoffice/6b3fdfe25dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/kagyuofficeE/6b3fdfe35dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/kearyhuang/6b3fdfe45dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/khabdha/6b3fdfe55dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/kirti92/6b3fdfe65dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/liaowangxizang/6b3fdfe75dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/middleway-visiontimes/6b3fdfe95dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/middleway/6b3fdfe85dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/minghui/6b3fdfea5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/ntd/6b3fdfeb5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/nytimes/6b3fdfec5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/phayul/6b3fdfed5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/potalapost/6b3fdfee5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/radiosoh/6b3fdfef5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/rfa_org/6b3fdff05dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/rtycnynj/6b3fdff15dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/savetibet/6b3fdff25dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/secretchina/6b3fdff35dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/sherig/6b3fdff45dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/sputniknews/6b3fdff55dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/studentsforafreetibet/6b3fdff65dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tchrd/6b3fdff75dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/thetibetpost/6b3fdff85dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibet/6b3fdff95dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetanentrepreneurs/6b3fdffa5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetanparliament/6b3fdffb5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetanwomen/6b3fdffc5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetanyouthcongress/6b3fdffd5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetexpress/6b3fdffe5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetsociety/6b3fdfff5dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetsun/6b3fe0005dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetswiss/6b3fe0015dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibettimes/6b3fe0025dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/tibetwomenBo/6b3fe0035dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/uyghurcongress/6b3fe0045dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/voachinese/6b3fe0055dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/vot_org/6b3fe0065dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/xiongdeng/6b3fe0075dd711e8a5fa000c29790ae4.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/default/xizang_zhiye/6b3fe0085dd711e8a5fa000c29790ae4.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/YFspider2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/YFspider2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YFspider2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/main2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/notice.html" afterDir="false" />
@@ -40,7 +113,7 @@
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinainperspective/905b39cf492711e8ae120862667c7ee1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinainperspective/c8aa20e14dcc11e88c9b0862667c7ee1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinesepen/4f9cd4c04dce11e897790862667c7ee1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinesepen/5cd2849e492811e8bc460862667c7ee1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinesepen/5cd2849e492811e8bc460862667c7ee1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/default/bbc_com_zhongwen_simp/6b3fdfd15dd711e8a5fa000c29790ae4.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinesepen/90668470492711e8b3080862667c7ee1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chinesepen/c8b433004dcc11e88de70862667c7ee1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/logs/default/chushigangdrug/4fa8e2b04dce11e8a5620862667c7ee1.log" beforeDir="false" />
@@ -137,13 +210,13 @@
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/pipeline_nameEN_to_nameCN.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/pipeline_nameEN_to_nameCN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/push_all_data_to_remote.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/push_all_data_to_remote.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/scrapyd_spider_Luncher.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/scrapyd_spider_Luncher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YFspider2/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/push_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/push_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/AtcOrgAu.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/AtcOrgAu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/CFTchinese.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/CFTchinese.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/aboluowang.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/aboluowang.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/bbc_com_zhongwen_simp.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/bbc_com_zhongwen_simp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YFspider2/spiders/bod.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/bod.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/boxun.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/boxun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/boxunE.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/boxunE.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/chinaaid.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/chinaaid.py" afterDir="false" />
@@ -200,9 +273,7 @@
       <change beforePath="$PROJECT_DIR$/YFspider2/spiders/xizang_zhiye.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/spiders/xizang_zhiye.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/test/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/test/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/test/test_find_why_cant_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/test/test_find_why_cant_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YFspider2/test/test_redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/test/test_redis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/test/testzangwen.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/test/testzangwen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" afterPath="$PROJECT_DIR$/twistd.pid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -274,13 +345,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dhokhamchushigangdrug.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dhokhamchushigangdrug.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YFspider2/spiders/dhokhamchushigangdrug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+            <state relative-caret-position="615">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YFspider2/main2.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="scrapyd_spider_Luncher.py" pinned="false" current-in-tab="false">
@@ -304,20 +380,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafkaConnector1.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KafkaConnector1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YFspider2/KafkaConnector1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="53" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="epollreactor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/twisted/internet/epollreactor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3255">
-              <caret line="227" selection-start-line="227" selection-end-line="227" />
+            <state relative-caret-position="197">
+              <caret line="42" column="53" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -489,18 +556,6 @@
             </path>
             <path>
               <item name="YFspider2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
-              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
-              <item name="othermodule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="YFspider2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
-              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="YFspider2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -515,7 +570,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -908,7 +963,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526636554827</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fuwuqi peizhi">
+      <created>1527062997445</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1527062997445</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -921,16 +983,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="753" y="182" width="1920" height="977" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" weight="0.21018419" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" visible="true" weight="0.20980616" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.48916763" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4920635" visible="true" weight="0.15548456" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4920635" visible="true" weight="0.15548456" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32675907" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -1361,16 +1422,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/YFspider2/spiders/vot_org.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="e#1791#2129#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YFspider2/spiders/tibetanwomen.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1560,6 +1611,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#66#97#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1636,13 +1690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YFspider2/KafkaConnector1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="53" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YFspider2/othermodule/scrapyd_spider_Luncher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
@@ -1673,8 +1720,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YFspider2/spiders/dhokhamchushigangdrug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+        <state relative-caret-position="615">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YFspider2/main2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YFspider2/KafkaConnector1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="53" />
         </state>
       </provider>
     </entry>
