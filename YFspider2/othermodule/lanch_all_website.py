@@ -71,15 +71,7 @@ web_begin_url_config={
     'boxunE':'http://en.boxun.com/',
     'ntd':'http://www.ntd.tv',
     'tibet':'http://tibet.net/',
-
-
-
-
-
-
-
-
-
+    'bod':'http://bod.asia/',
 
 
 }
@@ -219,4 +211,7 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('tibet')
+    # send_start_url_to_redis('bod')
+    for onewebsite in web_begin_url_config.keys():
+        print(onewebsite)
+        send_start_url_to_redis(onewebsite)

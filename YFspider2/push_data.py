@@ -5,7 +5,8 @@ import os
 from YFspider2.pipelines import BASIC_FILE2,BASIC_FILE
 from YFspider2.othermodule.pipeline_nameEN_to_nameCN import getNameCN
 import re
-
+from KafkaConnector1 import Producer
+import time
 
 
 
@@ -60,10 +61,26 @@ def get_file():
 
                 }
 
-                file222=open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')
-                response1=requests.post(url=url_post,data=dict1,files={'file':file222})
-                print response1.text
+                # file222=open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')
+                # response1=requests.post(url=url_post,data=dict1,files={'file':file222})
+                # print response1.text
+                with open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb') as fl:
+                    file222=json.load(fl)
+                yield (file222,one_jsonfile)
+
 
 
 if __name__ == '__main__':
-    get_file()
+    # get_file()
+    host = '192.168.6.187:9092,192.168.6.188:9092,192.168.6.229:9092,192.168.6.230:9092'
+    p = Producer(host)
+    i = 0
+    ztids = [339, 338]
+
+
+    for onefile in get_file():
+        print(onefile)
+        i+=1
+        if i>100:
+            break
+        p.send('test',{'data':onefile[0]},onefile[1],time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(int(time.time()))))

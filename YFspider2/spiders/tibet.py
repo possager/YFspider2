@@ -14,12 +14,9 @@ import time
 import datetime
 
 
-# def deal_links_to_fallow(link_raw):
-#     links=link_raw.replace('http://','')
-#     linksplited= links.strip('/').split('/')
-#     if len(linksplited)==2:
-#         print '跟进链接:',link_raw
-#         return link_raw
+def deal_links_to_fallow(link_raw):
+    if 'pdf' not in link_raw:
+        return link_raw
 
 
 
@@ -33,7 +30,7 @@ class tibet(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow=r'http\:\/\/tibet\.net\/\d{4}/\d{2}\/.*\/',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow=r'http\:\/\/tibet\.net\/\d{4}/\d{2}\/.*\/',process_value=deal_links_to_fallow),callback='parse_content',follow=True),
         Rule(LinkExtractor(allow=r'http\:\/\/tibet\.net\/.*',),follow=True)
     )
 
@@ -44,7 +41,8 @@ class tibet(RedisCrawlSpider):
         print ('in parseMore')
 
 
-        def deal_publish_time(publish_time_list,url):
+        def deal_publish_time(publish_time_couple):
+            publish_time_list,url=publish_time_couple[0],publish_time_couple[1]
             if publish_time_list:
                 publish_time_str=publish_time_list[0]
             else:
@@ -56,7 +54,6 @@ class tibet(RedisCrawlSpider):
                 year=datetime_splited[0]
                 mounth=datetime_splited[1]
                 return str(year)+'-'+str(mounth)+'-'+str(publish_time_str).strip()+' 00:00:00'
-
             except:
                 return '2018-02-01 00:00:00'
 
@@ -69,7 +66,7 @@ class tibet(RedisCrawlSpider):
         loader1.add_xpath('content','//main//div[@class="pf-content"]/p//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.strip('/').split('/')[-1])
         loader1.add_xpath('img_urls','//main//div[@class="pf-content"]//img/@src')
-        loader1.add_xpath('publish_time',(response.xpath('//main//div[@id="single_meta"]//div[contains(@class,"date")]//text()').re('\S* (\d*)\, \d*'),response.url),deal_publish_time)
+        loader1.add_value('publish_time',(response.xpath('//main//div[@id="single_meta"]//div[contains(@class,"date")]//text()').re('\S* (\d*)\, \d*'),response.url),deal_publish_time)
         # loader1.add_xpath('publish_user','//article//time[@class="published"]/a[@class="fn"]/text()')
 
 

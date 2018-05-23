@@ -58,7 +58,7 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
 
             content_loader.add_xpath('title','//table//table[@class="titel"]//tr/td/text()',lambda x:x[0].strip())
             content_loader.add_xpath('content','//td[@class="inhalt"]//text()|//table[@class="inhalt"]//text()',Join())
-            content_loader.add_value('publish_time','2011-11-11 11:11:11')
+            content_loader.add_value('publish_time','2018-02-01 00:00:00')
             content_loader.add_xpath('img_urls','//td[@class="inhalt"]//img/@src|//table[@class="inhalt"]//img/@src',deal_img_urls)
 
             item1=content_loader.load_item()
