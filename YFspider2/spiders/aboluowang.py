@@ -85,4 +85,4 @@ class aboluowang(RedisCrawlSpider):
         item=loader1.load_item()
         print (item)
         return item
-    #test git
+    #test git-----------------!1
