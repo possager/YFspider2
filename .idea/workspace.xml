@@ -65,7 +65,6 @@
       <change afterPath="$PROJECT_DIR$/logs/default/xizang_zhiye/6b3fe0085dd711e8a5fa000c29790ae4.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/YFspider2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/YFspider2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/main2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/notice.html" afterDir="false" />
@@ -73,7 +72,6 @@
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/notice_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/notice_new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/show_to_public.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/show_to_public.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/notice/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/notice/test1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/dbs/default.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/deal_url_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/deal_url_func.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/itemloader_ll.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/itemloader_ll.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YFspider2/othermodule/lanch_all_website.py" beforeDir="false" afterPath="$PROJECT_DIR$/YFspider2/othermodule/lanch_all_website.py" afterDir="false" />
@@ -366,8 +364,8 @@
       <file leaf-file-name="KafkaConnector1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YFspider2/KafkaConnector1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="332">
+              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -513,8 +511,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="753" />
-    <option name="y" value="182" />
+    <option name="x" value="2" />
+    <option name="y" value="50" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
@@ -542,6 +540,12 @@
               <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
               <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
               <item name="othermodule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="YFspider2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
+              <item name="YFspider2" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="YFspider2" type="b2602c69:ProjectViewProjectNode" />
@@ -966,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527064179264</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fuwuqi peizhi2">
+      <created>1527064636663</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1527064636663</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -978,8 +989,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="753" y="182" width="1920" height="977" extended-state="0" />
-    <editor active="true" />
+    <frame x="2" y="50" width="1920" height="977" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50852877" side_tool="true" visible="true" weight="0.36488026" />
@@ -1044,7 +1054,8 @@
     <MESSAGE value="修改了notice文件，将注意文件改成semantic做成的网页，效果更好了。修改了minghui网的爬虫bug。修改了每个文件的linkextractor(s)。" />
     <MESSAGE value="又添加了几个爬虫,暂停添加爬虫，下一步尝试部署。使用scrapyd。注意ftchinese中的reply_nodes" />
     <MESSAGE value="fuwuqi peizhi" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuwuqi peizhi" />
+    <MESSAGE value="fuwuqi peizhi2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuwuqi peizhi2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1727,8 +1738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YFspider2/KafkaConnector1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="332">
+          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
         </state>
       </provider>
     </entry>
