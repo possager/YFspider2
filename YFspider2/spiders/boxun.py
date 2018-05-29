@@ -26,7 +26,7 @@ class middleway(RedisCrawlSpider):
 
 
     rules =  (
-        Rule(LinkExtractor(allow=r'https\:\/\/boxun\.com\/.*\/.*\/.*\/\d*\/\d*\/\d*\.shtml',),callback='parse_content',follow=True),
+        Rule(LinkExtractor(allow=r'https\:\/\/boxun\.com\/\S*\/\S*\/\S*\/\d*\/\d*\/\d*\.shtml',),callback='parse_content',follow=True),
         Rule(LinkExtractor(allow=r'https\:\/\/boxun\.com\/.*',),follow=True)
     )
 
@@ -50,15 +50,22 @@ class middleway(RedisCrawlSpider):
             except Exception as e:
                 return '2018-02-01 00:00:00'
 
+        def deal_img_urls(img_urls_raw):
+            img_urls_list=[]
+            for one_img in img_urls_raw:
+                if 'boxun.com' not in one_img:
+                    one_img='https://boxun.com'+one_img
+                img_urls_list.append(one_img)
+            return img_urls_list
 
 
         loader1=ItemLoader(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())
         loader1.add_xpath('title','//div[@id="Content"]//table[@align]//center//b/text()',lambda x:''.join([y for y in x]))
-        loader1.add_xpath('content','//div[@id="Content"]//table[@align]//tr/td/text()',lambda x:[i.strip() for i in x],Join())
+        loader1.add_xpath('content','//div[@id="Content"]//table[@align]//tr/td//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.strip('/').split('/')[-1].split('.')[0])
-        loader1.add_xpath('img_urls','//div[@id="Content"]//table[@align]//tr//img/@src')
+        loader1.add_xpath('img_urls','//div[@id="Content"]//table[@align]//tr//img/@src',deal_img_urls)
         loader1.add_xpath('video_urls','//div[@id="Content"]//table[@align]//tr//iframe/@src')
         loader1.add_value('publish_time',response.url,deal_publish_time)
         loader1.add_xpath('read_count','//div[@align="center"]//td[@align="right"]//font[@color="red"]/text()')

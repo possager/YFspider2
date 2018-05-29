@@ -71,17 +71,7 @@ web_begin_url_config={
     'boxunE':'http://en.boxun.com/',
     'ntd':'http://www.ntd.tv',
     'tibet':'http://tibet.net/',
-
-
-
-
-
-
-
-
-
-
-
+    'bod':'http://bod.asia/',
 }
 
 
@@ -93,7 +83,6 @@ def send_ConfigWebname_to_redis():
             redis1.lpush(webname+':start_urls',web_begin_url_config[webname])
         except Exception as e:
             print(e)
-
 
 def get_all_Rediswebsite_name():
     webname=set()
@@ -111,13 +100,11 @@ def get_all_Rediswebsite_name():
 
     return list(webname)
 
-
 def send_start_url_to_redis(web_name):
     if web_name in web_begin_url_config.keys():
         redis1.lpush(str(web_name)+':start_urls',str(web_begin_url_config[web_name]))
     else:
         print (web_name,' is not defined')
-
 
 def deal_web_dupefilter(web_name):
     try:
@@ -131,13 +118,11 @@ def deal_web_items(web_name):
     except Exception as e:
         print (e)
 
-
 def deal_web_start_urls(web_name):
     try:
         redis1.delete(web_name+':start_urls')
     except Exception as e:
         print(e)
-
 
 def deal_web_requests(web_name):
     try:
@@ -219,4 +204,4 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('tibet')
+    send_start_url_to_redis('chinaaid')

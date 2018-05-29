@@ -97,6 +97,13 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
+DEFAULT_REQUEST_HEADERS = {
+    'accept-language': 'zh-CN,zh;q=0.8',
+    'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0'
+}
+
+
+
 REDIS_HOST="127.0.0.1"
 REDIS_PORT="6379"
 

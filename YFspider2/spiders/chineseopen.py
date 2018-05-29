@@ -37,7 +37,6 @@ class chinesepen(RedisCrawlSpider):
     def parse_content(self,response):
         print ('in parseMore')
 
-
         def deal_publish_time(publish_time_raw):
             if type(publish_time_raw)==type([]):
                 publish_time_raw_str=publish_time_raw.pop()
@@ -92,16 +91,17 @@ class chinesepen(RedisCrawlSpider):
                 return 0
 
 
-
         loader1=itemloader_ll(response=response,item=YfspiderspeakItem())
         loader1.add_value('url',response.url)
         loader1.add_value('id',response.url.split('/')[-1])
         loader1.add_value('spider_time',time.time())
         loader1.add_xpath('title','//div[@id="main"]//h1[@class="entry-title"]/text()',lambda x:x[0].strip())
-        loader1.add_xpath('content','//meta[@property="og:description"]/@content',lambda x:''.join([oneP.strip() for oneP in x]))
+        loader1.add_xpath('content','//div[@id="main"]//div[@class="entry-content"]//p//text()',lambda x:''.join([oneP.strip() for oneP in x]))
         loader1.add_xpath('publish_time','//div[@id="main"]//span[@class="date"]/text()',deal_publish_time)
         loader1.add_xpath('publish_user','//div[@id="main"]//span[@class="author"]/text()',deal_publish_user)
         loader1.add_value('read_count',response.xpath("//div[@id='content']/article/div/text()").re('阅读次数\:(.*)'),deal_read_count)
+        loader1.add_xpath('video_urls','//div[@id="main"]//div[@class="entry-content"]//iframe/@src')
+        loader1.add_xpath('img_urls','//div[@id="main"]//div[@class="entry-content"]//p//img/@src')
 
         item1=loader1.load_item()
         return item1

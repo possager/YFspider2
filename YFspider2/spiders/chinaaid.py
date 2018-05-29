@@ -62,6 +62,16 @@ class chinaaid(RedisCrawlSpider):
                 print ('publish_time_wrong')
                 return None
 
+        def deal_video_urls(video_urls):
+            video_urls_list=[]
+            for one_video_url in video_urls:
+                one_video_url=one_video_url.strip('/')
+                if 'http' not in one_video_url:
+                    one_video_url='http://'+one_video_url
+                video_urls_list.append(one_video_url)
+
+            return video_urls_list
+
 
         loader1=ItemLoader(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
@@ -71,6 +81,8 @@ class chinaaid(RedisCrawlSpider):
         loader1.add_xpath('content','//div[@id="main"]//div[@class="post-entry"]//text()',lambda x:[x1.strip() for x1 in x],Join())
         loader1.add_value('publish_time',response.xpath('//div[@id="main"]//div[@class="date-outer"]//span[@class="heading-date"]').re('(\d{1,2})\/(\d{1,2})\/(\d{4})'),deal_publish_time)
         loader1.add_xpath('img_urls','//div[@id="main"]//div[@class="post-entry"]//img/@src')
+        loader1.add_xpath('video_urls','//div[@id="main"]//div[@class="post-entry"]//iframe/@src',deal_video_urls)
+
 
 
 

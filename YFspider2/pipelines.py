@@ -37,7 +37,13 @@ class Yfspider2Pipeline(object):
 class YfspidersetdefaultValue(object):
     def process_item(self,item,spider):
         for itemkey in item.fields:
-            item.setdefault(itemkey,None)
+            if itemkey in ['read_count','reproduce_count','reply_count','dislike_count','like_count']:
+                item.setdefault(itemkey,0)
+            elif itemkey in ['reply_nodes','like_nodes','img_urls','video_urls']:
+                item.setdefault(itemkey,[])
+            else:
+                item.setdefault(itemkey,None)
+
         return item
 
 
