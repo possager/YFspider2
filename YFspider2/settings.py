@@ -70,9 +70,11 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
    # 'YFspider2.pipelines.Yfspider2Pipeline': 300,
     'scrapy_redis.pipelines.RedisPipeline':300,
-    'YFspider2.pipelines.save_data_to_file':603,
+    'YFspider2.pipelines.save_data_to_file':649,
     'YFspider2.pipelines.YfspidersetdefaultValue':601,
-    'YFspider2.pipelines.save_data_to_RemoteFile_XMX':602,
+    # 'YFspider2.pipelines.save_data_to_RemoteFile_XMX':603,#adjust_type
+    'YFspider2.pipelines.adjust_type': 602,  # adjust_type
+
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

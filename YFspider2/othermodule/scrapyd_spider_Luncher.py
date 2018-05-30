@@ -87,7 +87,7 @@ def cancel_all_spider_job():
 if __name__ == '__main__':
     # get_all_spiders()
     # start_a_spider_job(spidername='chinainperspective')
-    cancel_job(jobId='27cf4bf04de011e880a40862667c7ee1')
+    # cancel_job(jobId='27cf4bf04de011e880a40862667c7ee1')
     # get_all_Jobs()
-    # cancel_all_spider_job()
+    cancel_all_spider_job()
     # start_all_spider()
