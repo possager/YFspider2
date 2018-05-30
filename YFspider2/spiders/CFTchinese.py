@@ -85,7 +85,7 @@ class middleway(RedisCrawlSpider):
         loader1.add_value('publish_time',response.xpath('//span[@class="story-time"]/text()').re('(\d{4}).(\d{1,2}).(\d{1,2}). (\d{1,2})\:(\d{1,2})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@class="story-author"]/a/text()',deal_publish_user)
         loader1.add_value('reply_count',response.xpath('//div[@id="allcomments"]/div[@class="commentcontainer"]'),lambda x:len(x))
-        loader1.add_value('reply_nodes',response.url,deal_reply_nodes)
+        # loader1.add_value('reply_nodes',response.url,deal_reply_nodes)
 
         item1=loader1.load_item()
         return item1

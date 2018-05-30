@@ -53,7 +53,7 @@ class middleway(RedisCrawlSpider):
         def deal_img_urls(img_urls_raw):
             img_urls_list=[]
             for one_img in img_urls_raw:
-                if 'boxun.com' not in one_img:
+                if 'boxun.com' not in one_img and 'http' not in one_img:
                     one_img='https://boxun.com'+one_img
                 img_urls_list.append(one_img)
             return img_urls_list

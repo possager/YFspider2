@@ -12,9 +12,14 @@ from scrapy.loader.processors import Join,TakeFirst,MapCompose
 import scrapy
 import time
 import datetime
+import re
 
 
-
+def deal_links_to_fallow(links):
+    Re_find_link=re.compile('http:\/\/en\.boxun\.com\/\d{4}\/\d{2}\/\d{2}\/.*?\/(.+)')
+    url_rear=Re_find_link.findall(links)
+    if not url_rear:
+        return links
 
 class boxunE(RedisCrawlSpider):
     name = 'boxunE'
@@ -56,8 +61,8 @@ class boxunE(RedisCrawlSpider):
         loader1.add_xpath('title','//div[@id="container"]//div[@id="main"]//h1[@class="entry_title"]//text()',lambda x:''.join([y for y in x]).strip())
         loader1.add_xpath('content','//div[@id="container"]//div[@id="main"]//p/text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.strip('/').split('/')[-1].split('.')[0])
-        loader1.add_xpath('img_urls','//div[@id="container"]//div[@id="main"]//p//img/@src')
-        loader1.add_xpath('video_urls','//div[@id="container"]//div[@id="main"]//p//iframe/@src')
+        loader1.add_xpath('img_urls','//div[@id="container"]//div[@id="main"]//img/@src')
+        loader1.add_xpath('video_urls','//div[@id="container"]//div[@id="main"]//p//iframe[@allow]/@src')
         loader1.add_value('publish_time',response.xpath('//div[@id="container"]//div[@id="main"]//div[@class="singlepostmeta"]//text()').re('(\d{4})\/(\d{2})\/(\d{2})'),deal_publish_time)
         # loader1.add_xpath('read_count','//div[@align="center"]//td[@align="right"]//font[@color="red"]/text()')
         loader1.add_xpath('publish_user','//div[@id="container"]//div[@id="main"]//a[@rel="author"]//text()',lambda x:''.join([y for y in x]))
