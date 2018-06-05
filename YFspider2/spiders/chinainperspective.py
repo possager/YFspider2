@@ -73,17 +73,26 @@ class chinainperspective(RedisCrawlSpider):
         def deal_publish_user(publish_user_raw):
             if publish_user_raw:
                 publish_user_raw_str=publish_user_raw.pop()
-                publish_user_raw_str.replace(u'作者',u'')
+                publish_user_raw_str=publish_user_raw_str.replace(u'作者：',u'')
 
                 publish_user_list=publish_user_raw_str.split(' ')
                 publish_user_list_dealed=[]
                 for one_publish_user in publish_user_list:
-                    publish_user_list_dealed.append(one_publish_user.strip())
+                    publish_used_deal=one_publish_user.strip()
+                    if publish_used_deal:
+                        publish_user_list_dealed.append(publish_used_deal)
                 return publish_user_list_dealed
 
 
             else:
                 return None
+        def deal_img_urls(img_urls_raw):
+            img_urls_dealed=[]
+            for oneimg in img_urls_raw:
+                if 'chinainperspective' not in oneimg:
+                    oneimg='http://chinainperspective.com'+oneimg
+                img_urls_dealed.append(oneimg)
+            return img_urls_dealed
 
 
 
@@ -93,9 +102,10 @@ class chinainperspective(RedisCrawlSpider):
         loader1.add_xpath('title','//span[@id="labArticle_Name"]/text()',TakeFirst(),lambda x:x.strip())
         loader1.add_xpath('content','//div[@id="divContent"]//text()',lambda x:[i.strip() for i in x],Join())
         loader1.add_value('id',response.url.split('=')[1])
-        loader1.add_value('img_urls',response.selector.xpath('//div[@id="divContent"]//img/@src').extract())
+        loader1.add_value('img_urls',response.selector.xpath('//div[@id="divContent"]//img/@src').extract(),deal_img_urls)
         loader1.add_value('publish_time',response.xpath('//span[@id="labResource"]').re(ur'\, (\w*) (\d{1,2}).*(\d{4})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@id="labAuthor"]/text()',deal_publish_user)
+        loader1.add_xpath('video_urls','//div[@id="divContent"]//iframe/@src')
         # loader1.add_value('reply_count',response.selector.xpath('//*[@id="comments"]/h4/text()').re(ur'(\d{1,2}).*条评论'),lambda x:x[0] if x else 0)
         # loader1.add_value('reply_nodes',response.selector.re(ur'var items \= (\[.*?\])\;'),)
 

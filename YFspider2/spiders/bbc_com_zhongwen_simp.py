@@ -62,7 +62,7 @@ class bbc_com_zhongwen_simp(RedisCrawlSpider):
         loader1.add_value('id',response.url.strip('/').split('/')[-1])
         loader1.add_xpath('img_urls','//div[@role="main"]//div[@class="story-body__inner"]//img/@src')
         loader1.add_xpath('publish_time','//div[@role="main"]//div[@class="story-body"]//div[contains(@class,"date date")]/@data-seconds',deal_publish_time)
-        # loader1.add_xpath('video_urls','')
+        loader1.add_xpath('video_urls','')
 
 
 

@@ -31,7 +31,7 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
 
     rules = (
 
-        Rule(LinkExtractor(allow=r'www\.chushigangdrug\.ch\/.*?', ), callback='parse_content',
+        Rule(LinkExtractor(allow=r'www\.chushigangdrug\.ch\/.*', ), callback='parse_content',
              follow=True),
         # Rule(LinkExtractor(allow=))
     )
@@ -40,9 +40,16 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
         def deal_img_urls(img_urls_raw):
             img_urls_list=[]
             for one_img_url_raw in img_urls_raw:
-                if 'mages/up' or 'arrow_big_up' in one_img_url_raw:
+                if 'mages/up' in one_img_url_raw or 'arrow_big_up' in one_img_url_raw:
                     continue
-                img_url=urljoin('http://www.chushigangdrug.ch/',one_img_url_raw.lstrip('.'))
+                if 'verein' in response.url:
+                    img_url='http://www.chushigangdrug.ch/verein/'+one_img_url_raw.lstrip('.')
+                elif 'tanzgruppe' in response.url:
+                    img_url='http://www.chushigangdrug.ch/tanzgruppe/'+one_img_url_raw.strip('.')
+                elif 'galerie' in response.url:
+                    img_url='http://www.chushigangdrug.ch/galerie/'+one_img_url_raw.strip('.')
+                else:
+                    img_url='http://www.chushigangdrug.ch/'+one_img_url_raw.strip('.')
                 img_urls_list.append(img_url)
 
             return img_urls_list
@@ -57,9 +64,9 @@ class dhokhamchushigangdrug(RedisCrawlSpider):
             content_loader.add_value('id',response.url.strip('/').split('/')[-1].replace('.','_'))
 
             content_loader.add_xpath('title','//table//table[@class="titel"]//tr/td/text()',lambda x:x[0].strip())
-            content_loader.add_xpath('content','//td[@class="inhalt"]//text()|//table[@class="inhalt"]//text()',Join())
+            content_loader.add_xpath('content','//td[@valign="top"]//td[@valign and @bgcolor="#FFFFFF"]//text()',Join())
             content_loader.add_value('publish_time','2018-02-01 00:00:00')
-            content_loader.add_xpath('img_urls','//td[@class="inhalt"]//img/@src|//table[@class="inhalt"]//img/@src',deal_img_urls)
+            content_loader.add_xpath('img_urls','//td[@valign="top"]//td[@valign and @bgcolor="#FFFFFF"]//img[@width>50]/@src',deal_img_urls)
 
             item1=content_loader.load_item()
             return item1

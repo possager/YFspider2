@@ -101,7 +101,7 @@ ITEM_PIPELINES = {
 
 DEFAULT_REQUEST_HEADERS = {
     'accept-language': 'zh-CN,zh;q=0.8',
-    'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0'
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'
 }
 
 

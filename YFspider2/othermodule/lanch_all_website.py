@@ -204,4 +204,4 @@ if __name__ == '__main__':
 
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('chinaaid')
+    send_start_url_to_redis('CFTchinese')

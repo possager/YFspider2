@@ -11,8 +11,15 @@ from scrapy.loader.processors import Join,TakeFirst,MapCompose
 import scrapy
 import time
 import datetime
-from YFspider2.othermodule.deal_url_func import deal_ftchinese_url
+import re
 
+
+
+def deal_ftchinese_url(url):
+    Re_match=re.compile(r'www\.ftchinese\.com\/story\/\d*')
+    is_suit=Re_match.findall(url)
+    if is_suit:
+        return 'http://'+is_suit[0]+'?full=y'
 
 
 class middleway(RedisCrawlSpider):
@@ -39,8 +46,8 @@ class middleway(RedisCrawlSpider):
         print (response.url)
 
         def deal_img_urls(img_url_list):
-            for one_img_url in img_url_list:
-                print (one_img_url)
+            # for one_img_url in img_url_list:
+            #     print (one_img_url)
             return img_url_list
 
         def deal_publish_time(publish_time_raw_list):
@@ -80,7 +87,7 @@ class middleway(RedisCrawlSpider):
         loader1.add_xpath('title','//h1[@class="story-headline"]/text()',TakeFirst())
         # loader1.add_xpath('abstract','//div[@class="story-lead"]/text()')#没有abstract这个字段
         loader1.add_value('id',response.url.split('/')[-1].split('?')[0])
-        loader1.add_value('img_urls',response.xpath('//div[@class="story-container"]//img/@src').extract(),deal_img_urls)
+        loader1.add_value('img_urls',response.xpath('//div[@class="story-container"]//img/@src|//div[@class="story-container"]//figure/@data-url').extract(),deal_img_urls)
         loader1.add_xpath('content','//div[@class="story-body"]/p/text()',Join())
         loader1.add_value('publish_time',response.xpath('//span[@class="story-time"]/text()').re('(\d{4}).(\d{1,2}).(\d{1,2}). (\d{1,2})\:(\d{1,2})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@class="story-author"]/a/text()',deal_publish_user)

@@ -10,7 +10,7 @@ import time
 
 
 
-url_post='http://192.168.6.47:2348/mapDatas'
+url_post='http://192.168.6.211:2348/mapDatas'
 
 
 
@@ -56,31 +56,46 @@ def get_file():
                 #-----------------------------------------------------------------------------------------------------
                 dict1={
                     'fileName':one_jsonfile,
-                    # 'path':BASIC_FILE_webname_data_date.replace('/','\\').split('data_ll_xz')[-1].lstrip('\\'),
-                    'path': BASIC_FILE_webname_data_date.split('data_ll_xz')[-1].lstrip('/')
+                    'path':BASIC_FILE_webname_data_date.replace('/','\\').split('data_ll2_xz')[-1].lstrip('\\'),
+                    # 'path': BASIC_FILE_webname_data_date.split('data_ll_xz')[-1].lstrip('/')
 
                 }
-
-                # file222=open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')
-                # response1=requests.post(url=url_post,data=dict1,files={'file':file222})
-                # print response1.text
                 with open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb') as fl:
-                    file222=json.load(fl)
-                yield (file222,one_jsonfile)
+                    try:
+                        jsondict=json.load(fl)
+                        jsondict2={
+                            'data':jsondict
+                        }
+                        jsondict3={
+                            'content':jsondict2,
+                            'update_time':time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(int(time.time())))
+                        }
+                    except:
+                        continue
+                with open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'w+') as fl2:
+                    json.dump(jsondict3, fl2)
+
+
+                file222=open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb')
+                response1=requests.post(url=url_post,data=dict1,files={'file':file222})
+                print response1.text
+                # with open(BASIC_FILE_webname_data_date+'/'+one_jsonfile,'rb') as fl:
+                #     file222=json.load(fl)
+                # yield (file222,one_jsonfile)
 
 
 
 if __name__ == '__main__':
-    # get_file()
-    host = '192.168.6.187:9092,192.168.6.188:9092,192.168.6.229:9092,192.168.6.230:9092'
-    p = Producer(host)
-    i = 0
-    ztids = [339, 338]
-
-
-    for onefile in get_file():
-        print(onefile)
-        i+=1
-        if i>100:
-            break
-        p.send('test',{'data':onefile[0]},onefile[1],time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(int(time.time()))))
+    get_file()
+    # host = '192.168.6.187:9092,192.168.6.188:9092,192.168.6.229:9092,192.168.6.230:9092'
+    # p = Producer(host)
+    # i = 0
+    # ztids = [339, 338]
+    #
+    #
+    # for onefile in get_file():
+    #     print(onefile)
+    #     i+=1
+    #     if i>100:
+    #         break
+    #     p.send('test',{'data':onefile[0]},onefile[1],time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(int(time.time()))))
