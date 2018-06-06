@@ -14,6 +14,6 @@ response1=requests.get(url='http://www.bbc.com/zhongwen/simp/world/2011/03/11031
 
 selector1=Selector(text=response1.text)
 
-read_count=selector1.xpath('//div[@role="main"]//div[@class="story-body"]//div[contains(@class,"date date")]/@data-seconds').extract()
+read_count=selector1.xpath('//div[@role="main"]//div[@class="story-body"]//div[@data-seconds]/@data-datetime').re('(\d{4}).*?(\d{1,2}).*?(\d{1,2})')
 #//div[@role="main"]//div[@class="story-body"]//div[contains(@class,"date date")]
 print read_count
