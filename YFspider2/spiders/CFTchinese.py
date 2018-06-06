@@ -18,6 +18,8 @@ import re
 def deal_ftchinese_url(url):
     Re_match=re.compile(r'www\.ftchinese\.com\/story\/\d*')
     is_suit=Re_match.findall(url)
+    if 'rest' in url:
+        return
     if is_suit:
         return 'http://'+is_suit[0]+'?full=y'
 
@@ -51,15 +53,18 @@ class middleway(RedisCrawlSpider):
             return img_url_list
 
         def deal_publish_time(publish_time_raw_list):
-            year=str(publish_time_raw_list[0])
-            mounth=str(publish_time_raw_list[1]) if len(str(publish_time_raw_list[1]))==2 else '0'+str(publish_time_raw_list[1])
-            days=str(publish_time_raw_list[2]) if len(str(publish_time_raw_list[2]))==2 else '0'+str(publish_time_raw_list[2])
+            try:
+                year=str(publish_time_raw_list[0])
+                mounth=str(publish_time_raw_list[1]) if len(str(publish_time_raw_list[1]))==2 else '0'+str(publish_time_raw_list[1])
+                days=str(publish_time_raw_list[2]) if len(str(publish_time_raw_list[2]))==2 else '0'+str(publish_time_raw_list[2])
 
-            hourse=str(publish_time_raw_list[3])
-            minite=str(publish_time_raw_list[4])
+                hourse=str(publish_time_raw_list[3])
+                minite=str(publish_time_raw_list[4])
 
-            publish_time=year+'-'+mounth+'-'+days+' '+hourse+':'+minite+':00'
-            return publish_time
+                publish_time=year+'-'+mounth+'-'+days+' '+hourse+':'+minite+':00'
+                return publish_time
+            except Exception as e:
+                print(e)
 
         def deal_reply_nodes(response_url):
             # for one_reply_nodes in reply_nodes:
@@ -77,7 +82,8 @@ class middleway(RedisCrawlSpider):
             return publish_user_list
 
 
-
+        if not response.xpath('//span[@class="story-time"]/text()').re('(\d{4}).(\d{1,2}).(\d{1,2}). (\d{1,2})\:(\d{1,2})'):
+            return #charge the content is empty by this?
 
 
 
@@ -88,7 +94,7 @@ class middleway(RedisCrawlSpider):
         # loader1.add_xpath('abstract','//div[@class="story-lead"]/text()')#没有abstract这个字段
         loader1.add_value('id',response.url.split('/')[-1].split('?')[0])
         loader1.add_value('img_urls',response.xpath('//div[@class="story-container"]//img/@src|//div[@class="story-container"]//figure/@data-url').extract(),deal_img_urls)
-        loader1.add_xpath('content','//div[@class="story-body"]/p/text()',Join())
+        loader1.add_xpath('content','//div[@class="story-body"]//p//text()',Join())
         loader1.add_value('publish_time',response.xpath('//span[@class="story-time"]/text()').re('(\d{4}).(\d{1,2}).(\d{1,2}). (\d{1,2})\:(\d{1,2})'),deal_publish_time)
         loader1.add_xpath('publish_user','//span[@class="story-author"]/a/text()',deal_publish_user)
         loader1.add_value('reply_count',response.xpath('//div[@id="allcomments"]/div[@class="commentcontainer"]'),lambda x:len(x))
