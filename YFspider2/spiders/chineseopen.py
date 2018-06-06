@@ -16,6 +16,10 @@ import datetime
 
 
 class chinesepen(RedisCrawlSpider):
+    '''
+    notcie : the frequency shouldn't be too busy for ban!!!!
+    '''
+
     name = 'chinesepen'
     start_urls=['http://www.chinesepen.org/']
     headers={
@@ -85,8 +89,9 @@ class chinesepen(RedisCrawlSpider):
         def deal_read_count(read_count_raw):
             if read_count_raw:#这里边一定是list对象。
                 read_count_str=read_count_raw.pop()
+                read_count_str=str(read_count_str)
                 read_count=str(read_count_str).replace('阅读次数:','').replace(',','')
-                return read_count
+                return int(read_count)
             else:
                 return 0
 
@@ -99,7 +104,7 @@ class chinesepen(RedisCrawlSpider):
         loader1.add_xpath('content','//div[@id="main"]//div[@class="entry-content"]//text()',lambda x:''.join([oneP.strip() for oneP in x]))
         loader1.add_xpath('publish_time','//div[@id="main"]//span[@class="date"]/text()',deal_publish_time)
         loader1.add_xpath('publish_user','//div[@id="main"]//span[@class="author"]//text()',deal_publish_user)
-        loader1.add_value('read_count',response.xpath("//div[@id='content']/article/div/text()").re('阅读次数\:(.*)'),deal_read_count)
+        loader1.add_value('read_count',response.xpath("//div[@id='content']/article/div[contains(@class,'tags')]//text()").re(u'阅读次数\:(.*)'),deal_read_count)
         loader1.add_xpath('video_urls','//div[@id="main"]//div[@class="entry-content"]//iframe/@src')
         loader1.add_xpath('img_urls','//div[@id="main"]//div[@class="entry-content"]//img/@src')
 

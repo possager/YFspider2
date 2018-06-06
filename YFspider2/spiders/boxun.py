@@ -83,6 +83,7 @@ class middleway(RedisCrawlSpider):
             return response
 
         if response.xpath('//table[@class="content"]//tr[@align="center"]'):
+            #boxun的版面在很早之前是不一样的，所以由两个版面。
             loader2=ItemLoader(item=YfspiderspeakItem(),response=response)
             loader2.add_value('url', response.url)
             loader2.add_value('spider_time', time.time())

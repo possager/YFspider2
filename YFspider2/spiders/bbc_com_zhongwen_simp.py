@@ -12,7 +12,7 @@ from scrapy.loader.processors import Join,TakeFirst,MapCompose
 import scrapy
 import time
 import datetime
-
+import re
 
 
 
@@ -52,8 +52,17 @@ class bbc_com_zhongwen_simp(RedisCrawlSpider):
             except Exception as e:
                 return '2018-02-01 00:00:00'
 
+        def deal_repace_javascript(response):
+            Re_replace_javascript = re.compile('\<script.*?\>[\s|\S]*?\<\/script\>')
+            RE_replace_nojavascript=re.compile('\<noscript.*?\>[\s|\S]*?\<\/noscript\>')
+            resurltt1 = Re_replace_javascript.sub('', response.text)
+            resurltt2=RE_replace_nojavascript.sub('',resurltt1)
+            response=response.replace(body=resurltt2,url=response.url,status=response.status,headers=response.headers,
+                             request=response.request,flags=response.flags)
+            return response
 
 
+        response=deal_repace_javascript(response)
         loader1=ItemLoader(item=YfspiderspeakItem(),response=response)
         loader1.add_value('url',response.url)
         loader1.add_value('spider_time',time.time())

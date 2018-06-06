@@ -202,4 +202,4 @@ if __name__ == '__main__':
     #     deal_web_start_urls(one)
     # send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('CFTchinese')
+    send_start_url_to_redis('bbc_com_zhongwen_simp')
