@@ -51,12 +51,12 @@ def get_all_Jobs(project='default'):
     response1=requests.get(url=all_job_url,params=all_job_dict)
     datajson=json.loads(response1.text)
     runingSpider=datajson['running']
-    for i in runingSpider:
-        print('start_time:  ',i['start_time'])
-        print('pid:         ',i['pid'])
-        print('jobid:       ',i['id'])
-        print('spiderName:  ',i['spider'])
-        print('-----------------------------------')
+    # for i in runingSpider:
+    #     print('start_time:  ',i['start_time'])
+    #     print('pid:         ',i['pid'])
+    #     print('jobid:       ',i['id'])
+    #     print('spiderName:  ',i['spider'])
+    #     print('-----------------------------------')
     return runingSpider
     # print(response1.text)
 
@@ -65,7 +65,9 @@ def get_all_Jobs(project='default'):
 def start_all_spider():
     all_spider_avalid=get_all_spiders()
     for one_spidername in all_spider_avalid:
-        start_a_spider_job(spidername=one_spidername)
+        if one_spidername not in ['aboluowang','bbc_com_zhongwen_simp','boxun',
+                                  'boxunE','CFTchinese','chinaaid','chinainperspective','chinesepen']:
+            start_a_spider_job(spidername=one_spidername)
 
     print('_____________\n'
           ' all start  \n'
@@ -83,11 +85,36 @@ def cancel_all_spider_job():
           '_____________')
 
 
+def lanch_spider_runing_just_10Min():
+    start_all_spider()
+    while True:
+        all_spider_jobs=get_all_Jobs()
+        for onejob in all_spider_jobs:
+            start_time=onejob['start_time'].split('.')[0]
+            pid=onejob['pid']
+            jobid=onejob['id']
+            spider=onejob['spider']
+
+            timenow=time.time()
+            spidertime_str=start_time
+            spider_start_time_touple=time.strptime(spidertime_str,'%Y-%m-%d %H:%M:%S')
+            spider_start_time_stamp=time.mktime(spider_start_time_touple)
+            if timenow-spider_start_time_stamp>60*5:
+                cancel_job(jobid)
+                print('has cancle a job,which name is ',spider,' which id is ',jobid)
+
+
+        time.sleep(20)
+
+
+
+
 
 if __name__ == '__main__':
     # get_all_spiders()
     # start_a_spider_job(spidername='chinainperspective')
     # cancel_job(jobId='27cf4bf04de011e880a40862667c7ee1')
     # get_all_Jobs()
-    cancel_all_spider_job()
+    # cancel_all_spider_job()
     # start_all_spider()
+    lanch_spider_runing_just_10Min()

@@ -32,7 +32,8 @@ ENCNname_dict={
     'tibetswiss':'瑞士和比利时藏人协会',
     'uyghurcongress':'世界维吾尔大会',
     'xiongdeng':'多杰雄登CN',
-    # 'sherig':'藏人行政中央文化部',
+    'sherig':'藏人行政中央文化部',
+    'cn_rfi_fr':'法国国际广播电台',
     
     
     'dalailamaworld':'达赖喇嘛官网',#中文

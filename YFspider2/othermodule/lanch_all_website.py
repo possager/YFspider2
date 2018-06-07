@@ -200,6 +200,6 @@ if __name__ == '__main__':
     #     deal_web_items(one)
     #     deal_web_requests(one)
     #     deal_web_start_urls(one)
-    # send_ConfigWebname_to_redis()
+    send_ConfigWebname_to_redis()
     # deal_web_dupefilter('atc_org_au')
-    send_start_url_to_redis('bbc_com_zhongwen_simp')
+    # send_start_url_to_redis('bbc_com_zhongwen_simp')
