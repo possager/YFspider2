@@ -78,6 +78,9 @@ def push_to_kafka():
             break
         p.send('test',{'data':onefile[0]},onefile[1],time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(int(time.time()))))
 
+
+
+
 if __name__ == '__main__':
     push_to_XMX()
 
