@@ -29,7 +29,7 @@ def deal_links_to_fallow(link_raw):
 
 class dw(RedisCrawlSpider):
     name = 'dw'
-    start_urls=['http://tibetanparliament.org/']
+
     headers={
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',

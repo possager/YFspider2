@@ -94,6 +94,12 @@ class tibetsociety(RedisCrawlSpider):
 
 
     def deal_next_page(self,response):
+        '''
+        get the next part of webpage
+
+        :param response:
+        :return:
+        '''
         datameta=response.meta['pre_data']
 
 

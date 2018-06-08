@@ -65,7 +65,7 @@ def get_all_Jobs(project='default'):
 def start_all_spider():
     all_spider_avalid=get_all_spiders()
     for one_spidername in all_spider_avalid:
-        if one_spidername not in ['aboluowang','bbc_com_zhongwen_simp','boxun',
+        if one_spidername in ['aboluowang','bbc_com_zhongwen_simp','boxun',
                                   'boxunE','CFTchinese','chinaaid','chinainperspective','chinesepen']:
             start_a_spider_job(spidername=one_spidername)
 

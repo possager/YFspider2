@@ -5,12 +5,7 @@ import random
 
 #
 redis1=redis.StrictRedis(host='127.0.0.1',port=6379,db=1)
-# pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
-# redis1 = redis.Redis(connection_pool=pool)
 
-
-# pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
-# redis1 = redis.Redis(connection_pool=pool)
 all_website_key= redis1.keys('*')
 
 
@@ -130,62 +125,15 @@ def deal_web_requests(web_name):
     except Exception as e:
         print(e)
 
-# def begin_start_urls_to_redis(web_name):
-#     if web_name=='kirti92':
-#         redis1.lpush('kirti92:start_urls','http://www.kirti92.org/')
-#     elif web_name=='tibetanwomen':
-#         redis1.lpush('tibetanwomen:start_urls','http://tibetanwomen.org/')
-#     elif web_name=='tchrd':
-#         redis1.lpush('tchrd:start_urls','http://tchrd.org/chinese/')
-#     elif web_name == 'uyghurcongress':
-#         redis1.lpush('uyghurcongress:start_urls', 'http://www.uyghurcongress.org/cn/')
-#     elif web_name=='ftchinese':
-#         redis1.lpush('ftchinese:start_urls','http://www.ftchinese.com/')
-#     elif web_name=='chushigangdrug':
-#         redis1.lpush('chushigangdrug:start_urls','http://www.chushigangdrug.ch/')
-#     elif web_name=='middleway':
-#         redis1.lpush('middleway:start_urls','http://woeser.middle-way.net/')
-#     elif web_name=='tibetsun':
-#         redis1.lpush('tibetsun:start_urls','https://www.tibetsun.com/')
-#     elif web_name=='tibetanwomen':
-#         redis1.lpush('tibetanwomen:start_urls','http://tibetanwomen.org/')
-#     elif web_name=='sherig':
-#         redis1.lpush('sherig:start_urls','http://www.sherig.org/tb/')
-#     elif web_name=='xiongdeng':
-#         redis1.lpush('xiongdeng:start_urls','http://xiongdeng.com/')
-#     elif web_name=='secretchina':
-#         redis1.lpush('secretchina:start_urls','https://www.secretchina.com/')
-#     elif web_name=='tibetsociety':
-#         redis1.lpush('tibetsociety:start_urls','http://www.tibetsociety.com/')
-#     elif web_name=='dhokhamchushigangdrug':
-#         redis1.lpush('dhokhamchushigangdrug:start_urls','http://dhokhamchushigangdrug.com/')
-#     elif web_name=='tibetanentrepreneurs':
-#         redis1.lpush('tibetanentrepreneurs:start_urls','http://tibetanentrepreneurs.org/')
-#     elif web_name=='khabdha':
-#         redis1.lpush('khabdha:start_urls','http://www.khabdha.org/')
-#     elif web_name=='atc_org_au':
-#         redis1.lpush('atc_org_au:start_urls','http://www.atc.org.au/')
-#     elif web_name=='dorjeshugden':
-#         redis1.lpush('dorjeshugden:start_urls','http://www.dorjeshugden.com/')
-#     elif web_name=='chinesepen':
-#         redis1.lpush('chinesepen:start_urls','http://www.chinesepen.org/')
-#     elif web_name=='minghui':
-#         redis1.lpush('minghui:start_urls','http://www.minghui.org/')
-#     elif web_name=='tibetanyouthcongress':
-#         redis1.lpush('tibetanyouthcongress:start_urls','https://www.tibetanyouthcongress.org/')
-#     elif web_name=='studentsforafreetibet':
-#         redis1.lpush('studentsforafreetibet:start_urls','http://www.studentsforafreetibet.org/')
-#     elif web_name=='chinainperspective':
-#         redis1.lpush('chinainperspective:start_urls','http://chinainperspective.com/')
-#     elif web_name=='radiosoh':
-#         redis1.lpush('radiosoh:start_urls','http://radiosoh.com/')
-#     elif web_name=='chinaaid':
-#         redis1.lpush('chinaaid:start_urls','http://www.chinaaid.net/')
-#     elif web_name=='tibetswiss':
-#         redis1.lpush('tibetswiss:start_urls','http://www.tibetswiss.ch/index-bo.html')
 
 
-
+def clear_redis():
+    for n,one in enumerate(get_all_Rediswebsite_name()):
+        # send_start_url_to_redis(one)
+        deal_web_dupefilter(one)
+        deal_web_items(one)
+        deal_web_requests(one)
+        deal_web_start_urls(one)
 
 
 
@@ -194,12 +142,10 @@ def deal_web_requests(web_name):
 
 
 if __name__ == '__main__':
-    # for n,one in enumerate(get_all_Rediswebsite_name()):
-    #     # send_start_url_to_redis(one)
-    #     deal_web_dupefilter(one)
-    #     deal_web_items(one)
-    #     deal_web_requests(one)
-    #     deal_web_start_urls(one)
-    send_ConfigWebname_to_redis()
-    # deal_web_dupefilter('atc_org_au')
-    # send_start_url_to_redis('bbc_com_zhongwen_simp')
+    # clear_redis()
+
+    # send_ConfigWebname_to_redis()
+
+    # deal_web_dupefilter('tchrd')
+
+    send_start_url_to_redis('tchrd')

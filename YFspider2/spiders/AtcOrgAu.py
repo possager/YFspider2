@@ -68,13 +68,11 @@ class atc_org_au(RedisCrawlSpider):
 
             for img_url_raw in img_urls_raw:
                 if 'http' or 'www' in img_url:
-                    # 'https://www.atc.org.au/images/Campaigns/Rudrani%20Tooth.jpg'
                     img_url=urljoin('https://www.atc.org.au/',img_url_raw)
                     img_urls_end.append(img_url)
             return img_urls_end
 
 
-        # print response.url
         content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())
