@@ -6,7 +6,7 @@ from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
-from YFspider2.othermodule.itemloader_ll import itemloader_ll
+from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
 import hashlib
@@ -15,9 +15,7 @@ from w3lib.url import urljoin
 
 class savetibet(RedisCrawlSpider):
     name = 'savetibet'
-    # start_urls=['http://www.sherig.org/tb/page/{}/'.format(str(i)) for i in range(1,10)]
     start_urls=['http://www.savetibet.org/']
-    # redis_key = 'savetibet:url'
 
     rules = (
         # Extract links matching 'category.php' (but not matching 'subsection.php')
@@ -46,7 +44,7 @@ class savetibet(RedisCrawlSpider):
             #表明有title这个标签，版式就是统一的
 
             # print response.xpath('//div[@id="content"]//div[@id="main"]//h1[@class="title"]/text()').extract()
-            content_laoder=itemloader_ll(response=response,item=YfspiderspeakItem())
+            content_laoder=ItemLoader(response=response,item=YfspiderspeakItem())
             content_laoder.add_value('url',response.url)
             content_laoder.add_value('spider_time',time.time())
 

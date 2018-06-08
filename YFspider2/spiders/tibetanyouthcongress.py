@@ -6,7 +6,7 @@ from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
-from YFspider2.othermodule.itemloader_ll import itemloader_ll
+from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
 import hashlib
@@ -30,7 +30,7 @@ class tibetanyouthcongress(RedisCrawlSpider):
 
 
         print (response.url)
-        content_loader=itemloader_ll(response=response,item=YfspiderspeakItem())
+        content_loader=ItemLoader(response=response,item=YfspiderspeakItem())
         content_loader.add_value('url',response.url)
         content_loader.add_value('spider_time',time.time())
 

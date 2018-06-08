@@ -3,8 +3,6 @@ from scrapy.spiders import Rule
 from scrapy_redis.spiders import RedisCrawlSpider
 from scrapy.linkextractors import LinkExtractor
 from YFspider2.items import YfspiderspeakItem
-# from scrapy.loader import
-from YFspider2.othermodule.itemloader_ll import itemloader_ll
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,TakeFirst,MapCompose
 
@@ -83,7 +81,7 @@ class tibetwomenBo(RedisCrawlSpider):
                 return 0
 
 
-        loader1=itemloader_ll(response=response,item=YfspiderspeakItem())
+        loader1=ItemLoader(response=response,item=YfspiderspeakItem())
         loader1.add_value('url',response.url)
         loader1.add_value('id',response.url.split('/')[-1])
         loader1.add_value('spider_time',time.time())

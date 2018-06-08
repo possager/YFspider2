@@ -6,7 +6,7 @@ from scrapy_redis.spiders import RedisCrawlSpider
 from YFspider2.items import YfspiderspeakItem
 from scrapy.spiders import Rule
 from scrapy.linkextractors import LinkExtractor
-from YFspider2.othermodule.itemloader_ll import itemloader_ll
+from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Join,MapCompose,Compose,TakeFirst
 import time
 import hashlib
@@ -70,7 +70,7 @@ class tchrd(RedisCrawlSpider):
             return id_hash
 
 
-        loaders1=itemloader_ll(response=response,item=YfspiderspeakItem())
+        loaders1=ItemLoader(response=response,item=YfspiderspeakItem())
         loaders1.add_value('url', response.url)
         loaders1.add_value('spider_time', time.time())
         loaders1.add_xpath('title', '//*[@id="the-post"]/div[@class="post-inner"]/h1/span/text()')
