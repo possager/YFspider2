@@ -8,6 +8,10 @@ import time
 console_url='http://127.0.0.1:6800'
 
 def get_all_spiders():
+    '''
+    通过scrapyd来获取所有的spider
+    :return:
+    '''
     response1=requests.get(url=console_url+'/listspiders.json?',params={'project':'default'})
     result1=json.loads(response1.text)
     print('爬虫项目状态是-------------',result1['status'],'可用的爬虫数量：-------',len(result1['spiders']))
@@ -18,6 +22,12 @@ def get_all_spiders():
 
 
 def start_a_spider_job(project='default',spidername=None):
+    '''
+    根据爬虫名来生成一个spider
+    :param project:
+    :param spidername:
+    :return:
+    '''
     if spidername:
         spider_task={
             'project':project,
@@ -33,6 +43,13 @@ def start_a_spider_job(project='default',spidername=None):
 
 
 def cancel_job(jobId=None,project='default'):
+    '''
+    根据jobid来取消一个任务
+
+    :param jobId:
+    :param project:
+    :return:
+    '''
     if jobId:
         cancel_spider={
             'project':project,
@@ -44,6 +61,12 @@ def cancel_job(jobId=None,project='default'):
 
 
 def get_all_Jobs(project='default'):
+    '''
+    获取scrapyd中所有正在运行的jobs
+
+    :param project:
+    :return:
+    '''
     all_job_url=console_url+'/listjobs.json'
     all_job_dict={
         'project':project
@@ -63,17 +86,27 @@ def get_all_Jobs(project='default'):
 
 
 def start_all_spider():
+    '''
+    启动项目中所有的spiders
+
+    :return:
+    '''
     all_spider_avalid=get_all_spiders()
     for one_spidername in all_spider_avalid:
-        if one_spidername in ['aboluowang','bbc_com_zhongwen_simp','boxun',
-                                  'boxunE','CFTchinese','chinaaid','chinainperspective','chinesepen']:
-            start_a_spider_job(spidername=one_spidername)
+        start_a_spider_job(spidername=one_spidername)
 
     print('_____________\n'
           ' all start  \n'
           '_____________')
 
 def cancel_all_spider_job():
+    '''
+    取消所有正在运行的job，注意，正在pendding中的jobs不会被取消，所以取消正在运行的爬虫后，那些后边排队等待启动的爬虫会继续跟进，所以
+    要取消所有的jobs，那么就要持续运行这个函数
+
+    :return:
+    '''
+
     all_jobs_id=get_all_Jobs()
     for one_jod in all_jobs_id:
         print('cancel jobId-----',one_jod)
@@ -86,6 +119,11 @@ def cancel_all_spider_job():
 
 
 def lanch_spider_runing_just_10Min():
+    '''
+    debug专用，用来启动每个爬虫，每个爬虫只跑10分钟！！！！！！！！！！检测项目下所有的爬虫是不是可以运行。
+
+    :return:
+    '''
     start_all_spider()
     while True:
         all_spider_jobs=get_all_Jobs()

@@ -20,7 +20,6 @@ class atc_org_au(RedisCrawlSpider):
 
 
     rules = (
-
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/.*?\/.*?\/item\/.*'), follow=True,callback='parse_content'),
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?$'),follow=True),
         Rule(LinkExtractor(allow='www\.atc\.org\.au\/[^\/]*?\/[^\/]*?\?.*'), follow=True),
